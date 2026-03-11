@@ -23,11 +23,11 @@ export default function Home() {
 
         <section
           id="work"
-          className="px-6 py-24 md:py-32 lg:px-16"
+          className="px-3 py-12 sm:px-6 sm:py-20 md:px-16 md:py-24"
           aria-labelledby="featured-work-heading"
         >
           <div className="mx-auto max-w-[1280px]">
-            <div className="mb-16">
+            <div className="mb-6 sm:mb-10 md:mb-16">
               <SectionHeading
                 headingId="featured-work-heading"
                 title="Featured Work"
@@ -35,7 +35,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="flex flex-col gap-32 md:gap-40">
+            <div className="flex flex-col gap-10 sm:gap-16 md:gap-24">
               {FEATURED_PROJECTS.map((project) => (
                 <ProjectFeatureCard key={project.slug} project={project} />
               ))}
@@ -44,11 +44,11 @@ export default function Home() {
         </section>
 
         <section
-          className="border-t border-[#e5e5e5] px-6 py-24 md:py-32 lg:px-16"
+          className="border-t border-[#e5e5e5] px-3 py-12 sm:px-6 sm:py-20 md:px-16 md:py-24"
           aria-labelledby="additional-work-heading"
         >
           <div className="mx-auto max-w-[1280px]">
-            <div className="mb-16">
+            <div className="mb-6 sm:mb-10 md:mb-16">
               <SectionHeading
                 headingId="additional-work-heading"
                 title="Additional Professional Work"
@@ -56,7 +56,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="grid gap-12 md:grid-cols-2 md:gap-16">
+            <div className="grid grid-cols-2 gap-3 sm:gap-6 md:gap-10">
               {ADDITIONAL_PROJECTS.map((project) => (
                 <ProjectSupportCard key={project.slug} project={project} />
               ))}
@@ -65,14 +65,11 @@ export default function Home() {
         </section>
 
         <section
-          className="bg-[#fafafa] px-6 py-24 md:py-32 lg:px-16"
+          className="bg-[#fafafa] px-3 py-12 sm:px-6 sm:py-20 md:px-16 md:py-24"
           aria-labelledby="personal-work-heading"
         >
           <div className="mx-auto max-w-[1280px]">
-            <div className="mb-16">
-              <p className="mb-4 text-sm font-semibold uppercase tracking-[1.8px] text-[#737373]">
-                Independent Work
-              </p>
+            <div className="mb-6 sm:mb-10 md:mb-16">
               <SectionHeading
                 headingId="personal-work-heading"
                 title="Selected Explorations"
@@ -80,7 +77,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="grid gap-10 md:grid-cols-3 md:gap-12">
+            <div className="grid grid-cols-3 gap-2 sm:gap-5 md:gap-10">
               {PERSONAL_PROJECTS.map((project) => (
                 <PersonalProjectCard key={project.slug} project={project} />
               ))}

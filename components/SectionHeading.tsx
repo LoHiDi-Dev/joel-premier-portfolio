@@ -14,14 +14,12 @@ export function SectionHeading({
   headingId,
 }: SectionHeadingProps) {
   return (
-    <div
-      className={
-        centered ? "text-center" : ""
-      }
-    >
+    <div className={centered ? "text-center" : ""}>
       {eyebrow && (
         <p
-          className={`text-sm font-semibold uppercase tracking-[1.8px] text-[#737373] ${centered ? "" : "mb-4"}`}
+          className={`text-[10px] font-semibold uppercase tracking-[1.8px] text-[#737373] sm:text-sm ${
+            centered ? "" : "mb-3"
+          }`}
           role="doc-subtitle"
         >
           {eyebrow}
@@ -29,12 +27,12 @@ export function SectionHeading({
       )}
       <h2
         id={headingId}
-        className="text-3xl font-medium tracking-[-0.85px] text-[#171717] md:text-5xl md:leading-[60px]"
+        className="text-[26px] font-medium tracking-[-0.6px] text-[#171717] sm:text-3xl md:text-5xl md:leading-[60px]"
       >
         {title}
       </h2>
       <p
-        className={`mt-4 max-w-[672px] text-lg leading-[1.5] text-[#525252] md:text-xl ${
+        className={`mt-2 max-w-[672px] text-[12px] leading-[1.45] text-[#525252] sm:mt-4 sm:text-lg md:text-xl ${
           centered ? "mx-auto" : ""
         }`}
       >
