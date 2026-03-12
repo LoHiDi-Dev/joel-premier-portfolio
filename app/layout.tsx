@@ -9,11 +9,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Joel Stefano Premier | Senior Product Designer",
+  title: {
+    default: "Joel Premier | Senior Product Designer | Open to New Opportunities",
+    template: "%s | Joel Premier",
+  },
   description:
     "Senior Product Designer focused on complex digital products, systems thinking, and accessibility. Designing accessible, systems-driven digital experiences.",
   openGraph: {
-    title: "Joel Stefano Premier | Senior Product Designer",
+    title: "Joel Premier | Senior Product Designer | Open to New Opportunities",
     description:
       "Senior Product Designer focused on complex digital products, systems thinking, and accessibility.",
     type: "website",

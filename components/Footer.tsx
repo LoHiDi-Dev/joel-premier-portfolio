@@ -1,57 +1,51 @@
 import Link from "next/link";
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
+  const navLinkClass =
+    "text-xs font-medium text-[#a8a8a8] transition-colors duration-200 hover:text-white hover:underline hover:underline-offset-2 hover:decoration-white/60 focus:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#525252] focus-visible:ring-offset-2 focus-visible:ring-offset-[#171717] sm:text-sm";
 
   return (
     <footer
-      className="border-t border-[#262626] bg-[#171717] px-3 pt-8 pb-4 sm:px-6 sm:pt-12 md:px-16"
+      className="border-t border-[#2e2e2e] bg-[#171717] px-3 pt-10 pb-6 sm:px-6 sm:pt-14 sm:pb-8 md:px-16"
       role="contentinfo"
     >
       <div className="mx-auto max-w-[1280px]">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
-          <div className="space-y-1.5">
-            <p className="text-[11px] text-[#a1a1a1] sm:text-sm">Joel Stefano Premier</p>
-            <p className="max-w-[430px] text-[10px] leading-[1.5] text-[#a1a1a1] sm:text-xs md:text-sm">
-              Senior Product Designer bringing structure, usability, and
-              thoughtful execution to digital product teams.
+        <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+          <div className="space-y-2.5">
+            <p className="text-[13px] font-medium text-[#b3b3b3] sm:text-sm">
+              Joel Premier
+            </p>
+            <p className="max-w-[430px] whitespace-pre-line text-[13px] leading-[1.6] text-[#adadad] sm:text-sm sm:leading-[1.6] md:leading-[1.55]">
+              {`Senior Product Designer bringing structure, usability,
+and thoughtful execution to digital product teams.`}
             </p>
           </div>
 
-          <nav className="flex flex-wrap gap-3 sm:gap-6" aria-label="Footer navigation">
-            <Link
-              href="/work"
-              className="text-[11px] font-medium text-[#a1a1a1] transition-colors hover:text-white focus:text-white sm:text-xs md:text-sm"
-            >
+          <nav
+            className="flex flex-wrap gap-x-5 gap-y-2 sm:gap-x-6 sm:gap-y-0"
+            aria-label="Footer navigation"
+          >
+            <Link href="/work" className={navLinkClass}>
               Work
             </Link>
-            <Link
-              href="/about"
-              className="text-[11px] font-medium text-[#a1a1a1] transition-colors hover:text-white focus:text-white sm:text-xs md:text-sm"
-            >
+            <Link href="/about" className={navLinkClass}>
               About
             </Link>
-            <Link
-              href="/contact"
-              className="text-[11px] font-medium text-[#a1a1a1] transition-colors hover:text-white focus:text-white sm:text-xs md:text-sm"
-            >
+            <Link href="/contact" className={navLinkClass}>
               Contact
             </Link>
-            <Link
-              href="/resume"
-              className="text-[11px] font-medium text-[#a1a1a1] transition-colors hover:text-white focus:text-white sm:text-xs md:text-sm"
-            >
+            <Link href="/resume" className={navLinkClass}>
               Resume
             </Link>
           </nav>
         </div>
 
-        <div className="mt-6 border-t border-[#262626] pt-4 text-center">
-          <p className="text-[10px] leading-[1.5] text-[#a1a1a1] sm:text-xs">
-            © {currentYear} Joel Stefano Premier. All rights reserved.
+        <div className="mt-8 border-t border-[#2e2e2e] pt-5 text-center sm:mt-10 sm:pt-6">
+          <p className="text-xs leading-[1.6] text-[#a8a8a8] sm:text-[13px]">
+            All work presented for portfolio purposes.
           </p>
-          <p className="mt-0.5 text-[10px] leading-[1.5] text-[#a1a1a1] sm:text-xs">
-            Designed & developed with ❤️ in Dallas, Texas.
+          <p className="mt-1 text-xs leading-[1.6] text-[#a8a8a8] sm:text-[13px]">
+            Designed & developed with ❤️ in Dallas, Texas🇺🇸.
           </p>
         </div>
       </div>

@@ -36,12 +36,12 @@ Open [http://localhost:3000](http://localhost:3000).
 ## Case Study Routes
 
 - `/work/ulta-beauty`
-- `/work/cvs-aetna`
-- `/work/tractor-supply`
+- `/work/cvs-health-aetna`
+- `/work/tractor-supply-co`
 - `/work/american-airlines`
 - `/work/medivite`
-- `/work/st-jude-navigation`
-- `/work/reno-tx`
+- `/work/st-jude-navigation-study`
+- `/work/reno-tx-civic-website-redesign`
 
 ## Deployment
 

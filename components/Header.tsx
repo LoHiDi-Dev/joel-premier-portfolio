@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { Eye, Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { motion, useReducedMotion } from "framer-motion";
+import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const NAV_LINKS = [
@@ -10,8 +12,25 @@ const NAV_LINKS = [
   { href: "/contact", label: "Contact" },
 ] as const;
 
+const SCROLL_THRESHOLD = 32;
+const HERO_VISIBILITY_THRESHOLD = 0.15;
+
+const NAV_TRANSITION = {
+  duration: 0.34,
+  ease: [0.22, 1, 0.36, 1] as const,
+};
+
+const NAV_TRANSITION_REDUCED = {
+  duration: 0.1,
+  ease: [0.22, 1, 0.36, 1] as const,
+};
+
 export function Header() {
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const reducedMotion = Boolean(useReducedMotion());
+  const isHomepage = pathname === "/";
 
   const closeMenu = () => setMenuOpen(false);
 
@@ -23,22 +42,70 @@ export function Header() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    if (isHomepage) {
+      const hero = document.getElementById("hero");
+      if (!hero) {
+        setIsScrolled(false);
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          setIsScrolled((entry?.intersectionRatio ?? 1) < HERO_VISIBILITY_THRESHOLD);
+        },
+        {
+          threshold: [0, HERO_VISIBILITY_THRESHOLD, 0.5, 1],
+          rootMargin: "0px",
+        }
+      );
+      observer.observe(hero);
+      return () => observer.disconnect();
+    }
+
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > SCROLL_THRESHOLD);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isHomepage]);
+
+  const navVariants = {
+    top: {
+      backgroundColor: "rgba(255, 255, 255, 0.82)",
+      borderColor: "rgba(229, 229, 229, 0.55)",
+      boxShadow: "0 0 0 rgba(0, 0, 0, 0)",
+      backdropFilter: "blur(6px)",
+    },
+    scrolled: {
+      backgroundColor: "rgba(255, 255, 255, 0.97)",
+      borderColor: "rgba(229, 229, 229, 1)",
+      boxShadow: "0 1px 10px rgba(0, 0, 0, 0.04)",
+      backdropFilter: "blur(12px)",
+    },
+  };
+
   return (
-    <header
-      className="sticky top-0 z-50 border-b border-[#e5e5e5] bg-white/90 backdrop-blur-sm"
+    <motion.header
+      className="sticky top-0 z-50 border-b"
       role="banner"
+      initial={false}
+      animate={isScrolled ? "scrolled" : "top"}
+      variants={navVariants}
+      transition={reducedMotion ? NAV_TRANSITION_REDUCED : NAV_TRANSITION}
     >
       <nav
         className="mx-auto flex h-[56px] max-w-[1408px] items-center justify-between px-3 sm:px-6 md:h-[72px] md:px-16"
         aria-label="Main navigation"
       >
-        <Link
+        <a
           href="/"
-          aria-label="Joel Stefano Premier - Home"
+          aria-label="Joel Premier - Home"
           className="text-[11px] font-medium tracking-[-0.2px] text-[#171717] sm:text-sm md:text-[20px] md:tracking-[-0.45px]"
         >
-          Joel Stefano Premier
-        </Link>
+          Joel Premier
+        </a>
 
         {/* Desktop nav */}
         <div className="hidden items-center gap-3 sm:gap-5 md:flex md:gap-10">
@@ -53,9 +120,8 @@ export function Header() {
           ))}
           <Link
             href="/resume"
-            className="flex h-8 items-center gap-1.5 rounded-full border border-[#171717] bg-white px-4 text-[11px] font-medium text-[#171717] transition-colors hover:bg-[#171717] hover:text-white focus:bg-[#171717] focus:text-white sm:h-10 sm:gap-2 sm:px-6 sm:text-xs md:h-14 md:px-8 md:text-base"
+            className="flex h-8 items-center rounded-full border border-[#171717] bg-white px-4 text-[11px] font-medium text-[#171717] transition-colors hover:bg-[#171717] hover:text-white focus:bg-[#171717] focus:text-white sm:h-10 sm:px-6 sm:text-xs md:h-14 md:px-8 md:text-base"
           >
-            <Eye className="h-3.5 w-3.5 sm:h-4 sm:w-4" aria-hidden />
             Resume
           </Link>
         </div>
@@ -105,13 +171,12 @@ export function Header() {
           <Link
             href="/resume"
             onClick={closeMenu}
-            className="mt-2 flex h-12 items-center justify-center gap-2 rounded-full border border-[#171717] bg-white px-6 text-base font-medium text-[#171717] transition-colors hover:bg-[#171717] hover:text-white focus:bg-[#171717] focus:text-white focus:outline-none"
+            className="mt-2 flex h-12 items-center justify-center rounded-full border border-[#171717] bg-white px-6 text-base font-medium text-[#171717] transition-colors hover:bg-[#171717] hover:text-white focus:bg-[#171717] focus:text-white focus:outline-none"
           >
-            <Eye className="h-4 w-4" aria-hidden />
             Resume
           </Link>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }

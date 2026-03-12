@@ -35,7 +35,7 @@ export function SectionHeading({
         {title}
       </HeadingTag>
       <p
-        className={`mt-2 max-w-[672px] text-[12px] leading-[1.45] text-[#525252] sm:mt-4 sm:text-lg md:text-xl ${
+        className={`mt-2 max-w-[672px] whitespace-pre-line text-[13px] leading-[1.5] text-[#525252] sm:mt-4 sm:text-base sm:leading-[1.55] md:text-lg md:text-xl md:leading-[1.5] ${
           centered ? "mx-auto" : ""
         }`}
       >

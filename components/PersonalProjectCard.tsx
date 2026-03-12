@@ -23,20 +23,27 @@ export function PersonalProjectCard({ project }: PersonalProjectCardProps) {
         />
       </div>
 
-      <div className="space-y-1">
-        <h3 className="text-sm font-medium leading-tight tracking-[-0.2px] text-[#171717] sm:text-sm md:text-xl md:tracking-[-0.95px]">
+      <div className="flex flex-col">
+        <h3 className="mb-3 text-sm font-medium leading-tight tracking-[-0.2px] text-[#171717] sm:text-base md:text-xl md:tracking-[-0.95px]">
           {project.title}
         </h3>
-        <p className="text-xs leading-[1.3] text-[#525252] sm:text-xs md:text-base md:leading-[1.45]">
+        <p className="mb-5 text-xs leading-[1.4] text-[#525252] sm:text-xs md:text-base md:leading-[1.45]">
           {project.description}
         </p>
+        <div>
         <Link
           href={`/work/${project.slug}`}
-          className="inline-flex items-center gap-1 text-[9px] font-medium text-[#171717] transition-opacity hover:opacity-80 focus:opacity-80 sm:text-xs md:gap-2 md:text-base"
+          className="group inline-flex items-center gap-1 text-[10px] font-medium text-[#171717] transition-opacity hover:opacity-80 focus:opacity-80 sm:text-xs md:gap-2 md:text-base"
         >
           View Case Study
-          <span aria-hidden="true">→</span>
+          <span
+            aria-hidden="true"
+            className="transition-transform duration-200 group-hover:translate-x-0.5 group-focus:translate-x-0.5"
+          >
+            →
+          </span>
         </Link>
+        </div>
       </div>
     </article>
   );

@@ -34,7 +34,7 @@ export function ProjectSupportCard({ project }: ProjectSupportCardProps) {
         </div>
 
         <p className="text-[9px] font-semibold uppercase tracking-wider text-[#737373] sm:text-[10px] md:text-sm">
-          Role · {project.role}
+          Role <span className="font-semibold">·</span> {project.role}
         </p>
 
           <p className="text-sm leading-[1.35] text-[#404040] sm:text-xs md:text-lg">
@@ -43,10 +43,15 @@ export function ProjectSupportCard({ project }: ProjectSupportCardProps) {
 
         <Link
           href={`/work/${project.slug}`}
-          className="inline-flex items-center gap-1 text-[10px] font-medium text-[#171717] transition-opacity hover:opacity-80 focus:opacity-80 sm:text-xs md:gap-2 md:text-base"
+          className="group inline-flex items-center gap-1 text-[10px] font-medium text-[#171717] transition-opacity hover:opacity-80 focus:opacity-80 sm:text-xs md:gap-2 md:text-base"
         >
           View Case Study
-          <span aria-hidden="true">→</span>
+          <span
+            aria-hidden="true"
+            className="transition-transform duration-200 group-hover:translate-x-0.5 group-focus:translate-x-0.5"
+          >
+            →
+          </span>
         </Link>
       </div>
     </article>
