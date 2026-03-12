@@ -4,7 +4,7 @@ export function CTASection() {
   return (
     <section
       id="about"
-      className="bg-[#171717] px-3 py-12 sm:px-6 sm:py-20 md:py-24"
+      className="bg-[#171717] px-3 py-12 sm:px-6 sm:py-20 md:px-16 md:py-24"
       aria-labelledby="cta-heading"
     >
       <div className="mx-auto max-w-[896px] text-center">
@@ -24,7 +24,7 @@ export function CTASection() {
 
         <div className="mt-6 flex flex-wrap items-center justify-center gap-2 sm:mt-10 sm:gap-4">
           <a
-            href="mailto:hello@joelstefanopremier.com"
+            href="mailto:jojo.s.1er@gmail.com"
             className="flex h-8 items-center justify-center rounded-full bg-white px-4 text-[11px] font-medium text-[#171717] transition-opacity hover:opacity-90 focus:opacity-90 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#171717] sm:h-10 sm:px-6 sm:text-xs md:h-14 md:px-8 md:text-base"
           >
             Let&apos;s Connect

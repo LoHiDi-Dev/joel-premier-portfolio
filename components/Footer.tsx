@@ -14,7 +14,7 @@ export function Footer() {
             <p className="text-[11px] text-[#a1a1a1] sm:text-sm">Joel Stefano Premier</p>
             <p className="max-w-[430px] text-[10px] leading-[1.5] text-[#a1a1a1] sm:text-xs md:text-sm">
               Senior Product Designer focused on complex digital products,
-              systems thinking, and accessibility.
+              systems thinking, accessibility, and outcomes that matter.
             </p>
           </div>
 
