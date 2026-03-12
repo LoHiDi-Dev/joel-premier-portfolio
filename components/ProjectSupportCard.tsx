@@ -15,7 +15,7 @@ export function ProjectSupportCard({ project }: ProjectSupportCardProps) {
           alt={project.imageAlt}
           fill
           className="object-cover opacity-90"
-          sizes="(max-width: 768px) 50vw, 50vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 50vw"
         />
         <div
           className="absolute inset-0 bg-gradient-to-b from-black/10 to-transparent"
@@ -25,7 +25,7 @@ export function ProjectSupportCard({ project }: ProjectSupportCardProps) {
 
       <div className="space-y-1 sm:space-y-2">
         <div className="flex flex-wrap items-baseline gap-1">
-          <h3 className="text-[12px] font-medium tracking-[-0.2px] text-[#171717] sm:text-lg md:text-3xl">
+          <h3 className="text-base font-medium tracking-[-0.2px] text-[#171717] sm:text-lg md:text-3xl">
             {project.title}
           </h3>
           <span className="text-[10px] text-[#525252] sm:text-xs md:text-base">
@@ -37,7 +37,7 @@ export function ProjectSupportCard({ project }: ProjectSupportCardProps) {
           Role · {project.role}
         </p>
 
-        <p className="text-[10px] leading-[1.35] text-[#404040] sm:text-xs md:text-lg">
+          <p className="text-sm leading-[1.35] text-[#404040] sm:text-xs md:text-lg">
           {project.description}
         </p>
 

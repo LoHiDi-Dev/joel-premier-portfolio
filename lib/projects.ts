@@ -17,22 +17,22 @@ export interface PersonalProject {
   imageAlt: string;
 }
 
-// Figma asset URLs - replace with local paths for production longevity
+// Figma design asset URLs (from JP-I-Portfolio-UX-PILOT, node 9:1112)
 const IMAGES = {
   ultaBeauty:
-    "https://www.figma.com/api/mcp/asset/2ff42803-f98f-4c11-ab29-2e752121efe5",
+    "https://www.figma.com/api/mcp/asset/efefe37d-6f53-4d6d-af7d-7c2ffc136735",
   cvsAetna:
-    "https://www.figma.com/api/mcp/asset/992294c6-054a-4c49-bc39-8a4a890f2f3d",
+    "https://www.figma.com/api/mcp/asset/45b896b9-0d65-4338-9605-a5869094bcc7",
   tractorSupply:
-    "https://www.figma.com/api/mcp/asset/41822b78-6225-4844-9dcb-47704ddbba93",
+    "https://www.figma.com/api/mcp/asset/26ab01dc-ae7e-4267-8fee-39ef828d9426",
   americanAirlines:
-    "https://www.figma.com/api/mcp/asset/54817338-20aa-4c30-83d6-2d8c5ff89718",
+    "https://www.figma.com/api/mcp/asset/f79a1d5a-a38e-4d92-a193-74c2b8eb708f",
   medivite:
-    "https://www.figma.com/api/mcp/asset/41822b78-6225-4844-9dcb-47704ddbba93",
+    "https://www.figma.com/api/mcp/asset/43e70474-bb35-498f-879e-8ecf2358c593",
   stJude:
-    "https://www.figma.com/api/mcp/asset/9f060320-046b-4178-bf66-2e16b9d44a46",
+    "https://www.figma.com/api/mcp/asset/032a5f14-5016-43e8-a400-dde92adc93de",
   renoTx:
-    "https://www.figma.com/api/mcp/asset/0e7a51d0-fe36-42ba-b1d6-f61395075308",
+    "https://www.figma.com/api/mcp/asset/db2a842f-5672-485d-932d-00f7ff07f945",
 };
 
 export const FEATURED_PROJECTS: Project[] = [

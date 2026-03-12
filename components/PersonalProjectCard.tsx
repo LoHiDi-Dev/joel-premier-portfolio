@@ -15,7 +15,7 @@ export function PersonalProjectCard({ project }: PersonalProjectCardProps) {
           alt={project.imageAlt}
           fill
           className="object-cover opacity-90"
-          sizes="(max-width: 768px) 33vw, 33vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
         />
         <div
           className="absolute inset-0 bg-gradient-to-b from-black/10 to-transparent"
@@ -24,10 +24,10 @@ export function PersonalProjectCard({ project }: PersonalProjectCardProps) {
       </div>
 
       <div className="space-y-1">
-        <h3 className="text-[10px] font-medium leading-tight tracking-[-0.2px] text-[#171717] sm:text-sm md:text-xl md:tracking-[-0.95px]">
+        <h3 className="text-sm font-medium leading-tight tracking-[-0.2px] text-[#171717] sm:text-sm md:text-xl md:tracking-[-0.95px]">
           {project.title}
         </h3>
-        <p className="text-[9px] leading-[1.3] text-[#525252] sm:text-xs md:text-base md:leading-[1.45]">
+        <p className="text-xs leading-[1.3] text-[#525252] sm:text-xs md:text-base md:leading-[1.45]">
           {project.description}
         </p>
         <Link

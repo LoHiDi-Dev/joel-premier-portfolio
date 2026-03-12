@@ -50,7 +50,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       <main className="min-h-screen">
         <article className="mx-auto max-w-[896px] px-6 py-24 md:py-32">
           <Link
-            href="/#work"
+            href="/work"
             className="mb-12 inline-flex items-center gap-2 text-[#737373] transition-colors hover:text-[#171717]"
           >
             ← Back to Work
@@ -98,7 +98,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
               future expansion.
             </p>
             <Link
-              href="/#work"
+              href="/work"
               className="inline-flex items-center gap-2 font-medium text-[#171717] transition-opacity hover:opacity-80"
             >
               View all work

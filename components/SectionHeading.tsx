@@ -4,6 +4,7 @@ interface SectionHeadingProps {
   description: string;
   centered?: boolean;
   headingId?: string;
+  level?: 1 | 2;
 }
 
 export function SectionHeading({
@@ -12,7 +13,9 @@ export function SectionHeading({
   description,
   centered = false,
   headingId,
+  level = 2,
 }: SectionHeadingProps) {
+  const HeadingTag = level === 1 ? "h1" : "h2";
   return (
     <div className={centered ? "text-center" : ""}>
       {eyebrow && (
@@ -25,12 +28,12 @@ export function SectionHeading({
           {eyebrow}
         </p>
       )}
-      <h2
+      <HeadingTag
         id={headingId}
-        className="text-[26px] font-medium tracking-[-0.6px] text-[#171717] sm:text-3xl md:text-5xl md:leading-[60px]"
+        className="text-xl font-medium tracking-[-0.6px] text-[#171717] sm:text-3xl md:text-5xl md:leading-[60px]"
       >
         {title}
-      </h2>
+      </HeadingTag>
       <p
         className={`mt-2 max-w-[672px] text-[12px] leading-[1.45] text-[#525252] sm:mt-4 sm:text-lg md:text-xl ${
           centered ? "mx-auto" : ""
