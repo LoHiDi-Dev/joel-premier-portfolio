@@ -7,7 +7,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 export const metadata = {
   title: "Resume | Joel Stefano Premier",
   description:
-    "A formal overview of experience across product design, UX strategy, design systems, and implementation-aware delivery.",
+    "A formal overview of experience across product design, UX strategy, design systems, and delivery.",
 };
 
 export default function ResumePage() {
@@ -24,7 +24,7 @@ export default function ResumePage() {
               <SectionHeading
                 headingId="resume-heading"
                 title="Resume"
-                description="A formal overview of my experience across product design, UX strategy, design systems, and implementation-aware delivery."
+                description="A formal overview of my experience across product design, UX strategy, design systems, and delivery."
                 level={1}
               />
             </div>

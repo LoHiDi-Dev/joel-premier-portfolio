@@ -6,7 +6,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 export const metadata = {
   title: "Contact | Joel Stefano Premier",
   description:
-    "Reach out about senior product design roles and select consulting engagements across product, systems, and experience design.",
+    "Reach out about senior product design roles and select consulting engagements where thoughtful product work can make a clear difference.",
 };
 
 const CONTACT_ITEMS = [
@@ -41,17 +41,17 @@ const VALUE_ITEMS = [
   {
     title: "Enterprise Product Design",
     description:
-      "Teams shaping complex services or platforms where usability, clarity, and business priorities need to work together.",
+      "Teams shaping multi-step services or platforms where usability, decision-making, and business priorities need to work together.",
   },
   {
     title: "Design Systems & Accessibility",
     description:
-      "Organizations investing in scalable systems, consistent interfaces, and accessible patterns that raise quality across products.",
+      "Organizations investing in shared foundations, consistent interfaces, and inclusive patterns that improve quality across products.",
   },
   {
     title: "Cross-Functional Collaboration",
     description:
-      "Product environments where design, engineering, content, and analytics partner closely to turn ambiguity into thoughtful, shippable decisions.",
+      "Product environments where design, engineering, content, and analytics partner closely to turn ambiguity into decisions teams can ship.",
   },
 ] as const;
 
@@ -69,7 +69,7 @@ export default function ContactPage() {
               <SectionHeading
                 headingId="contact-heading"
                 title="Let's Connect"
-                description="Open to senior product design roles and select consulting engagements where clarity, collaboration, and thoughtful execution matter."
+                description="Open to senior product design roles and select consulting engagements where thoughtful product design can improve the experience and help teams move forward."
                 level={1}
               />
             </div>
@@ -127,19 +127,18 @@ export default function ContactPage() {
 
             <div className="mt-12 border-t border-[#e5e5e5] pt-10 sm:mt-16 md:mt-24 md:pt-12">
               <p className="mb-4 text-[11px] font-semibold uppercase tracking-[1.8px] text-[#525252] sm:mb-6 sm:text-sm">
-                How I Work
+                Opportunity Fit
               </p>
               <div className="space-y-5 max-w-[896px]">
                 <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
-                  I&apos;m a strong fit for teams working through complex flows,
-                  service ecosystems, or platform decisions where clear
-                  thinking and strong collaboration matter.
+                  I&apos;m a strong fit for teams hiring across core product,
+                  service flows, platform work, or system-level UX where senior
+                  product design judgment is needed.
                 </p>
                 <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
-                  If you&apos;re hiring for a senior product design role or
-                  exploring consulting support, I bring structure, momentum,
-                  and thoughtful partnership from early definition through
-                  delivery.
+                  If the work calls for thoughtful design, close partnership,
+                  and steady execution from definition through delivery,
+                  I&apos;d be glad to connect.
                 </p>
               </div>
             </div>

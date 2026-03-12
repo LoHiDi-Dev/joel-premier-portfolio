@@ -47,8 +47,8 @@ export function Hero() {
         </h1>
 
         <p className="mx-auto mt-2 max-w-[780px] text-center text-[13px] leading-[1.45] text-[#525252] sm:mt-3 sm:text-base md:mt-4 md:text-2xl">
-          I design accessible, systems-driven digital experiences that reduce
-          friction, improve clarity, and drive measurable outcomes.
+          I design system-aware digital experiences that reduce friction,
+          support better decisions, and move work forward.
         </p>
 
         <div className="mt-4 flex flex-wrap items-center justify-center gap-2 sm:mt-5 sm:gap-4 md:mt-6">

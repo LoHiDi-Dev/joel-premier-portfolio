@@ -25,7 +25,7 @@ export default function Home() {
               <SectionHeading
                 headingId="featured-work-heading"
                 title="Featured Work"
-                description="Selected case studies spanning commerce, healthcare, travel, and enterprise product design."
+                description="Selected case studies from commerce, healthcare, travel, and enterprise teams."
               />
             </div>
 

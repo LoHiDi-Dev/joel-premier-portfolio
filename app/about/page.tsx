@@ -13,17 +13,17 @@ const FOCUS_AREAS = [
   {
     title: "Product Design",
     description:
-      "Designing digital products with emphasis on clarity, usability, and measurable business impact.",
+      "Shaping digital products with emphasis on usability, coherence, and meaningful business impact.",
   },
   {
     title: "Design Systems",
     description:
-      "Building scalable systems that create consistency across teams, speed up delivery, and strengthen product quality.",
+      "Building shared foundations that create consistency across teams, speed delivery, and strengthen product quality.",
   },
   {
     title: "Accessibility & Implementation",
     description:
-      "Designing with accessibility in mind and partnering closely with engineering to support thoughtful, implementation-aware outcomes.",
+      "Working accessibly from the start and partnering closely with engineering so design decisions hold up in implementation.",
   },
 ] as const;
 
@@ -48,17 +48,17 @@ export default function AboutPage() {
 
             <div className="max-w-[896px] space-y-5">
               <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
-                I design digital products with a focus on clarity, structure,
-                and measurable impact. My work centers on making demanding
+                I design digital products with a focus on structure, usability,
+                and meaningful impact. My work centers on making demanding
                 experiences easier to understand, easier to use, and more
-                effective for both the people using them and the teams building
-                them.
+                effective for the people navigating them and the teams
+                delivering them.
               </p>
               <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
                 Across e-commerce, healthcare, travel, and enterprise products,
-                I&apos;ve led work spanning discovery, flows, navigation, design
-                systems, and implementation-aware collaboration. I care deeply
-                about reducing friction, improving accessibility, and creating
+                I&apos;ve led work spanning discovery, flows, navigation, shared
+                systems, and close product-engineering partnership. I care
+                deeply about reducing friction, improving access, and creating
                 experiences that hold up under real-world complexity.
               </p>
               <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
@@ -92,17 +92,17 @@ export default function AboutPage() {
               </p>
               <div className="max-w-[896px] space-y-5">
                 <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
-                  My approach is grounded in clarity over complexity. I look for
+                  My approach is grounded in usefulness over noise. I look for
                   the structure beneath a problem, simplify where it matters,
-                  and design systems that support both immediate needs and
+                  and build systems that support both immediate needs and
                   long-term growth.
                 </p>
                 <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
                   I work closely with product and engineering to shape
-                  accessible, scalable experiences that align user needs with
-                  business priorities. The goal is not just polished screens,
-                  but thoughtful decisions that improve how a product performs
-                  and how a team delivers it.
+                  scalable experiences that align user needs with business
+                  priorities. The goal is not just polished screens, but sound
+                  decisions that improve how a product works and how a team
+                  delivers it.
                 </p>
               </div>
             </div>
@@ -113,15 +113,13 @@ export default function AboutPage() {
               </p>
               <div className="max-w-[896px] space-y-5">
                 <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
-                  I&apos;m focused on product work where systems thinking,
-                  implementation-aware collaboration, and accessible design can
-                  meaningfully improve the user experience.
+                  I&apos;m most interested in product work where fragmented
+                  journeys, growing systems, and delivery realities need to be
+                  brought into better alignment.
                 </p>
                 <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
-                  I&apos;m especially drawn to teams navigating product
-                  complexity, growing systems, or service journeys where
-                  thoughtful design can bring more clarity, consistency, and
-                  confidence.
+                  The problems I enjoy most require design judgment, close
+                  partnership, and steady execution across teams.
                 </p>
               </div>
             </div>
