@@ -115,7 +115,7 @@ export default function ContactPage() {
                       <h3 className="text-[11px] font-semibold leading-tight tracking-[-0.2px] text-[#171717] sm:text-base md:text-xl">
                         {item.title}
                       </h3>
-                      <p className="mt-1 max-w-[896px] text-[11px] leading-[1.5] text-[#525252] sm:mt-2 sm:text-sm md:text-xl md:leading-[1.55]">
+                      <p className="mt-1 max-w-[896px] text-[11px] leading-[1.5] text-[#525252] sm:mt-2 sm:text-sm md:text-base md:leading-[1.55]">
                         {item.description}
                       </p>
                     </li>

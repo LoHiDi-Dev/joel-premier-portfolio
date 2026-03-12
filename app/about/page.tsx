@@ -6,14 +6,14 @@ import { SectionHeading } from "@/components/SectionHeading";
 export const metadata = {
   title: "About | Joel Stefano Premier",
   description:
-    "Senior Product Designer focused on complex digital products, systems thinking, accessibility, and measurable outcomes.",
+    "Senior Product Designer focused on complex digital products, systems thinking, accessibility, and outcomes that matter.",
 };
 
 const FOCUS_AREAS = [
   {
     title: "Product Design",
     description:
-      "Designing complex digital products with a strong emphasis on clarity, usability, and measurable business impact.",
+      "Designing digital products with emphasis on clarity, usability, and measurable business impact.",
   },
   {
     title: "Design Systems",
@@ -41,31 +41,30 @@ export default function AboutPage() {
               <SectionHeading
                 headingId="about-heading"
                 title="About"
-                description="Senior Product Designer focused on complex digital products, systems thinking, accessibility, and measurable outcomes."
+                description="Senior Product Designer focused on complex digital products, systems thinking, accessibility, and outcomes that matter."
                 level={1}
               />
             </div>
 
             <div className="max-w-[896px] space-y-5">
               <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
-                I design complex digital products with a focus on clarity,
-                systems thinking, and measurable outcomes. My work centers on
-                making demanding experiences feel easier to understand, easier
-                to use, and more effective for both the people using them and
-                the teams building them.
+                I design digital products with a focus on clarity, structure,
+                and measurable impact. My work centers on making demanding
+                experiences easier to understand, easier to use, and more
+                effective for both the people using them and the teams building
+                them.
               </p>
               <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
                 Across e-commerce, healthcare, travel, and enterprise products,
-                I&apos;ve led work that spans discovery, flows, navigation,
-                design systems, and implementation-aware collaboration. I care
-                deeply about reducing friction, improving accessibility, and
-                creating digital experiences that hold up under real-world
-                complexity.
+                I&apos;ve led work spanning discovery, flows, navigation, design
+                systems, and implementation-aware collaboration. I care deeply
+                about reducing friction, improving accessibility, and creating
+                experiences that hold up under real-world complexity.
               </p>
               <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
-                I do my best work in close partnership with product,
-                engineering, content, and leadership, connecting user needs to
-                business goals with a steady, thoughtful approach to delivery.
+                I do my best work in close partnership with product, engineering,
+                content, and leadership—connecting user needs to business goals
+                through a steady, thoughtful approach to delivery.
               </p>
             </div>
 
@@ -93,10 +92,10 @@ export default function AboutPage() {
               </p>
               <div className="max-w-[896px] space-y-5">
                 <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
-                  My approach is grounded in clarity over complexity. I look
-                  for the structure underneath a problem, simplify where it
-                  matters, and design systems that can support both immediate
-                  needs and long-term growth.
+                  My approach is grounded in clarity over complexity. I look for
+                  the structure beneath a problem, simplify where it matters,
+                  and design systems that support both immediate needs and
+                  long-term growth.
                 </p>
                 <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
                   I work closely with product and engineering to shape

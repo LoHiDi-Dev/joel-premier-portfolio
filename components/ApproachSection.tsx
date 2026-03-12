@@ -5,11 +5,11 @@ export function ApproachSection() {
   return (
     <section
       id="process"
-      className="px-3 py-14 sm:px-6 sm:py-20 md:py-24"
+      className="px-3 py-14 sm:px-6 sm:py-20 md:px-16 md:py-24"
       aria-labelledby="approach-heading"
     >
-      <div className="mx-auto max-w-[1152px]">
-        <div className="mb-8 text-center sm:mb-12">
+      <div className="mx-auto max-w-[1280px]">
+        <div className="mb-6 text-center sm:mb-10 md:mb-16">
           <SectionHeading
             headingId="approach-heading"
             title="Systems-Driven Design"
@@ -24,7 +24,7 @@ export function ApproachSection() {
               <h3 className="text-[11px] font-semibold leading-tight tracking-[-0.2px] text-[#171717] sm:text-base md:text-xl">
                 {item.title}
               </h3>
-              <p className="mt-1 text-[10px] leading-[1.35] text-[#525252] sm:mt-2 sm:text-sm md:text-base">
+              <p className="mt-1 text-[11px] leading-[1.5] text-[#525252] sm:mt-2 sm:text-sm md:text-base md:leading-[1.55]">
                 {item.description}
               </p>
             </div>

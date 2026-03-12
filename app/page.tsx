@@ -38,7 +38,7 @@ export default function Home() {
             <div className="mt-12 text-center sm:mt-16">
               <Link
                 href="/work"
-                className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#171717] px-8 text-base font-medium text-white transition-opacity hover:opacity-90 focus:opacity-90"
+                className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#171717] px-8 text-base font-medium text-white transition-opacity hover:opacity-90 focus:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#171717] focus:ring-offset-2"
               >
                 View all work
                 <span aria-hidden="true">→</span>

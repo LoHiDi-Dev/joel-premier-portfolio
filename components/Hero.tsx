@@ -54,7 +54,7 @@ export function Hero() {
         <div className="mt-4 flex flex-wrap items-center justify-center gap-2 sm:mt-5 sm:gap-4 md:mt-6">
           <Link
             href="/work"
-            className="flex h-8 items-center justify-center gap-1 rounded-full bg-[#171717] px-4 text-[11px] font-medium text-white shadow-sm transition-opacity hover:opacity-90 focus:opacity-90 sm:h-10 sm:px-6 sm:text-xs md:h-14 md:px-8 md:text-base"
+            className="flex h-8 items-center justify-center gap-1 rounded-full bg-[#171717] px-4 text-[11px] font-medium text-white shadow-sm transition-opacity hover:opacity-90 focus:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#171717] focus:ring-offset-2 sm:h-10 sm:px-6 sm:text-xs md:h-14 md:px-8 md:text-base"
           >
             View Case Studies
             <span aria-hidden="true">→</span>
@@ -62,7 +62,7 @@ export function Hero() {
           <a
             href="/Joel_Premier_Senior_Product_Designer_Resume.pdf"
             download="Joel_Premier_Resume.pdf"
-            className="flex h-8 items-center justify-center gap-1.5 rounded-full border border-[#171717] bg-white px-4 text-[11px] font-medium text-[#171717] transition-colors hover:bg-[#171717] hover:text-white focus:bg-[#171717] focus:text-white sm:h-10 sm:gap-2 sm:px-6 sm:text-xs md:h-14 md:px-8 md:text-base"
+            className="flex h-8 items-center justify-center gap-1.5 rounded-full border border-[#171717] bg-white px-4 text-[11px] font-medium text-[#171717] transition-colors hover:bg-[#171717] hover:text-white focus:bg-[#171717] focus:text-white focus:outline-none focus:ring-2 focus:ring-[#171717] focus:ring-offset-2 sm:h-10 sm:gap-2 sm:px-6 sm:text-xs md:h-14 md:px-8 md:text-base"
           >
             <Download className="h-3.5 w-3.5 sm:h-4 sm:w-4" aria-hidden />
             Resume
