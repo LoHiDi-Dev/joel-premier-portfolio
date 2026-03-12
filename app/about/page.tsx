@@ -113,14 +113,15 @@ export default function AboutPage() {
               </p>
               <div className="max-w-[896px] space-y-5">
                 <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
-                  I&apos;m focused on complex digital product work where systems
-                  thinking, implementation-aware collaboration, and accessible
-                  design can meaningfully improve the user experience.
+                  I&apos;m focused on product work where systems thinking,
+                  implementation-aware collaboration, and accessible design can
+                  meaningfully improve the user experience.
                 </p>
                 <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
-                  I&apos;m open to senior product design roles and select
-                  consulting engagements where thoughtful design can help teams
-                  move with more clarity, consistency, and confidence.
+                  I&apos;m especially drawn to teams navigating product
+                  complexity, growing systems, or service journeys where
+                  thoughtful design can bring more clarity, consistency, and
+                  confidence.
                 </p>
               </div>
             </div>

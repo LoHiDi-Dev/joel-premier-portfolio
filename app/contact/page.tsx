@@ -6,7 +6,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 export const metadata = {
   title: "Contact | Joel Stefano Premier",
   description:
-    "Get in touch about senior product design roles and select consulting engagements focused on thoughtful UX, design systems, and complex digital products.",
+    "Reach out about senior product design roles and select consulting engagements across product, systems, and experience design.",
 };
 
 const CONTACT_ITEMS = [
@@ -41,17 +41,17 @@ const VALUE_ITEMS = [
   {
     title: "Enterprise Product Design",
     description:
-      "Complex digital products where usability, clarity, and business goals need to work together across the full product experience.",
+      "Teams shaping complex services or platforms where usability, clarity, and business priorities need to work together.",
   },
   {
     title: "Design Systems & Accessibility",
     description:
-      "Teams investing in scalable systems, consistent interfaces, and accessibility-minded design that improves quality across products.",
+      "Organizations investing in scalable systems, consistent interfaces, and accessible patterns that raise quality across products.",
   },
   {
     title: "Cross-Functional Collaboration",
     description:
-      "Product environments where design, engineering, content, and analytics work closely to turn ambiguity into thoughtful, shippable outcomes.",
+      "Product environments where design, engineering, content, and analytics partner closely to turn ambiguity into thoughtful, shippable decisions.",
   },
 ] as const;
 
@@ -69,7 +69,7 @@ export default function ContactPage() {
               <SectionHeading
                 headingId="contact-heading"
                 title="Let's Connect"
-                description="I'm open to senior product design roles and select consulting engagements focused on thoughtful UX, design systems, and complex digital products."
+                description="Open to senior product design roles and select consulting engagements where clarity, collaboration, and thoughtful execution matter."
                 level={1}
               />
             </div>
@@ -131,14 +131,15 @@ export default function ContactPage() {
               </p>
               <div className="space-y-5 max-w-[896px]">
                 <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
-                  I do my best work with teams solving meaningful product challenges
-                  through clear thinking, strong collaboration, and high design
-                  standards.
+                  I&apos;m a strong fit for teams working through complex flows,
+                  service ecosystems, or platform decisions where clear
+                  thinking and strong collaboration matter.
                 </p>
                 <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
-                  Whether the need is product strategy, UX design, systems work, or
-                  implementation-aware support, I bring structure, clarity, and
-                  momentum from concept to launch.
+                  If you&apos;re hiring for a senior product design role or
+                  exploring consulting support, I bring structure, momentum,
+                  and thoughtful partnership from early definition through
+                  delivery.
                 </p>
               </div>
             </div>

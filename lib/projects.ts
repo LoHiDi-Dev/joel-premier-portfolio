@@ -56,7 +56,7 @@ export const FEATURED_PROJECTS: Project[] = [
     description:
       "Designed accessible Medicare plan comparison and enrollment experiences, improving clarity, usability, and decision-making across a highly regulated digital journey.",
     outcome:
-      "Reduced friction by 22% and increased conversions by 17% across the browse-to-buy experience.",
+      "Improved plan comparison clarity and supported more confident enrollment decisions across a complex Medicare journey.",
     image: IMAGES.cvsAetna,
     imageAlt: "CVS Health Aetna Medicare Extra Benefits Card",
   },

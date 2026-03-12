@@ -18,8 +18,8 @@ export function CTASection() {
         </h2>
 
         <p className="mx-auto mt-4 max-w-[672px] text-[12px] leading-[1.4] text-[#a1a1a1] sm:mt-6 sm:text-base md:text-xl">
-          Open to senior product design roles and select consulting opportunities
-          focused on accessible, scalable digital products.
+          Open to senior product design roles and select consulting work where
+          clarity, accessibility, and strong collaboration matter.
         </p>
 
         <div className="mt-6 flex flex-wrap items-center justify-center gap-2 sm:mt-10 sm:gap-4">
