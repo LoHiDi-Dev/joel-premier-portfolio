@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { SectionHeading } from "@/components/SectionHeading";
 
 export const metadata = {
@@ -76,19 +75,19 @@ export default function ContactPage() {
 
             <div className="grid grid-cols-1 gap-10 sm:gap-16 md:grid-cols-2 md:gap-x-16 md:gap-y-24">
               <div className="space-y-4 sm:space-y-8 md:space-y-12">
-                <p className="text-[11px] font-semibold uppercase tracking-[1.8px] text-[#4a4a4a] sm:text-sm">
+                <p className="text-[10px] font-semibold uppercase tracking-[1.8px] text-[#737373] sm:text-[11px]">
                   Get in Touch
                 </p>
                 <ul className="space-y-4 sm:space-y-6">
                   {CONTACT_ITEMS.map((item) => (
                     <li key={item.label}>
-                      <p className="text-[11px] font-medium uppercase tracking-wider text-[#525252] sm:text-xs md:text-base">
+                      <p className="text-[10px] font-semibold uppercase tracking-[1.8px] text-[#737373] sm:text-[11px]">
                         {item.label}
                       </p>
                       {item.href ? (
                         <a
                           href={item.href}
-                          className="mt-1 block max-w-[896px] text-[11px] leading-[1.5] text-[#171717] transition-colors hover:text-[#404040] focus:text-[#404040] focus:outline-none focus:ring-2 focus:ring-[#171717] focus:ring-offset-2 sm:text-sm md:text-xl md:leading-[1.55]"
+                          className="mt-2 block max-w-[36rem] text-[15px] leading-[1.7] text-[#171717] transition-colors hover:text-[#404040] focus:text-[#404040] focus:outline-none focus:ring-2 focus:ring-[#171717] focus:ring-offset-2 sm:text-[16px] sm:leading-[1.68] md:text-[18px] md:leading-[1.62]"
                           aria-label={item.ariaLabel ?? undefined}
                           {...(item.href.startsWith("http")
                             ? { target: "_blank", rel: "noopener noreferrer" }
@@ -97,7 +96,7 @@ export default function ContactPage() {
                           {item.value}
                         </a>
                       ) : (
-                        <p className="mt-1 max-w-[896px] text-[11px] leading-[1.5] text-[#171717] sm:text-sm md:text-xl md:leading-[1.55]">
+                        <p className="mt-2 max-w-[36rem] text-[15px] leading-[1.7] text-[#171717] sm:text-[16px] sm:leading-[1.68] md:text-[18px] md:leading-[1.62]">
                           {item.value}
                         </p>
                       )}
@@ -107,16 +106,16 @@ export default function ContactPage() {
               </div>
 
               <div className="space-y-4 sm:space-y-8 md:space-y-12">
-                <p className="text-[11px] font-semibold uppercase tracking-[1.8px] text-[#4a4a4a] sm:text-sm">
+                <p className="text-[10px] font-semibold uppercase tracking-[1.8px] text-[#737373] sm:text-[11px]">
                   Where I Add Value
                 </p>
                 <ul className="space-y-6 sm:space-y-8 md:space-y-12" role="list">
                   {VALUE_ITEMS.map((item) => (
                     <li key={item.title} role="listitem">
-                      <h3 className="text-[11px] font-semibold leading-tight tracking-[-0.2px] text-[#171717] sm:text-base md:text-xl">
+                      <h3 className="text-[15px] font-medium leading-[1.18] tracking-[-0.2px] text-[#171717] sm:text-[18px] md:text-[20px]">
                         {item.title}
                       </h3>
-                      <p className="mt-1 max-w-[896px] text-[11px] leading-[1.5] text-[#525252] sm:mt-2 sm:text-sm md:text-base md:leading-[1.55]">
+                      <p className="mt-3 max-w-[30rem] text-[14px] leading-[1.65] text-[#555555] sm:text-[15px] sm:leading-[1.62] md:text-[16px]">
                         {item.description}
                       </p>
                     </li>
@@ -126,16 +125,16 @@ export default function ContactPage() {
             </div>
 
             <div className="mt-12 border-t border-[#e5e5e5] pt-10 sm:mt-16 md:mt-24 md:pt-12">
-              <p className="mb-4 text-[11px] font-semibold uppercase tracking-[1.8px] text-[#4a4a4a] sm:mb-6 sm:text-sm">
+              <p className="mb-4 text-[10px] font-semibold uppercase tracking-[1.8px] text-[#737373] sm:mb-6 sm:text-[11px]">
                 Opportunity Fit
               </p>
-              <div className="space-y-5 max-w-[896px]">
-                <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
+              <div className="max-w-[46rem] space-y-5">
+                <p className="text-[15px] leading-[1.72] text-[#3d3d3d] sm:text-[16px] sm:leading-[1.7] md:text-[18px] md:leading-[1.66]">
                   I&apos;m a strong fit for teams hiring across core product,
                   service flows, platform work, or system-level UX where senior
                   product design judgment is needed.
                 </p>
-                <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
+                <p className="text-[15px] leading-[1.72] text-[#3d3d3d] sm:text-[16px] sm:leading-[1.7] md:text-[18px] md:leading-[1.66]">
                   If the work calls for thoughtful design, close partnership,
                   and steady execution from definition through delivery,
                   I&apos;d be glad to connect.
@@ -167,7 +166,6 @@ export default function ContactPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

@@ -7,6 +7,7 @@ export interface CaseStudy {
   slug: string;
   title: string;
   category: string;
+  hideCategory?: boolean;
   role: string;
   description: string;
   summary: string;
@@ -46,9 +47,10 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
     slug: "ulta-beauty",
     title: "Ulta Beauty",
     category: "E-Commerce & Shopping Optimization",
+    hideCategory: true,
     role: "Senior Product Designer",
     description:
-      "Designed the end-to-end shopping journey across discovery,\nproduct detail, cart, checkout, and recommendations.",
+      "Designed the end-to-end shopping journey across\ndiscovery, product detail, cart, checkout,\nand personalized recommendations.",
     summary:
       "Designed key moments across Ulta's browse-to-buy journey, balancing merchandising, loyalty, and purchase confidence across responsive commerce surfaces.",
     outcome:
@@ -108,11 +110,12 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
   },
   {
     slug: "cvs-health-aetna",
-    title: "CVS Health / Aetna",
+    title: "CVS Health",
     category: "Medicare Plan Comparison & Enrollment",
+    hideCategory: true,
     role: "Senior Product Designer",
     description:
-      "Designed Medicare plan comparison and enrollment flows that improved\nclarity and supported more confident member decisions.",
+      "Designed Medicare plan comparison and enrollment experiences that improved clarity and helped members make more confident decisions.",
     summary:
       "Focused on simplifying a regulated healthcare journey where clarity, accessibility, and trust directly affected decision-making.",
     outcome:
@@ -173,10 +176,10 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
   {
     slug: "tractor-supply-co",
     title: "Tractor Supply Co",
-    category: "Commerce Audit & Design Systems",
+    category: "E-Commerce UX Audit & Design Systems",
     role: "User Experience Designer",
     description:
-      "Applied audit-driven UX improvements across web and mobile\nwhile supporting design system migration work.",
+      "Led audit-informed UX improvements across web and mobile, while helping evolve Adobe XD templates into a unified Figma design system.",
     summary:
       "Used research-backed heuristics and systems thinking to improve core shopping flows while helping modernize shared design foundations.",
     outcome:
@@ -238,7 +241,7 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
     category: "Travel Journey Architecture",
     role: "Senior Information Architect",
     description:
-      "Defined information architecture for booking and post-booking journeys across web, mobile, and kiosk touchpoints.",
+      "Defined information architecture across end-to-end travel journeys for web, mobile, and kiosk experiences.",
     summary:
       "Structured a complex travel ecosystem so customers could move through booking and trip-management tasks with less confusion.",
     outcome:
@@ -303,7 +306,7 @@ export const SECONDARY_CASE_STUDIES: CaseStudy[] = [
     category: "Digital Health Platform Exploration",
     role: "Independent Product Design Exploration",
     description:
-      "Explored a digital health platform centered on care access, provider discovery, and clearer patient journeys.",
+      "Designed a digital health platform focused on care access, provider discovery, and clearer patient journeys.",
     summary:
       "A self-directed exploration focused on making healthcare access feel more coordinated, understandable, and responsive to patient needs.",
     outcome:
@@ -361,11 +364,11 @@ export const SECONDARY_CASE_STUDIES: CaseStudy[] = [
   },
   {
     slug: "st-jude-navigation-study",
-    title: "St. Jude - Navigation Study",
+    title: "St. Jude - Navigation Exploration",
     category: "Information Architecture Exploration",
     role: "Independent Navigation Study",
     description:
-      "Explored nonprofit navigation patterns and clearer paths to help supporters find the right next step.",
+      "Explored nonprofit navigation patterns and simpler supporter pathways to improve findability.",
     summary:
       "A focused navigation and information architecture study aimed at reducing friction across a mission-driven site with multiple audiences and needs.",
     outcome:
@@ -427,7 +430,7 @@ export const SECONDARY_CASE_STUDIES: CaseStudy[] = [
     category: "Civic Service Experience",
     role: "Independent Civic UX Exploration",
     description:
-      "Reframed a municipal website around service clarity, resident tasks, and easier access to local information.",
+      "Reframed a municipal website around service clarity, key resident tasks, and easier access to local information.",
     summary:
       "A civic website exploration focused on helping residents complete everyday tasks with less searching and more confidence.",
     outcome:
@@ -506,6 +509,16 @@ ALL_CASE_STUDIES.forEach((project) => {
 
 export function getProjectBySlug(slug: string): CaseStudy | undefined {
   return PROJECT_MAP[slug];
+}
+
+export function getNextCaseStudy(slug: string): CaseStudy | undefined {
+  const currentIndex = ALL_CASE_STUDIES.findIndex((project) => project.slug === slug);
+
+  if (currentIndex === -1) {
+    return undefined;
+  }
+
+  return ALL_CASE_STUDIES[(currentIndex + 1) % ALL_CASE_STUDIES.length];
 }
 
 export const APPROACH_ITEMS = [

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Download } from "lucide-react";
 import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { SectionHeading } from "@/components/SectionHeading";
 
 export const metadata = {
@@ -29,7 +28,7 @@ export default function ResumePage() {
               />
             </div>
 
-            <div className="overflow-hidden border border-[#e5e5e5] bg-white">
+            <div className="overflow-hidden rounded-[20px] border border-[#e5e5e5] bg-white shadow-[0_8px_24px_rgba(23,23,23,0.04)]">
               <iframe
                 src="/Joel_Premier_Senior_Product_Designer_Resume.pdf#page=1"
                 title="Joel Premier Resume"
@@ -62,7 +61,6 @@ export default function ResumePage() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

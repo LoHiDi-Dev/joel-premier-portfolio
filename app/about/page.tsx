@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { SectionHeading } from "@/components/SectionHeading";
 
 export const metadata = {
@@ -46,39 +45,39 @@ export default function AboutPage() {
               />
             </div>
 
-            <div className="max-w-[896px] space-y-5">
-              <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
+            <div className="max-w-[46rem] space-y-5">
+              <p className="text-[15px] leading-[1.72] text-[#3d3d3d] sm:text-[16px] sm:leading-[1.7] md:text-[18px] md:leading-[1.66]">
                 I design digital products with a focus on structure, usability,
                 and meaningful impact. My work centers on making demanding
                 experiences easier to understand, easier to use, and more
                 effective for the people navigating them and the teams
                 delivering them.
               </p>
-              <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
+              <p className="text-[15px] leading-[1.72] text-[#3d3d3d] sm:text-[16px] sm:leading-[1.7] md:text-[18px] md:leading-[1.66]">
                 Across e-commerce, healthcare, travel, and enterprise products,
                 I&apos;ve led work spanning discovery, flows, navigation, shared
                 systems, and close product-engineering partnership. I care
                 deeply about reducing friction, improving access, and creating
                 experiences that hold up under real-world complexity.
               </p>
-              <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
+              <p className="text-[15px] leading-[1.72] text-[#3d3d3d] sm:text-[16px] sm:leading-[1.7] md:text-[18px] md:leading-[1.66]">
                 I do my best work in close partnership with product, engineering,
-                content, and leadership—connecting user needs to business goals
+                content, and leadership - connecting user needs to business goals
                 through a steady, thoughtful approach to delivery.
               </p>
             </div>
 
             <div className="mt-12 border-t border-[#e5e5e5] pt-10 sm:mt-16 md:mt-24 md:pt-12">
-              <p className="mb-4 text-[11px] font-semibold uppercase tracking-[1.8px] text-[#525252] sm:mb-6 sm:text-sm">
+              <p className="mb-4 text-[10px] font-semibold uppercase tracking-[1.8px] text-[#737373] sm:mb-6 sm:text-[11px]">
                 What I Focus On
               </p>
               <div className="grid grid-cols-1 gap-8 sm:gap-10 md:grid-cols-3 md:gap-10">
                 {FOCUS_AREAS.map((area) => (
                   <div key={area.title}>
-                    <h2 className="text-[11px] font-semibold leading-tight tracking-[-0.2px] text-[#171717] sm:text-base md:text-xl">
+                    <h2 className="text-[15px] font-medium leading-[1.18] tracking-[-0.2px] text-[#171717] sm:text-[18px] md:text-[20px]">
                       {area.title}
                     </h2>
-                    <p className="mt-2 text-[11px] leading-[1.5] text-[#525252] sm:text-sm md:text-base md:leading-[1.55]">
+                    <p className="mt-3 text-[14px] leading-[1.65] text-[#555555] sm:text-[15px] sm:leading-[1.62] md:text-[16px]">
                       {area.description}
                     </p>
                   </div>
@@ -87,17 +86,17 @@ export default function AboutPage() {
             </div>
 
             <div className="mt-12 border-t border-[#e5e5e5] pt-10 sm:mt-16 md:mt-24 md:pt-12">
-              <p className="mb-4 text-[11px] font-semibold uppercase tracking-[1.8px] text-[#525252] sm:mb-6 sm:text-sm">
+              <p className="mb-4 text-[10px] font-semibold uppercase tracking-[1.8px] text-[#737373] sm:mb-6 sm:text-[11px]">
                 How I Work
               </p>
-              <div className="max-w-[896px] space-y-5">
-                <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
+              <div className="max-w-[46rem] space-y-5">
+                <p className="text-[15px] leading-[1.72] text-[#3d3d3d] sm:text-[16px] sm:leading-[1.7] md:text-[18px] md:leading-[1.66]">
                   My approach is grounded in usefulness over noise. I look for
                   the structure beneath a problem, simplify where it matters,
                   and build systems that support both immediate needs and
                   long-term growth.
                 </p>
-                <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
+                <p className="text-[15px] leading-[1.72] text-[#3d3d3d] sm:text-[16px] sm:leading-[1.7] md:text-[18px] md:leading-[1.66]">
                   I work closely with product and engineering to shape
                   scalable experiences that align user needs with business
                   priorities. The goal is not just polished screens, but sound
@@ -108,16 +107,16 @@ export default function AboutPage() {
             </div>
 
             <div className="mt-12 border-t border-[#e5e5e5] pt-10 sm:mt-16 md:mt-24 md:pt-12">
-              <p className="mb-4 text-[11px] font-semibold uppercase tracking-[1.8px] text-[#525252] sm:mb-6 sm:text-sm">
+              <p className="mb-4 text-[10px] font-semibold uppercase tracking-[1.8px] text-[#737373] sm:mb-6 sm:text-[11px]">
                 Currently
               </p>
-              <div className="max-w-[896px] space-y-5">
-                <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
+              <div className="max-w-[46rem] space-y-5">
+                <p className="text-[15px] leading-[1.72] text-[#3d3d3d] sm:text-[16px] sm:leading-[1.7] md:text-[18px] md:leading-[1.66]">
                   I&apos;m most interested in product work where fragmented
                   journeys, growing systems, and delivery realities need to be
                   brought into better alignment.
                 </p>
-                <p className="text-[11px] leading-[1.5] text-[#404040] sm:text-sm md:text-xl md:leading-[1.55]">
+                <p className="text-[15px] leading-[1.72] text-[#3d3d3d] sm:text-[16px] sm:leading-[1.7] md:text-[18px] md:leading-[1.66]">
                   The problems I enjoy most require design judgment, close
                   partnership, and steady execution across teams.
                 </p>
@@ -153,7 +152,6 @@ export default function AboutPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

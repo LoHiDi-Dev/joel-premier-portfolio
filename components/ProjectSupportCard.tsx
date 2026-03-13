@@ -28,9 +28,11 @@ export function ProjectSupportCard({ project }: ProjectSupportCardProps) {
           <h3 className="text-base font-medium tracking-[-0.2px] text-[#171717] sm:text-lg md:text-3xl">
             {project.title}
           </h3>
-          <span className="text-[10px] text-[#525252] sm:text-xs md:text-base">
-            — {project.category}
-          </span>
+          {!project.hideCategory && (
+            <span className="text-[10px] text-[#525252] sm:text-xs md:text-base">
+              - {project.category}
+            </span>
+          )}
         </div>
 
         <p className="text-[9px] font-semibold uppercase tracking-wider text-[#737373] sm:text-[10px] md:text-sm">

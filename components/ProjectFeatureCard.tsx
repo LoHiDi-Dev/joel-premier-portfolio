@@ -28,7 +28,7 @@ export function ProjectFeatureCard({ project }: ProjectFeatureCardProps) {
     <article className="flex flex-col gap-4 sm:gap-8 md:gap-12">
       <motion.div
         ref={imageRef}
-        className="relative aspect-[16/10] w-full overflow-hidden rounded-xl bg-gradient-to-br from-[#f5f5f5] to-[#fafafa] shadow-sm md:rounded-2xl"
+        className="relative aspect-[16/10] w-full overflow-hidden rounded-[20px] border border-[#e5e5e5] bg-gradient-to-br from-[#f5f5f5] to-[#fafafa] shadow-[0_8px_24px_rgba(23,23,23,0.04)]"
         style={
           reducedMotion
             ? undefined
@@ -63,26 +63,30 @@ export function ProjectFeatureCard({ project }: ProjectFeatureCardProps) {
           className="mb-5 flex flex-wrap items-baseline gap-x-3 gap-y-1"
           variants={fadeUpVariants(reducedMotion, 10)}
         >
-          <h3 className="text-base font-medium tracking-[-0.35px] text-[#171717] sm:text-2xl md:text-5xl md:tracking-[-0.85px]">
+          <h3 className="text-[28px] font-medium leading-[1.02] tracking-[-0.8px] text-[#171717] sm:text-[34px] md:text-[44px] md:tracking-[-1.1px]">
             {project.title}
           </h3>
-          <span className="shrink-0 text-xs text-[#525252] sm:text-base md:text-xl" aria-hidden="true">
-            —
-          </span>
-          <span className="text-xs text-[#525252] sm:text-base md:text-xl">
-            {project.category}
-          </span>
+          {!project.hideCategory && (
+            <>
+              <span className="shrink-0 text-[13px] text-[#525252] sm:text-[15px] md:text-[18px]" aria-hidden="true">
+                -
+              </span>
+              <span className="text-[13px] text-[#525252] sm:text-[15px] md:text-[18px]">
+                {project.category}
+              </span>
+            </>
+          )}
         </motion.div>
 
         <motion.p
-          className="mb-5 text-xs font-medium uppercase tracking-wider text-[#525252] sm:text-[13px] md:text-base"
+          className="mb-5 text-[11px] font-medium uppercase tracking-[1.8px] text-[#737373] sm:text-[12px] md:text-[13px]"
           variants={fadeUpVariants(reducedMotion, 10)}
         >
           Role <span className="font-semibold">·</span> {project.role}
         </motion.p>
 
         <motion.p
-          className={`max-w-[896px] whitespace-pre-line text-xs leading-[1.55] text-[#404040] sm:text-[13px] sm:leading-[1.5] md:text-xl md:leading-[1.5] ${project.outcome ? "mb-4" : "mb-6"}`}
+          className={`max-w-[46rem] whitespace-pre-line text-[14px] leading-[1.65] text-[#3d3d3d] sm:text-[15px] sm:leading-[1.62] md:text-[18px] md:leading-[1.62] ${project.outcome ? "mb-4" : "mb-6"}`}
           variants={fadeUpVariants(reducedMotion, 10)}
         >
           {project.description}
@@ -90,7 +94,7 @@ export function ProjectFeatureCard({ project }: ProjectFeatureCardProps) {
 
         {project.outcome && (
           <motion.p
-            className="mb-5 whitespace-pre-line text-xs italic leading-[1.55] text-[#525252] sm:text-[13px] md:text-base md:leading-[1.55]"
+            className="mb-5 whitespace-pre-line text-[14px] italic leading-[1.62] text-[#5b5b5b] sm:text-[14px] md:text-[16px] md:leading-[1.58]"
             variants={fadeUpVariants(reducedMotion, 10)}
           >
             {project.outcome}

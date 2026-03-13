@@ -3,7 +3,6 @@ import { Hero } from "@/components/Hero";
 import { HomeFeaturedWorkSection } from "@/components/HomeFeaturedWorkSection";
 import { ApproachSection } from "@/components/ApproachSection";
 import { CTASection } from "@/components/CTASection";
-import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -16,8 +15,6 @@ export default function Home() {
         <ApproachSection />
         <CTASection />
       </main>
-
-      <Footer />
     </>
   );
 }

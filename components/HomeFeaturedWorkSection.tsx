@@ -13,7 +13,7 @@ export function HomeFeaturedWorkSection() {
   return (
     <section
       id="work"
-      className="px-3 pt-12 pb-10 sm:px-6 sm:pt-20 sm:pb-16 md:px-16 md:pt-24 md:pb-16"
+      className="px-3 pt-12 pb-8 sm:px-6 sm:pt-20 sm:pb-12 md:px-16 md:pt-24 md:pb-12"
       aria-labelledby="featured-work-heading"
     >
       <div className="mx-auto max-w-[1280px]">
