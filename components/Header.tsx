@@ -124,6 +124,12 @@ export function Header({ heroOverlay = false }: HeaderProps) {
         <Link
           href="/"
           aria-label="Joel Premier - Home"
+          onClick={(e) => {
+            if (pathname === "/") {
+              e.preventDefault();
+              window.location.href = "/";
+            }
+          }}
           className={`text-[11px] font-medium tracking-[-0.2px] transition-colors sm:text-sm md:text-[20px] md:tracking-[-0.45px] ${
             isOverlayTop
               ? "text-white/90 hover:text-white"

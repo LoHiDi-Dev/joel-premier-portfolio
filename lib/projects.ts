@@ -117,7 +117,7 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
     description:
       "Designed Medicare plan comparison and enrollment experiences that improved clarity and helped members make more confident decisions.",
     summary:
-      "Focused on simplifying a regulated healthcare journey where clarity, accessibility, and trust directly affected decision-making.",
+      "Simplifying a regulated healthcare journey\nthrough greater clarity, trust, and accessibility.",
     outcome:
       "Reduced friction across a complex, regulated journey and clarified\nkey steps in plan selection and enrollment.",
     image: IMAGES.cvsAetna,
@@ -175,7 +175,7 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
   },
   {
     slug: "tractor-supply-co",
-    title: "Tractor Supply Co",
+    title: "Tractor Supply",
     category: "E-Commerce UX Audit & Design Systems",
     role: "User Experience Designer",
     description:

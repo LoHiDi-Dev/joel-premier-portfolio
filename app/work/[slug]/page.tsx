@@ -1,11 +1,11 @@
 import { notFound } from "next/navigation";
-import { CaseStudyTemplate } from "@/components/CaseStudyTemplate";
-import { CaseStudyUltaContent } from "@/components/CaseStudyUltaContent";
+import { CaseStudyPageTemplate } from "@/components/case-study/CaseStudyPageTemplate";
 import {
   ALL_CASE_STUDIES,
   getNextCaseStudy,
   getProjectBySlug,
 } from "@/lib/projects";
+import { getCaseStudyPageConfig } from "@/lib/case-study-configs";
 
 export function generateStaticParams() {
   return ALL_CASE_STUDIES.map((project) => ({ slug: project.slug }));
@@ -34,17 +34,15 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
     notFound();
   }
 
-  if (slug === "ulta-beauty") {
-    return (
-      <main className="min-h-screen bg-white">
-        <CaseStudyUltaContent project={project} nextProject={nextProject} />
-      </main>
-    );
-  }
+  const config = getCaseStudyPageConfig(project);
 
   return (
     <main className="min-h-screen bg-white">
-      <CaseStudyTemplate project={project} nextProject={nextProject} />
+      <CaseStudyPageTemplate
+        project={project}
+        nextProject={nextProject}
+        config={config}
+      />
     </main>
   );
 }

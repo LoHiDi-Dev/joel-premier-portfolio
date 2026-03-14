@@ -55,9 +55,17 @@ export function Footer() {
           className={`flex flex-col sm:items-start sm:justify-between ${classes.mainGap}`}
         >
           <div className={classes.leftGap}>
-            <p className="text-[13px] font-medium text-[#b3b3b3] sm:text-sm">
+            <Link
+              href="/"
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = "/";
+              }}
+              className="text-[13px] font-medium text-[#b3b3b3] transition-colors hover:text-white focus:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#525252] focus-visible:ring-offset-2 focus-visible:ring-offset-[#171717] sm:text-sm"
+              aria-label="Joel Premier - Home"
+            >
               {FOOTER_COPY.name}
-            </p>
+            </Link>
             <p className="max-w-[430px] whitespace-pre-line text-[13px] leading-[1.6] text-[#adadad] sm:text-sm sm:leading-[1.6] md:leading-[1.55]">
               {FOOTER_COPY.description}
             </p>
