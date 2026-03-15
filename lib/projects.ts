@@ -50,11 +50,11 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
     hideCategory: true,
     role: "Senior Product Designer",
     description:
-      "Designed the end-to-end shopping journey across\ndiscovery, product detail, cart, checkout,\nand personalized recommendations.",
+      "Designed a more coherent browse-to-buy journey across\ndiscovery, navigation, category entry, and loyalty.",
     summary:
       "Designed key moments across Ulta's browse-to-buy journey, balancing merchandising, loyalty, and purchase confidence across responsive commerce surfaces.",
     outcome:
-      "Improved continuity across key shopping flows, helping users find products faster\nand move to purchase with more confidence.",
+      "Improved continuity across key shopping flows, helping customers\nmove with less friction and more confidence.",
     image: IMAGES.ultaBeauty,
     imageAlt: "Ulta Beauty e-commerce experience featuring makeup products",
     emphasis: "primary",
@@ -115,11 +115,11 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
     hideCategory: true,
     role: "Senior Product Designer",
     description:
-      "Designed Medicare plan comparison and enrollment experiences that improved clarity and helped members make more confident decisions.",
+      "Designed clearer Medicare plan shopping and enrollment\nexperiences across search, comparison, and plan review.",
     summary:
-      "Simplifying a regulated healthcare journey\nthrough greater clarity, trust, and accessibility.",
+      "Simplifying a regulated healthcare journey through greater clarity,\ntrust, and accessibility.",
     outcome:
-      "Reduced friction across a complex, regulated journey and clarified\nkey steps in plan selection and enrollment.",
+      "Reduced friction in a complex, regulated journey and helped\nmembers make more confident decisions.",
     image: IMAGES.cvsAetna,
     imageAlt: "CVS Health Aetna Medicare Extra Benefits Card",
     emphasis: "primary",
@@ -181,7 +181,7 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
     description:
       "Led audit-informed UX improvements across web and mobile, while helping evolve Adobe XD templates into a unified Figma design system.",
     summary:
-      "Used research-backed heuristics and systems thinking to improve core shopping flows while helping modernize shared design foundations.",
+      "Clarifying core shopping flows across product discovery,\nevaluation, and purchase.",
     outcome:
       "Helped modernize core patterns and improve consistency across commerce touchpoints.",
     image: IMAGES.tractorSupply,
@@ -237,7 +237,7 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
   },
   {
     slug: "american-airlines",
-    title: "American Airlines",
+    title: "American\u00A0Airlines",
     category: "Travel Journey Architecture",
     role: "Senior Information Architect",
     description:
@@ -525,7 +525,7 @@ export const APPROACH_ITEMS = [
   {
     title: "Product Strategy",
     description:
-      "Aligning user needs, business goals, and product priorities to support better decisions.",
+      "Aligning user needs, business goals, and product priorities to support clearer decisions.",
   },
   {
     title: "Design Systems",
@@ -535,21 +535,21 @@ export const APPROACH_ITEMS = [
   {
     title: "Accessibility",
     description:
-      "Designing inclusive experiences that improve\nclarity, usability, and compliance.",
+      "Designing inclusive experiences that strengthen clarity, usability, and compliance.",
   },
   {
     title: "Responsive Design",
     description:
-      "Creating cohesive experiences across\ndesktop, tablet, and mobile.",
+      "Creating cohesive experiences across desktop, tablet, and mobile.",
   },
   {
     title: "Journey Mapping",
     description:
-      "Structuring complex flows into clearer\nend-to-end experiences.",
+      "Structuring complex flows into clearer end-to-end experiences.",
   },
   {
     title: "Cross-Functional Delivery",
     description:
-      "Partnering with product, engineering, and content\nto deliver with clarity and momentum.",
+      "Partnering with product, engineering, and content to deliver with clarity and momentum.",
   },
 ];

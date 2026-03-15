@@ -7,7 +7,8 @@ import {
   SECTION_HEADING_CLASS,
   BODY_CLASS,
   SECTION_MAX,
-  CONTENT_MAX,
+  CONTENT_MAX_EDITORIAL,
+  HEADING_MAX_EDITORIAL,
   SECTION_DEFAULT,
 } from "./constants";
 import { ScreenshotFrame } from "./ScreenshotFrame";
@@ -48,8 +49,8 @@ export function SplitNarrativeSection({
       >
         <motion.div variants={fadeUpVariants(reducedMotion, 10)}>
           <p className={LABEL_CLASS}>{eyebrow}</p>
-          <h2 className={SECTION_HEADING_CLASS}>{title}</h2>
-          <div className={`mt-5 ${CONTENT_MAX} space-y-5`}>
+          <h2 className={`${SECTION_HEADING_CLASS} ${HEADING_MAX_EDITORIAL}`}>{title}</h2>
+          <div className={`mt-5 ${CONTENT_MAX_EDITORIAL} space-y-5`}>
             {paragraphs.map((paragraph) => (
               <p key={paragraph} className={BODY_CLASS}>
                 {paragraph}

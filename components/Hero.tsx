@@ -165,12 +165,12 @@ export function Hero() {
             </motion.div>
           </span>
 
-          <span className="mt-0.5 block text-[32px] font-medium leading-[0.98] tracking-[-1.2px] text-[#737373] sm:mt-0.5 sm:text-5xl sm:whitespace-nowrap md:mt-1 md:text-7xl lg:text-[96px] lg:leading-[105px]">
+          <span className="mt-0.5 block text-[32px] font-medium leading-[0.98] tracking-[-1.2px] text-[#525252] sm:mt-0.5 sm:text-5xl sm:whitespace-nowrap md:mt-1 md:text-7xl lg:text-[96px] lg:leading-[105px]">
             people can actually use
           </span>
         </h1>
 
-        <p className="mx-auto mt-2 max-w-[780px] text-center text-[13px] leading-[1.45] text-[#525252] sm:mt-3 sm:text-base md:mt-4 md:text-2xl">
+        <p className="mx-auto mt-2 max-w-[780px] text-center text-[14px] leading-[1.55] text-[#525252] sm:mt-3 sm:text-base sm:leading-[1.6] md:mt-4 md:text-2xl md:leading-[1.5]">
           I design system-aware digital experiences that reduce friction,
           support better decisions, and move work forward.
         </p>

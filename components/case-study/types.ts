@@ -10,6 +10,8 @@ export interface ScreenshotConfig {
   aspectClass?: string;
   treatment?: "neutral" | "before" | "after" | "support";
   captionNowrap?: boolean;
+  /** When true, caption spans full width of image instead of max-w-[36rem] */
+  captionFullWidth?: boolean;
   badgeLabel?: string;
   imageClassName?: string;
   imageStyle?: CSSProperties;
@@ -65,8 +67,8 @@ export interface CaseStudyPageConfig {
     label: string;
     value: string;
   }>;
-  overview: EditorialSectionContent;
-  challenge: EditorialSectionContent;
+  overview: EditorialSectionContent & { wideContent?: boolean; relaxedHeadingGap?: boolean; compactGrid?: boolean; editorialMeasure?: boolean };
+  challenge: EditorialSectionContent & { wideContent?: boolean; compactGrid?: boolean; editorialMeasure?: boolean; relaxedBodyMeasure?: boolean; compactBodyMeasure?: boolean; wideBodyMeasure?: boolean };
   approach?: SplitNarrativeContent | (EditorialSectionContent & {
     bullets?: string[];
     image?: ScreenshotConfig;
@@ -97,5 +99,5 @@ export interface CaseStudyPageConfig {
     items: CardGridItem[];
     numbered?: boolean;
   };
-  reflection: EditorialSectionContent;
+  reflection?: EditorialSectionContent & { editorialMeasure?: boolean; relaxedBodyMeasure?: boolean; wideBodyMeasure?: boolean };
 }

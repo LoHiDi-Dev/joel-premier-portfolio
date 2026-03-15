@@ -22,6 +22,7 @@ export function ScreenshotFrame({
   aspectClass = "aspect-[16/10]",
   treatment = "neutral",
   captionNowrap = false,
+  captionFullWidth = false,
   badgeLabel,
   imageClassName,
   imageStyle,
@@ -118,7 +119,7 @@ export function ScreenshotFrame({
       {frameContent}
       <figcaption className="mt-5 space-y-1.5">
         <p
-          className={`max-w-[36rem] ${CAPTION_CLASS} ${captionNowrap ? "md:whitespace-nowrap" : ""}`}
+          className={`${captionFullWidth ? "w-full" : "max-w-[36rem]"} ${CAPTION_CLASS} ${captionNowrap ? "md:whitespace-nowrap" : ""}`}
         >
           {caption}
         </p>

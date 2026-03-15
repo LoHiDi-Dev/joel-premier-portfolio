@@ -14,7 +14,7 @@ export function ApproachSection() {
             headingId="approach-heading"
             title="Systems-Driven Design"
             description={
-              "Applying product strategy, accessibility, and systems thinking\nto simplify complex digital experiences."
+              "Using product strategy, accessibility, and systems thinking\nto simplify complex digital experiences."
             }
             centered
           />
@@ -26,7 +26,7 @@ export function ApproachSection() {
               <h3 className="text-[15px] font-medium leading-[1.18] tracking-[-0.2px] text-[#171717] sm:text-[18px] md:text-[20px]">
                 {item.title}
               </h3>
-              <p className="mt-3 whitespace-pre-line text-[14px] leading-[1.62] text-[#555555] sm:text-[15px] md:text-[16px] md:leading-[1.58]">
+              <p className="mt-3 whitespace-pre-line text-[15px] leading-[1.62] text-[#525252] sm:text-[16px] md:text-[16px] md:leading-[1.6]">
                 {item.description}
               </p>
             </div>

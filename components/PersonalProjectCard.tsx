@@ -59,7 +59,7 @@ export function PersonalProjectCard({ project }: PersonalProjectCardProps) {
           {project.title}
         </motion.h3>
         <motion.p
-          className="mb-4 flex-1 text-[13px] leading-[1.62] text-[#555555] sm:text-[14px] md:text-[15px] md:leading-[1.62]"
+          className="mb-4 flex-1 text-[14px] leading-[1.6] text-[#525252] sm:text-[14px] md:text-[15px] md:leading-[1.62]"
           variants={fadeUpVariants(reducedMotion, 10)}
         >
           {project.description}
@@ -67,7 +67,7 @@ export function PersonalProjectCard({ project }: PersonalProjectCardProps) {
         <motion.div variants={fadeUpVariants(reducedMotion, 10)}>
           <Link
             href={`/work/${project.slug}`}
-            className="group inline-flex items-center gap-1 text-xs font-medium text-[#525252] transition-colors duration-200 hover:text-[#171717] focus:text-[#171717] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#525252] focus-visible:ring-offset-2 sm:text-[13px] md:gap-1.5 md:text-sm"
+            className="group inline-flex items-center gap-1 text-[13px] font-medium text-[#525252] transition-colors duration-200 hover:text-[#171717] focus:text-[#171717] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#525252] focus-visible:ring-offset-2 sm:text-[13px] md:gap-1.5 md:text-sm"
           >
             View Case Study
             <span

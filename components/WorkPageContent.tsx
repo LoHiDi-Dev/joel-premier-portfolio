@@ -60,9 +60,9 @@ export function WorkPageContent() {
               className="mt-4 max-w-[46rem] text-[14px] leading-[1.6] text-[#525252] sm:mt-5 sm:text-[16px] sm:leading-[1.58] md:text-[20px] md:leading-[1.5]"
               variants={fadeUpVariants(reducedMotion, 16)}
             >
-              Enterprise product design across e-commerce, healthcare, travel,
-              and operations, building accessible, scalable experiences that
-              deliver measurable impact.
+              Enterprise product design across e-commerce, healthcare and travel
+              building accessible, scalable experiences that deliver measurable
+              impact.
             </motion.p>
           </motion.div>
 
@@ -77,7 +77,7 @@ export function WorkPageContent() {
               className="mb-8 sm:mb-10 md:mb-12"
               variants={fadeUpVariants(reducedMotion, 16)}
             >
-              <p className="text-[10px] font-semibold uppercase tracking-[1.8px] text-[#737373] sm:text-[11px]">
+              <p className="text-[11px] font-semibold uppercase tracking-[1.8px] text-[#525252] sm:text-[12px]">
                 Selected Case Studies
               </p>
             </motion.div>

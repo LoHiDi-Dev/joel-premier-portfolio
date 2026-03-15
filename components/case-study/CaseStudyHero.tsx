@@ -68,7 +68,7 @@ export function CaseStudyHero({
         <motion.div variants={fadeUpVariants(reducedMotion, 10)}>
           <Link
             href="/work"
-            className="inline-flex items-center gap-2 text-[11px] font-medium text-white/84 transition-colors duration-200 hover:text-white focus:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#171717] sm:text-sm"
+            className="inline-flex items-center gap-2 text-[12px] font-medium text-white/88 transition-colors duration-200 hover:text-white focus:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#171717] sm:text-sm"
           >
             <span aria-hidden="true">←</span>
             Back to Work
@@ -77,7 +77,7 @@ export function CaseStudyHero({
 
         <div className="mt-auto max-w-[860px] pt-14 sm:pt-20 md:pt-24">
           <motion.p
-            className="text-[11px] font-semibold uppercase tracking-[1.8px] text-white/68 sm:text-sm"
+            className="text-[12px] font-semibold uppercase tracking-[1.8px] text-white/78 sm:text-sm"
             variants={fadeUpVariants(reducedMotion, 16)}
           >
             {eyebrow}
@@ -91,14 +91,14 @@ export function CaseStudyHero({
           </motion.h1>
           {subtitle ? (
             <motion.p
-              className="mt-6 text-[12px] font-semibold uppercase tracking-[1.6px] text-white/78 sm:text-[13px] md:text-[14px]"
+              className="mt-6 text-[13px] font-semibold uppercase tracking-[1.6px] text-white/82 sm:text-[13px] md:text-[14px]"
               variants={fadeUpVariants(reducedMotion, 16)}
             >
               {subtitle}
             </motion.p>
           ) : null}
           <motion.p
-            className="mt-5 max-w-[36rem] whitespace-pre-line text-[16px] leading-[1.54] text-white/92 sm:text-[19px] sm:leading-[1.5] md:text-[25px] md:leading-[1.38]"
+            className="mt-5 max-w-full whitespace-pre-line text-[16px] leading-[1.55] text-white/92 sm:text-[19px] sm:leading-[1.5] md:text-[25px] md:leading-[1.38]"
             variants={fadeUpVariants(reducedMotion, 16)}
           >
             {supportingLine}

@@ -45,7 +45,7 @@ const VALUE_ITEMS = [
   {
     title: "Design Systems & Accessibility",
     description:
-      "Organizations investing in shared foundations, consistent interfaces, and inclusive patterns that improve quality across products and teams.",
+      "Teams investing in shared foundations, consistent interfaces, and inclusive patterns that improve quality across products and teams.",
   },
   {
     title: "Cross-Functional Collaboration",
@@ -64,58 +64,62 @@ export default function ContactPage() {
           aria-labelledby="contact-heading"
         >
           <div className="mx-auto max-w-[1280px]">
-            <div className="mb-6 sm:mb-10 md:mb-16">
+            <div className="max-w-[860px]">
               <SectionHeading
                 headingId="contact-heading"
                 title="Let's Connect"
-                description="Open to senior product design roles and select consulting engagements where thoughtful design can help teams simplify complexity, improve usability, and move with confidence."
+                description="Open to senior product design roles and select consulting engagements focused on clarity, usability, and thoughtful execution."
                 level={1}
               />
             </div>
 
-            <div className="grid grid-cols-1 gap-10 sm:gap-16 md:grid-cols-2 md:gap-x-16 md:gap-y-24">
-              <div className="space-y-4 sm:space-y-8 md:space-y-12">
-                <p className="text-[10px] font-semibold uppercase tracking-[1.8px] text-[#737373] sm:text-[11px]">
-                  Get in Touch
+            <div className="mt-12 border-t border-[#e5e5e5] pt-8 sm:mt-16 sm:pt-10 md:mt-20 md:pt-12">
+              <div className="grid grid-cols-1 gap-10 sm:gap-16 md:grid-cols-2 md:gap-x-16 md:gap-y-24">
+              <div className="space-y-6 sm:space-y-8 md:space-y-10">
+                <p className="text-[11px] font-semibold uppercase tracking-[1.8px] text-[#525252] sm:text-[12px]">
+                  GET IN TOUCH
                 </p>
-                <ul className="space-y-4 sm:space-y-6">
-                  {CONTACT_ITEMS.map((item) => (
-                    <li key={item.label}>
-                      <p className="text-[10px] font-semibold uppercase tracking-[1.8px] text-[#737373] sm:text-[11px]">
-                        {item.label}
-                      </p>
-                      {item.href ? (
-                        <a
-                          href={item.href}
-                          className="mt-2 block max-w-[36rem] text-[15px] leading-[1.7] text-[#171717] transition-colors hover:text-[#404040] focus:text-[#404040] focus:outline-none focus:ring-2 focus:ring-[#171717] focus:ring-offset-2 sm:text-[16px] sm:leading-[1.68] md:text-[18px] md:leading-[1.62]"
-                          aria-label={item.ariaLabel ?? undefined}
-                          {...(item.href.startsWith("http")
-                            ? { target: "_blank", rel: "noopener noreferrer" }
-                            : {})}
-                        >
-                          {item.value}
-                        </a>
-                      ) : (
-                        <p className="mt-2 max-w-[36rem] text-[15px] leading-[1.7] text-[#171717] sm:text-[16px] sm:leading-[1.68] md:text-[18px] md:leading-[1.62]">
-                          {item.value}
+                <ul className="space-y-6 sm:space-y-8">
+                  {CONTACT_ITEMS.map((item) => {
+                    const isPrimary = item.label === "PHONE" || item.label === "EMAIL";
+                    return (
+                      <li key={item.label}>
+                        <p className="text-[11px] font-semibold uppercase tracking-[1.8px] text-[#525252] sm:text-[12px]">
+                          {item.label}
                         </p>
-                      )}
-                    </li>
-                  ))}
+                        {item.href ? (
+                          <a
+                            href={item.href}
+                            className={`mt-2 block max-w-[36rem] leading-[1.7] text-[#171717] transition-colors hover:text-[#404040] focus:text-[#404040] focus:outline-none focus:ring-2 focus:ring-[#171717] focus:ring-offset-2 sm:leading-[1.68] md:leading-[1.62] ${isPrimary ? "text-[16px] font-medium sm:text-[17px] md:text-[18px]" : "text-[15px] sm:text-[16px] md:text-[18px]"}`}
+                            aria-label={item.ariaLabel ?? undefined}
+                            {...(item.href.startsWith("http")
+                              ? { target: "_blank", rel: "noopener noreferrer" }
+                              : {})}
+                          >
+                            {item.value}
+                          </a>
+                        ) : (
+                          <p className={`mt-2 max-w-[36rem] leading-[1.7] text-[#171717] sm:leading-[1.68] md:leading-[1.62] ${isPrimary ? "text-[16px] font-medium sm:text-[17px] md:text-[18px]" : "text-[15px] sm:text-[16px] md:text-[18px]"}`}>
+                            {item.value}
+                          </p>
+                        )}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
 
-              <div className="space-y-4 sm:space-y-8 md:space-y-12">
-                <p className="text-[10px] font-semibold uppercase tracking-[1.8px] text-[#737373] sm:text-[11px]">
-                  Where I Add Value
+              <div className="space-y-6 sm:space-y-8 md:space-y-10">
+                <p className="text-[11px] font-semibold uppercase tracking-[1.8px] text-[#525252] sm:text-[12px]">
+                  BEST FIT
                 </p>
-                <ul className="space-y-6 sm:space-y-8 md:space-y-12" role="list">
+                <ul className="space-y-8 sm:space-y-10 md:space-y-12" role="list">
                   {VALUE_ITEMS.map((item) => (
                     <li key={item.title} role="listitem">
                       <h3 className="text-[15px] font-medium leading-[1.18] tracking-[-0.2px] text-[#171717] sm:text-[18px] md:text-[20px]">
                         {item.title}
                       </h3>
-                      <p className="mt-3 max-w-[30rem] text-[14px] leading-[1.65] text-[#555555] sm:text-[15px] sm:leading-[1.62] md:text-[16px]">
+                      <p className="mt-3 max-w-[32rem] text-[14px] leading-[1.62] text-[#525252] sm:text-[15px] sm:leading-[1.62] md:text-[16px]">
                         {item.description}
                       </p>
                     </li>
@@ -123,26 +127,28 @@ export default function ContactPage() {
                 </ul>
               </div>
             </div>
+            </div>
 
-            <div className="mt-12 border-t border-[#e5e5e5] pt-10 sm:mt-16 md:mt-24 md:pt-12">
-              <p className="mb-4 text-[10px] font-semibold uppercase tracking-[1.8px] text-[#737373] sm:mb-6 sm:text-[11px]">
-                Opportunity Fit
+            <div className="mt-14 border-t border-[#e5e5e5] pt-10 sm:mt-16 sm:pt-12 md:mt-20 md:pt-14">
+              <p className="mb-5 text-[11px] font-semibold uppercase tracking-[1.8px] text-[#525252] sm:mb-6 sm:text-[12px]">
+                LET&apos;S TALK
               </p>
               <div className="max-w-[46rem] space-y-5">
                 <p className="text-[15px] leading-[1.72] text-[#3d3d3d] sm:text-[16px] sm:leading-[1.7] md:text-[18px] md:leading-[1.66]">
-                  I&apos;m a strong fit for teams hiring across core product,
-                  service flows, platform work, or system-level UX where senior
-                  product design judgment is needed.
+                  If you&apos;re hiring for product work that needs clarity,
+                  systems thinking, and steady cross-functional execution,
+                  I&apos;d be glad to connect.
                 </p>
                 <p className="text-[15px] leading-[1.72] text-[#3d3d3d] sm:text-[16px] sm:leading-[1.7] md:text-[18px] md:leading-[1.66]">
-                  If the work calls for thoughtful design, close partnership,
-                  and steady execution from definition through delivery,
-                  I&apos;d be glad to connect.
+                  Whether it&apos;s a senior product design role, platform
+                  work, or a consulting engagement, I&apos;m open to
+                  conversations where thoughtful design can help teams move
+                  forward with confidence.
                 </p>
               </div>
             </div>
 
-            <div className="mt-12 flex flex-wrap gap-2 sm:mt-16 sm:gap-4">
+            <div className="mt-10 flex flex-wrap gap-2 sm:mt-12 sm:gap-4 md:mt-14">
               <a
                 href="mailto:jojo.s.1er@gmail.com"
                 aria-label="Email Joel Premier"

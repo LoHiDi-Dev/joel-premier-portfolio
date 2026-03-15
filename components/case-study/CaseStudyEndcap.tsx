@@ -30,16 +30,16 @@ export function CaseStudyEndcap({
             className="flex flex-col items-center"
             variants={fadeUpVariants(reducedMotion, 16)}
           >
-            <p className="text-[11px] font-semibold uppercase tracking-[1.8px] text-white/52 sm:text-sm">
+            <p className="text-[12px] font-semibold uppercase tracking-[1.8px] text-white/72 sm:text-sm">
               NEXT CASE STUDY
             </p>
             <h2
               id="case-study-endcap-title"
-              className="mt-6 max-w-[11ch] text-[42px] font-medium leading-[0.94] tracking-[-1.3px] text-white sm:text-[56px] sm:tracking-[-1.8px] md:text-[72px] md:tracking-[-2px]"
+              className="mt-6 max-w-[20ch] text-[42px] font-medium leading-[0.94] tracking-[-1.3px] text-white sm:text-[56px] sm:tracking-[-1.8px] md:text-[72px] md:tracking-[-2px]"
             >
               {nextProject.title}
             </h2>
-            <p className="mx-auto mt-5 max-w-[36rem] text-[14px] leading-[1.62] text-[#c7c7c7] sm:mt-6 sm:text-[16px] sm:leading-[1.58] md:max-w-[40rem] md:text-[18px] md:leading-[1.56]">
+            <p className="mx-auto mt-5 max-w-[36rem] whitespace-pre-line text-[14px] leading-[1.6] text-[#c7c7c7] sm:mt-6 sm:text-[16px] sm:leading-[1.58] md:max-w-[40rem] md:text-[18px] md:leading-[1.56]">
               {nextProject.summary}
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-2 sm:mt-9 sm:gap-4">

@@ -32,10 +32,10 @@ export function CTASection() {
         </motion.h2>
 
         <motion.p
-          className="mx-auto mt-4 max-w-[720px] whitespace-pre-line text-[13px] leading-[1.55] text-[#b3b3b3] sm:mt-6 sm:text-base sm:leading-[1.5] md:max-w-[820px] md:text-xl md:leading-[1.5]"
+          className="mx-auto mt-4 max-w-[720px] whitespace-pre-line text-[14px] leading-[1.6] text-[#c2c2c2] sm:mt-6 sm:text-base sm:leading-[1.55] md:max-w-[820px] md:text-xl md:leading-[1.5]"
           variants={fadeUpVariants(reducedMotion)}
         >
-          Open to senior product design roles and select consulting engagements where thoughtful design can help companies achieve more clarity, consistency, and confidence across complex digital experiences.
+          {"Open to senior product design roles and select consulting engagements\nwhere thoughtful design brings more clarity, consistency,\nand confidence to complex products and services."}
         </motion.p>
 
         <motion.div

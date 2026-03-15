@@ -29,23 +29,23 @@ export function ProjectSupportCard({ project }: ProjectSupportCardProps) {
             {project.title}
           </h3>
           {!project.hideCategory && (
-            <span className="text-[10px] text-[#525252] sm:text-xs md:text-base">
+            <span className="text-[11px] text-[#525252] sm:text-xs md:text-base">
               - {project.category}
             </span>
           )}
         </div>
 
-        <p className="text-[9px] font-semibold uppercase tracking-wider text-[#737373] sm:text-[10px] md:text-sm">
+        <p className="text-[11px] font-semibold uppercase tracking-wider text-[#525252] sm:text-[12px] md:text-sm">
           Role <span className="font-semibold">·</span> {project.role}
         </p>
 
-          <p className="text-sm leading-[1.35] text-[#404040] sm:text-xs md:text-lg">
+          <p className="text-sm leading-[1.5] text-[#404040] sm:text-sm md:text-lg md:leading-[1.55]">
           {project.description}
         </p>
 
         <Link
           href={`/work/${project.slug}`}
-          className="group inline-flex items-center gap-1 text-[10px] font-medium text-[#171717] transition-opacity hover:opacity-80 focus:opacity-80 sm:text-xs md:gap-2 md:text-base"
+          className="group inline-flex items-center gap-1 text-[12px] font-medium text-[#171717] transition-opacity hover:opacity-80 focus:opacity-80 sm:text-xs md:gap-2 md:text-base"
         >
           View Case Study
           <span

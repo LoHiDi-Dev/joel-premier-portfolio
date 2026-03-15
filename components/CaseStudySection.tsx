@@ -29,7 +29,7 @@ export function CaseStudySection({
     >
       <div className="mx-auto grid max-w-[1280px] gap-6 px-4 py-18 sm:px-8 sm:py-22 md:grid-cols-[180px_minmax(0,1fr)] md:gap-x-12 md:px-12 md:py-26">
         <motion.div variants={fadeUpVariants(reducedMotion, 16)}>
-          <h2 className="text-[10px] font-semibold uppercase tracking-[1.8px] text-[#737373] sm:text-[11px]">
+          <h2 className="text-[11px] font-semibold uppercase tracking-[1.8px] text-[#525252] sm:text-[12px]">
             {title}
           </h2>
         </motion.div>
@@ -59,7 +59,7 @@ export function CaseStudySection({
                   className="rounded-[20px] border border-[#e8e8e8] bg-[#fafafa] px-5 py-5 sm:px-6 sm:py-6"
                   variants={fadeUpVariants(reducedMotion, 10)}
                 >
-                  <p className="text-[10px] font-semibold uppercase tracking-[1.8px] text-[#737373] sm:text-[11px]">
+                  <p className="text-[11px] font-semibold uppercase tracking-[1.8px] text-[#525252] sm:text-[12px]">
                     {String(index + 1).padStart(2, "0")}
                   </p>
                   <p className="mt-4 text-[14px] leading-[1.65] text-[#4c4c4c] sm:text-[14px] sm:leading-[1.66] md:text-[15px] md:leading-[1.62]">

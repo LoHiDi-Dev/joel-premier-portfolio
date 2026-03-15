@@ -5,7 +5,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Header } from "@/components/Header";
 import type { CaseStudy } from "@/lib/projects";
 import { fadeUpVariants, staggerContainerVariants } from "@/lib/motion";
-import { LABEL_CLASS, SECTION_HEADING_CLASS, SECTION_MAX, CONTENT_MAX, SECTION_LOOSE } from "./constants";
+import { LABEL_CLASS, SECTION_HEADING_CLASS, SECTION_MAX, CONTENT_MAX_EDITORIAL, SECTION_LOOSE } from "./constants";
 import type { CaseStudyPageConfig } from "./types";
 import { CaseStudyHero } from "./CaseStudyHero";
 import { CaseStudyMetaRow } from "./CaseStudyMetaRow";
@@ -91,6 +91,10 @@ export function CaseStudyPageTemplate({
         title={config.overview.title}
         paragraphs={config.overview.paragraphs}
         reducedMotion={reducedMotion}
+        wideContent={config.overview.wideContent}
+        relaxedHeadingGap={config.overview.relaxedHeadingGap}
+        compactGrid={config.overview.compactGrid}
+        editorialMeasure={config.overview.editorialMeasure}
       />
 
       <EditorialSection
@@ -99,6 +103,12 @@ export function CaseStudyPageTemplate({
         paragraphs={config.challenge.paragraphs}
         reducedMotion={reducedMotion}
         muted
+        wideContent={config.challenge.wideContent}
+        compactGrid={config.challenge.compactGrid}
+        editorialMeasure={config.challenge.editorialMeasure}
+        relaxedBodyMeasure={config.challenge.relaxedBodyMeasure}
+        compactBodyMeasure={config.challenge.compactBodyMeasure}
+        wideBodyMeasure={config.challenge.wideBodyMeasure}
       />
 
       {approach != null &&
@@ -146,7 +156,7 @@ export function CaseStudyPageTemplate({
         >
           <div className={`mx-auto ${SECTION_MAX}`}>
             <motion.div
-              className={`mb-12 ${CONTENT_MAX} md:mb-14`}
+              className={`mb-12 ${CONTENT_MAX_EDITORIAL} md:mb-14`}
               variants={fadeUpVariants(reducedMotion, 16)}
             >
               <p className={LABEL_CLASS}>
@@ -199,7 +209,7 @@ export function CaseStudyPageTemplate({
           />
         )}
 
-      {!isAuditLed && config.designAreas && (
+      {config.designAreas && (
         <CardGridSection
           eyebrow={config.designAreas.eyebrow}
           title={config.designAreas.title}
@@ -241,14 +251,19 @@ export function CaseStudyPageTemplate({
         />
       )}
 
-      <EditorialSection
-        eyebrow={config.reflection.eyebrow}
-        title={config.reflection.title}
-        paragraphs={config.reflection.paragraphs}
-        reducedMotion={reducedMotion}
-        muted
-        spacious={isAuditLed}
-      />
+      {config.reflection && (
+        <EditorialSection
+          eyebrow={config.reflection.eyebrow}
+          title={config.reflection.title}
+          paragraphs={config.reflection.paragraphs}
+          reducedMotion={reducedMotion}
+          muted
+          spacious
+          editorialMeasure={config.reflection.editorialMeasure}
+          relaxedBodyMeasure={config.reflection.relaxedBodyMeasure}
+          wideBodyMeasure={config.reflection.wideBodyMeasure}
+        />
+      )}
 
       <CaseStudyEndcap
         nextProject={nextProject}

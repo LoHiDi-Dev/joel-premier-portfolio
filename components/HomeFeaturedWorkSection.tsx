@@ -27,7 +27,7 @@ export function HomeFeaturedWorkSection() {
           <SectionHeading
             headingId="featured-work-heading"
             title="Featured Work"
-            description={'Selected case studies across e-commerce, healthcare,\ntravel, and enterprise product design.'}
+            description={'Selected case studies across e-commerce, healthcare, travel, and enterprise product design, focused on clarity, systems thinking, and decision support.'}
           />
         </motion.div>
 

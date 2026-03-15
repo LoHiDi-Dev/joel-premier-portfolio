@@ -22,14 +22,14 @@ export function SectionHeading({
       : "text-[28px] font-medium leading-[1.02] tracking-[-0.8px] text-[#171717] sm:text-[34px] md:text-[44px] md:tracking-[-1.1px]";
   const descriptionClass =
     level === 1
-      ? "mt-4 max-w-[46rem] whitespace-pre-line text-[14px] leading-[1.6] text-[#525252] sm:mt-5 sm:text-[16px] sm:leading-[1.58] md:text-[20px] md:leading-[1.5]"
-      : "mt-3 max-w-[42rem] whitespace-pre-line text-[14px] leading-[1.6] text-[#525252] sm:mt-4 sm:text-[16px] sm:leading-[1.55] md:text-[18px] md:leading-[1.52]";
+      ? "mt-4 max-w-[46rem] whitespace-pre-line text-[15px] leading-[1.6] text-[#525252] sm:mt-5 sm:text-[16px] sm:leading-[1.58] md:text-[20px] md:leading-[1.5]"
+      : "mt-3 max-w-[42rem] whitespace-pre-line text-[15px] leading-[1.6] text-[#525252] sm:mt-4 sm:text-[16px] sm:leading-[1.55] md:text-[18px] md:leading-[1.52]";
 
   return (
     <div className={centered ? "text-center" : ""}>
       {eyebrow && (
         <p
-          className={`text-[10px] font-semibold uppercase tracking-[1.8px] text-[#737373] sm:text-[11px] ${
+          className={`text-[11px] font-semibold uppercase tracking-[1.8px] text-[#525252] sm:text-[12px] ${
             centered ? "" : "mb-3"
           }`}
           role="doc-subtitle"

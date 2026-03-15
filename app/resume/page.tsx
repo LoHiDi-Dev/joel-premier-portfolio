@@ -1,12 +1,10 @@
-import Link from "next/link";
-import { Download } from "lucide-react";
 import { Header } from "@/components/Header";
-import { SectionHeading } from "@/components/SectionHeading";
+import { ResumePreviewSection } from "@/components/ResumePreviewSection";
 
 export const metadata = {
   title: "Resume",
   description:
-    "A formal overview of experience across product design, UX strategy, design systems, and delivery.",
+    "A concise overview of experience across product design, systems thinking, and delivery.",
 };
 
 export default function ResumePage() {
@@ -15,48 +13,25 @@ export default function ResumePage() {
       <Header />
       <main>
         <section
-          className="px-3 py-12 sm:px-6 sm:py-20 md:px-16 md:py-24"
+          className="px-3 pt-12 pb-14 sm:px-6 sm:pt-20 sm:pb-20 md:px-16 md:pt-24 md:pb-24"
           aria-labelledby="resume-heading"
         >
           <div className="mx-auto max-w-[1280px]">
-            <div className="mb-6 sm:mb-10 md:mb-16">
-              <SectionHeading
-                headingId="resume-heading"
-                title="Resume"
-                description="A formal overview of my experience across product design, UX strategy, design systems, and delivery."
-                level={1}
-              />
+            <div className="max-w-[860px]">
+              <h1
+                id="resume-heading"
+                className="text-[32px] font-medium leading-[0.98] tracking-[-1.1px] text-[#171717] sm:text-[44px] md:text-[64px] md:tracking-[-1.6px]"
+              >
+                Resume
+              </h1>
+              <p className="mt-4 max-w-[46rem] text-[14px] leading-[1.6] text-[#525252] sm:mt-5 sm:text-[16px] sm:leading-[1.58] md:text-[20px] md:leading-[1.5]">
+                A concise overview of my experience across product design,
+                systems thinking, and delivery.
+              </p>
             </div>
 
-            <div className="overflow-hidden rounded-[20px] border border-[#e5e5e5] bg-white shadow-[0_8px_24px_rgba(23,23,23,0.04)]">
-              <iframe
-                src="/Joel_Premier_Senior_Product_Designer_Resume.pdf#page=1"
-                title="Joel Premier Resume"
-                className="h-[62vh] min-h-[420px] w-full sm:h-[70vh] sm:min-h-[560px] md:h-[calc(100vh-240px)] md:min-h-[700px]"
-              />
-            </div>
-
-            <div className="mt-12 flex flex-col gap-2 sm:mt-16 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
-              <a
-                href="/Joel_Premier_Senior_Product_Designer_Resume.pdf"
-                download="Joel_Premier_Resume.pdf"
-                className="inline-flex h-8 w-full items-center justify-center gap-1.5 rounded-full bg-[#171717] px-4 text-[11px] font-medium text-white shadow-sm transition-opacity hover:opacity-90 focus:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#171717] focus:ring-offset-2 sm:h-10 sm:w-auto sm:px-6 sm:text-xs md:h-14 md:px-8 md:text-base"
-              >
-                <Download className="h-3.5 w-3.5 sm:h-4 sm:w-4" aria-hidden />
-                Download Resume
-              </a>
-              <Link
-                href="/"
-                className="group inline-flex h-8 w-full items-center justify-center gap-1 rounded-full border border-[#171717] bg-white px-4 text-[11px] font-medium text-[#171717] transition-colors hover:bg-[#171717] hover:text-white focus:bg-[#171717] focus:text-white focus:outline-none focus:ring-2 focus:ring-[#171717] focus:ring-offset-2 sm:h-10 sm:w-auto sm:gap-2 sm:px-6 sm:text-xs md:h-14 md:px-8 md:text-base"
-              >
-                View Portfolio
-                <span
-                  aria-hidden="true"
-                  className="transition-transform duration-200 group-hover:translate-x-0.5 group-focus:translate-x-0.5"
-                >
-                  →
-                </span>
-              </Link>
+            <div className="mt-12 border-t border-[#e5e5e5] pt-8 sm:mt-16 sm:pt-10 md:mt-20 md:pt-12">
+              <ResumePreviewSection />
             </div>
           </div>
         </section>

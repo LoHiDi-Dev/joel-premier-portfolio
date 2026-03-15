@@ -49,7 +49,7 @@ export function AuditGridSection({
             ))}
           </div>
           {attribution && (
-            <p className="mt-6 text-[13px] font-medium italic leading-[1.5] text-[#525252] sm:text-[14px]">
+            <p className="mt-6 text-[14px] font-medium italic leading-[1.55] text-[#525252] sm:text-[15px]">
               {attribution}
             </p>
           )}

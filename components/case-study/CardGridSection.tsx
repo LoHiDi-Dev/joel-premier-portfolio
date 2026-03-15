@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { fadeUpVariants, staggerContainerVariants } from "@/lib/motion";
 import {
   LABEL_CLASS,
@@ -9,6 +9,8 @@ import {
   CARD_TITLE_CLASS,
   CAPTION_CLASS,
   SECTION_MAX,
+  CONTENT_MAX_EDITORIAL,
+  HEADING_MAX_EDITORIAL,
   RADIUS,
   SECTION_TIGHT,
   LEAD_CARD_BG,
@@ -45,12 +47,12 @@ export function CardGridSection({
     >
       <div className={`mx-auto ${SECTION_MAX}`}>
         <motion.div
-          className="max-w-[50rem]"
+          className={CONTENT_MAX_EDITORIAL}
           variants={fadeUpVariants(reducedMotion, 16)}
         >
           <p className={dark ? LABEL_CLASS_DARK : LABEL_CLASS}>{eyebrow}</p>
           <h2
-            className={`${SECTION_HEADING_CLASS} ${dark ? "text-white" : "text-[#171717]"}`}
+            className={`${SECTION_HEADING_CLASS} ${HEADING_MAX_EDITORIAL} ${dark ? "text-white" : "text-[#171717]"}`}
           >
             {title}
           </h2>
@@ -74,7 +76,7 @@ export function CardGridSection({
               {numbered && (
                 <p
                   className={`text-[10px] font-semibold uppercase tracking-[1.8px] sm:text-[11px] ${
-                    dark ? "text-white/60" : "text-[#737373]"
+                    dark ? "text-white/72" : "text-[#525252]"
                   }`}
                 >
                   {String(index + 1).padStart(2, "0")}
@@ -86,7 +88,7 @@ export function CardGridSection({
                 {item.title}
               </h3>
               <p
-                className={`mt-5 ${CAPTION_CLASS} ${dark ? "text-white/78" : "text-[#555555]"}`}
+                className={`mt-5 ${CAPTION_CLASS} ${dark ? "text-white/78" : "text-[#525252]"}`}
               >
                 {item.description}
               </p>

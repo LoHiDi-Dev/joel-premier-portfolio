@@ -94,7 +94,7 @@ export function WorkCaseStudyCard({
             </motion.h3>
             {!project.hideCategory && (
               <span
-                className={`text-[13px] text-[#525252] ${
+                className={`text-[14px] text-[#525252] ${
                   isFeature ? "sm:text-[15px] md:text-[18px]" : "sm:text-[14px] md:text-[16px]"
                 }`}
               >
@@ -104,7 +104,7 @@ export function WorkCaseStudyCard({
           </motion.div>
 
           <motion.p
-            className="mb-5 text-[11px] font-medium uppercase tracking-[1.8px] text-[#737373] sm:text-[12px] md:text-[13px]"
+            className="mb-5 text-[12px] font-medium uppercase tracking-[1.8px] text-[#525252] sm:text-[12px] md:text-[13px]"
             variants={fadeUpVariants(reducedMotion, 10)}
           >
             Role <span className="font-semibold">·</span> {project.role}
@@ -113,8 +113,8 @@ export function WorkCaseStudyCard({
           <motion.p
             className={`whitespace-pre-line text-[14px] leading-[1.65] text-[#3d3d3d] ${
               isFeature
-                ? "mb-7 max-w-[36rem] sm:text-[15px] sm:leading-[1.62] md:text-[18px] md:leading-[1.62]"
-                : "mb-6 sm:text-[14px] sm:leading-[1.6] md:text-[16px] md:leading-[1.58]"
+                ? "mb-7 max-w-[32rem] sm:text-[15px] sm:leading-[1.62] md:max-w-[36rem] md:text-[18px] md:leading-[1.62]"
+                : "mb-6 max-w-[32rem] sm:text-[14px] sm:leading-[1.6] md:max-w-[36rem] md:text-[16px] md:leading-[1.58]"
             }`}
             variants={fadeUpVariants(reducedMotion, 10)}
           >

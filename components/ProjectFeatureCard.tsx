@@ -79,14 +79,14 @@ export function ProjectFeatureCard({ project }: ProjectFeatureCardProps) {
         </motion.div>
 
         <motion.p
-          className="mb-5 text-[11px] font-medium uppercase tracking-[1.8px] text-[#737373] sm:text-[12px] md:text-[13px]"
+          className="mb-5 text-[12px] font-medium uppercase tracking-[1.8px] text-[#525252] sm:text-[13px] md:text-[13px]"
           variants={fadeUpVariants(reducedMotion, 10)}
         >
           Role <span className="font-semibold">·</span> {project.role}
         </motion.p>
 
         <motion.p
-          className={`max-w-[46rem] whitespace-pre-line text-[14px] leading-[1.65] text-[#3d3d3d] sm:text-[15px] sm:leading-[1.62] md:text-[18px] md:leading-[1.62] ${project.outcome ? "mb-4" : "mb-6"}`}
+          className={`max-w-[32rem] whitespace-pre-line text-[14px] leading-[1.65] text-[#3d3d3d] sm:text-[15px] sm:leading-[1.62] md:max-w-[40rem] md:text-[18px] md:leading-[1.62] ${project.outcome ? "mb-4" : "mb-6"}`}
           variants={fadeUpVariants(reducedMotion, 10)}
         >
           {project.description}
@@ -94,7 +94,7 @@ export function ProjectFeatureCard({ project }: ProjectFeatureCardProps) {
 
         {project.outcome && (
           <motion.p
-            className="mb-5 whitespace-pre-line text-[14px] italic leading-[1.62] text-[#5b5b5b] sm:text-[14px] md:text-[16px] md:leading-[1.58]"
+            className="mb-5 whitespace-pre-line text-[15px] italic leading-[1.6] text-[#525252] sm:text-[15px] md:text-[16px] md:leading-[1.58]"
             variants={fadeUpVariants(reducedMotion, 10)}
           >
             {project.outcome}

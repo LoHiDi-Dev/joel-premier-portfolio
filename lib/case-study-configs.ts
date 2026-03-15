@@ -162,10 +162,11 @@ export function getUltaCaseStudyConfig(): CaseStudyPageConfig {
 
   return {
     heroSupportingLine:
-      "Designing a clearer browse-to-buy journey across discovery, navigation, and loyalty.",
+      "Designing a clearer browse-to-buy journey across\ndiscovery, navigation, and loyalty.",
     overview: {
       eyebrow: "OVERVIEW",
       title: "Designing a more coherent browse-to-buy journey for Ulta Beauty.",
+      editorialMeasure: true,
       paragraphs: [
         "At Ulta, I designed across connected moments in the commerce experience — treating homepage, browse, category entry, and account access as parts of one journey rather than separate screens.",
         "My focus was to bring stronger hierarchy to merchandising, clearer paths into shopping, and smoother transitions between discovery and loyalty so customers could move through the experience with more confidence.",
@@ -175,6 +176,7 @@ export function getUltaCaseStudyConfig(): CaseStudyPageConfig {
     challenge: {
       eyebrow: "CHALLENGE",
       title: "Balancing merchandising complexity with customer clarity.",
+      editorialMeasure: true,
       paragraphs: [
         "Ulta needed to support high-volume promotions, broad product discovery, and loyalty value without creating too much decision friction at key points in the journey.",
         "The challenge was not simply to modernize the interface, but to create stronger continuity across homepage, navigation, category entry, and account access so customers could keep moving with less friction and more confidence.",
@@ -234,6 +236,7 @@ export function getUltaCaseStudyConfig(): CaseStudyPageConfig {
     reflection: {
       eyebrow: "REFLECTION",
       title: "Designing across the journey, not just the screens.",
+      editorialMeasure: true,
       paragraphs: [
         "This work reinforced the value of thinking in systems. The strongest decisions came from treating homepage, navigation, category discovery, and account access as connected parts of one commerce experience rather than isolated touchpoints.",
         "It also underscored how easily merchandising can compete with clarity in high-volume retail environments. Better outcomes came from creating stronger hierarchy, clearer paths into action, and a more continuous sense of movement across the journey.",
@@ -247,19 +250,22 @@ export function getCvsCaseStudyConfig(): CaseStudyPageConfig {
     heroTitle: "CVS Health",
     heroSubtitle: "Medicare Plan Comparison & Enrollment",
     heroSupportingLine:
-      "Simplifying a regulated healthcare journey\nthrough greater clarity, trust, and accessibility.",
+      "Simplifying a regulated healthcare journey through greater clarity,\ntrust, and accessibility.",
     overview: {
       eyebrow: "OVERVIEW",
-      title: "Designing clearer Medicare plan shopping and enrollment.",
+      title: "Designing clearer Medicare plan shopping\nand enrollment.",
+      editorialMeasure: true,
       paragraphs: [
         "Medicare plan selection required people to weigh premiums, deductibles, coverage, pharmacy fit, provider fit, and extra benefits in a regulated healthcare context where clarity and trust mattered.",
-        "I simplified how plan information was structured across plan search, plan comparison, and plan review so members could understand tradeoffs faster and move toward enrollment with more confidence.",
+        "I simplified how plan information was structured across plan search, plan comparison, and plan review so members could understand tradeoffs faster and move toward enrollment with more confidence, including users with varying levels of digital comfort.",
         "The work spanned Medicare shopping entry, plan-detail clarity, comparison support, and enrollment readiness across responsive experiences.",
       ],
     },
     challenge: {
       eyebrow: "CHALLENGE",
       title: "Reducing decision friction in a high-stakes healthcare journey.",
+      editorialMeasure: true,
+      wideBodyMeasure: true,
       paragraphs: [
         "The challenge was not simply presenting more information. It was helping people navigate dense plan details, understand tradeoffs, and move toward enrollment without losing confidence or context.",
         "Because Medicare users often include older adults with varying levels of digital comfort, the experience also needed to support clear hierarchy, readable content, and trustworthy guidance at every step.",
@@ -270,10 +276,10 @@ export function getCvsCaseStudyConfig(): CaseStudyPageConfig {
       eyebrow: "APPROACH",
       title: "Designing for clarity across the Medicare decision journey.",
       paragraphs: [
-        "I began by looking at the Medicare experience through the lens of the people using it—understanding decision pain points, information overload, and the need for clarity among members with varying levels of digital comfort.",
+        "I looked at the Medicare experience through the lens of the people using it, focusing on decision pain points, information overload, and clarity for members with varying levels of digital comfort.",
       ],
       bullets: [
-        "Defined where plan search, comparison, and review created the most friction in the decision journey",
+        "Treated plan search, comparison, and review as one connected journey, identifying where structure, hierarchy, and decision support mattered most.",
       ],
       image: {
         src: CVS_ASSETS.entryAfter,
@@ -415,9 +421,11 @@ export function getCvsCaseStudyConfig(): CaseStudyPageConfig {
     reflection: {
       eyebrow: "REFLECTION",
       title: "Designing for trust, not just transactions.",
+      editorialMeasure: true,
+      wideBodyMeasure: true,
       paragraphs: [
-        "This work reinforced that healthcare product design is not only about presenting information. It is about helping people make high-stakes decisions through clearer structure, stronger hierarchy, and more trustworthy interactions.",
-        "The strongest decisions came from treating plan shopping, comparison, and enrollment as one connected journey rather than optimizing each moment in isolation.",
+        "This work reinforced that healthcare plan shopping demands more than simplifying screens.\nIt requires helping people, including older members with varying levels of digital comfort, understand complex tradeoffs through clearer hierarchy, stronger structure, and more trustworthy interactions.",
+        "The strongest outcomes came from treating search, comparison, and enrollment as one connected journey, while also strengthening the system behind the experience through more reusable and scalable design patterns.",
       ],
     },
   };
@@ -432,42 +440,45 @@ export function getTractorSupplyCaseStudyConfig(): CaseStudyPageConfig {
     layoutVariant: "audit-led",
     heroEyebrow: "CASE STUDY",
     heroSupportingLine:
-      "Clarifying browse-to-buy decisions across product lists and product pages.",
+      "Clarifying browse-to-buy decisions across\nproduct listing, product detail, and mobile shopping.",
     overview: {
       eyebrow: "OVERVIEW",
-      title: "Designing clearer product discovery and purchase decisions for Tractor Supply.",
+      title: "Designing clearer product discovery\nand purchase decisions for TSC.",
+      editorialMeasure: true,
       paragraphs: [
         "At Tractor Supply, I focused on the core commerce moments where purchase confidence mattered most — product lists, product pages, and mobile shopping experiences.",
-        "Baymard's benchmark helped surface friction in browsing, comparison, fulfillment visibility, and purchase decision-making. I used those findings as a starting point to translate broad usability issues into clearer PLP and PDP patterns across web and mobile.",
-        "The result was a more structured path from discovery to purchase, with stronger hierarchy, clearer product evaluation, and better support for fulfillment decisions across devices.",
+        "Baymard's benchmark helped surface where browse-to-buy friction was most visible, from product discovery to purchase decisions. I used those findings as a starting point to translate\nthe highest-friction issues into focused PLP and PDP redesigns across web and mobile.",
+        "The result was a more structured path from discovery to purchase, with stronger hierarchy, clearer product evaluation, and better support for purchase decisions across devices.",
       ],
     },
     challenge: {
       eyebrow: "CHALLENGE",
       title: "Reducing decision friction across product discovery and purchase.",
+      editorialMeasure: true,
+      wideBodyMeasure: true,
       paragraphs: [
-        "Tractor Supply needed to support broad product discovery, comparison, and fulfillment decisions without making customers work too hard at key points in the shopping journey.",
-        "The challenge was not simply to refresh the interface, but to create clearer continuity across product lists, product pages, and mobile shopping so customers could browse, evaluate options, and move toward purchase with more confidence.",
-        "That meant improving hierarchy, reducing comparison friction, and making package, availability, and fulfillment choices easier to understand across devices.",
+        "Tractor Supply needed to support broad product discovery, comparison, and purchase decisions without making shoppers work too hard at key points in the journey.",
+        "The challenge was not simply modernizing the interface. It was reducing friction across product listing, product evaluation, and mobile decision-making so shoppers could compare options and move toward purchase with more confidence.",
       ],
     },
     approach: {
       eyebrow: "APPROACH",
-      title: "Using benchmark evidence to shape the redesign.",
+      title: "Using benchmark insight to shape the redesign.",
       paragraphs: [
-        "Baymard's benchmark surfaced where Tractor Supply's browse-to-buy experience was creating the most friction.",
+        "Baymard's benchmark surfaced where Tractor Supply's browse-to-buy experience was creating the most friction. I used those findings to focus the redesign on product lists, product pages, and mobile shopping.",
       ],
       bullets: [
-        "I used those findings to focus the redesign on product lists, product pages, and mobile shopping, translating the most critical issues into clearer hierarchy.",
+        "Turned the most critical issues into clearer hierarchy, easier comparison, and stronger purchase flows.",
       ],
       image: {
         src: TSC_ASSETS.auditWebPlp,
         alt: "Baymard Institute Product Lists & Filtering area summary showing performance metrics for Tractor Supply Co.",
         caption:
-          "Benchmark findings helped identify where clearer support was needed across browse, evaluation, and mobile decision-making.",
+          "Benchmark findings helped identify where browse, evaluation, and mobile decision-making needed clearer support.",
         label: "Product Lists & Filtering",
         aspectClass: "aspect-[1024/498]",
         captionNowrap: false,
+        captionFullWidth: true,
         treatment: "support",
       },
       lightboxVisuals: [
@@ -499,48 +510,22 @@ export function getTractorSupplyCaseStudyConfig(): CaseStudyPageConfig {
     },
     evidenceSection: {
       eyebrow: "DESIGN EVOLUTION",
-      title: "Before & after redesigns.",
+      title: "Key redesigns that improved clarity across browse and purchase.",
     },
     evidenceChapters: [
       {
-        label: "WEB PDP",
-        title: "Web PDP — Before & After",
+        label: "WEB Product Listing Page",
+        title: "Creating a clearer path through product discovery.",
         paragraphs: [
-          "The product detail page redesign reorganized the experience around shopper decision-making. Instead of forcing users to hunt through scattered content, the page brings together product media, package-size selection, subscription value, fulfillment choice, and key attributes in a clearer purchase flow. The redesigned PDP makes the product easier to evaluate and easier to buy.",
-        ],
-        visuals: [
-          mkScreenshot({
-            src: TSC_ASSETS.webPdpBefore,
-            alt: "Tractor Supply product detail page before redesign showing sparse grouping and weaker decision support.",
-            caption:
-              "Before — sparse grouping, weaker decision support, less fulfillment clarity",
-            label: "Before",
-            badgeLabel: "BEFORE",
-            treatment: "before",
-          }),
-          mkScreenshot({
-            src: TSC_ASSETS.webPdpAfter,
-            alt: "Tractor Supply product detail page after redesign with clearer hierarchy and stronger buy flow.",
-            caption:
-              "After — clearer hierarchy, stronger buy flow, better package and fulfillment visibility",
-            label: "After",
-            badgeLabel: "AFTER",
-            treatment: "after",
-          }),
-        ],
-      },
-      {
-        label: "WEB PLP",
-        title: "Web PLP — Before & After",
-        paragraphs: [
-          "The product list redesign shifts the page from a dense retail catalog into a clearer browsing surface. I reduced visual competition between filters and products, improved item scanability, and made fulfillment cues easier to notice without overwhelming the list. The result is a PLP that supports faster comparison and lower cognitive load.",
+          "The product list needed to support faster scanning, easier comparison, and more confident filtering across a dense retail catalog.",
+          "The redesign reduced visual competition, clarified product-card hierarchy, and created a lighter browsing experience.",
         ],
         visuals: [
           mkScreenshot({
             src: TSC_ASSETS.webPlpBefore,
             alt: "Tractor Supply product list page before redesign with heavier filtering and denser cards.",
             caption:
-              "Before — heavier filtering, denser cards, slower product scanning",
+              "Filtering and product scanning competed too heavily for attention, making comparison feel denser and less direct.",
             label: "Before",
             badgeLabel: "BEFORE",
             treatment: "before",
@@ -549,7 +534,7 @@ export function getTractorSupplyCaseStudyConfig(): CaseStudyPageConfig {
             src: TSC_ASSETS.webPlpAfter,
             alt: "Tractor Supply product list page after redesign with lighter browsing and stronger hierarchy.",
             caption:
-              "After — lighter browsing, stronger hierarchy, clearer product cards",
+              "A lighter structure made discovery, comparison, and product hierarchy easier to follow.",
             label: "After",
             badgeLabel: "AFTER",
             treatment: "after",
@@ -557,17 +542,46 @@ export function getTractorSupplyCaseStudyConfig(): CaseStudyPageConfig {
         ],
       },
       {
-        label: "MOBILE PDP",
-        title: "Mobile PDP — Before & After",
+        label: "WEB Product Detail Page",
+        title: "Restructuring the product page around purchase decisions.",
         paragraphs: [
-          "On mobile, the redesign focused on reducing decision friction within a tighter viewport. I surfaced the most important choices earlier, improved information chunking, and supported easier thumb-driven interaction through clearer modules and a stronger add-to-cart flow.",
+          "The product detail page needed to help shoppers evaluate options and move toward purchase without unnecessary friction.",
+          "The redesign reorganized the page around key decisions, creating a clearer path to purchase.",
+        ],
+        visuals: [
+          mkScreenshot({
+            src: TSC_ASSETS.webPdpBefore,
+            alt: "Tractor Supply product detail page before redesign showing sparse grouping and weaker decision support.",
+            caption:
+              "Sparser grouping, weaker decision support, and less clarity around package and purchase options.",
+            label: "Before",
+            badgeLabel: "BEFORE",
+            treatment: "before",
+          }),
+          mkScreenshot({
+            src: TSC_ASSETS.webPdpAfter,
+            alt: "Tractor Supply product detail page after redesign with clearer hierarchy and stronger buy flow.",
+            caption:
+              "Clearer hierarchy, stronger purchase flow, and better visibility into package and purchase options.",
+            label: "After",
+            badgeLabel: "AFTER",
+            treatment: "after",
+          }),
+        ],
+      },
+      {
+        label: "MOBILE Product Detail Page",
+        title: "Strengthening purchase clarity on mobile.",
+        paragraphs: [
+          "The mobile product page needed to support quick product understanding and purchase decisions within a tighter, more constrained viewport.",
+          "The redesign surfaced key choices earlier, improved information grouping, and clarified the add-to-cart flow on mobile.",
         ],
         visuals: [
           mkScreenshot({
             src: TSC_ASSETS.mobilePdpBefore,
             alt: "Tractor Supply mobile product detail page before redesign with text-heavy flow.",
             caption:
-              "Before — text-heavy flow, later decision support, weaker purchase momentum",
+              "Important decisions appeared later in the flow, weakening purchase momentum on mobile.",
             label: "Before",
             badgeLabel: "BEFORE",
             treatment: "before",
@@ -576,7 +590,7 @@ export function getTractorSupplyCaseStudyConfig(): CaseStudyPageConfig {
             src: TSC_ASSETS.mobilePdpAfter,
             alt: "Tractor Supply mobile product detail page after redesign with earlier decision support.",
             caption:
-              "After — earlier decision support, clearer modules, stronger mobile purchase flow",
+              "Earlier decision support and clearer structure created a stronger mobile purchase path.",
             label: "After",
             badgeLabel: "AFTER",
             treatment: "after",
@@ -584,24 +598,41 @@ export function getTractorSupplyCaseStudyConfig(): CaseStudyPageConfig {
         ],
       },
     ],
-    processApproach: {
-      eyebrow: "PROCESS",
-      title: "From audit signal to interface decisions",
-      paragraphs: [
-        "Rather than redesigning everything at once, I used the audit findings to target the moments where usability friction was most visible and most actionable. The work focused on clarifying hierarchy, reducing visual density, improving filter and option selection, strengthening fulfillment visibility, and organizing product details into clearer decision-making modules. This was a practical redesign exercise: take evidence, identify the highest-friction commerce patterns, and redesign the system around better shopper comprehension.",
+    designAreas: {
+      eyebrow: "KEY DESIGN DECISIONS",
+      title: "Key moments where audit insight, redesign, and validation came together.",
+      items: [
+        {
+          title: "UX Audit as Design Input",
+          description:
+            "Used Baymard's benchmark to identify where browse-to-buy friction was most visible across product lists, product pages, and mobile experiences.",
+        },
+        {
+          title: "Focused Redesign Response",
+          description:
+            "Translated those findings into targeted redesigns that improved hierarchy, comparison, purchase options, and decision flow across PLP, PDP, and mobile PDP.",
+        },
+        {
+          title: "Validation Through Testing",
+          description:
+            "Tested revised concepts against the original pain points to assess whether the new patterns created clearer and more confident shopping decisions.",
+        },
+        {
+          title: "Validation & Design Confidence",
+          description:
+            "Refined the work through validation feedback to better support user acceptance and create a stronger foundation for measuring design impact.",
+        },
       ],
-      bullets: [
-        "Translate benchmark findings into concrete UI priorities",
-        "Reduce scan friction across browse and comparison surfaces",
-        "Improve package, fulfillment, and purchase clarity",
-        "Adapt dense product information for mobile decision-making",
-      ],
+      numbered: true,
     },
     reflection: {
-      eyebrow: "KEY TAKEAWAYS",
-      title: "Key takeaways",
+      eyebrow: "REFLECTION",
+      title: "Designing for clarity, not just conversion.",
+      editorialMeasure: true,
+      wideBodyMeasure: true,
       paragraphs: [
-        "This project reinforced an approach I value in commerce design: strong product work often begins with clear evidence, not assumptions. Baymard's benchmark exposed where the experience was underperforming. My role was to turn that signal into more usable, more structured, and more conversion-ready PLP and PDP patterns across web and mobile.",
+        "This project reinforced that effective commerce design is not just about showcasing products.\nIt is about helping shoppers understand options, compare with confidence, and move toward purchase through clearer structure, stronger hierarchy, and more usable decision flows.",
+        "The strongest outcomes came from treating PLP, PDP, and mobile shopping as one connected journey — using audit insight to focus the redesign, then validating whether the new patterns made purchase decisions clearer and easier to act on.",
       ],
     },
   };
