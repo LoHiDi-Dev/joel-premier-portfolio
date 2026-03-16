@@ -146,6 +146,7 @@ export const TOOLS_AND_TECHNOLOGY = [
       "Wireframing",
       "User Flows",
       "Accessibility Review",
+      "UX Writing",
     ],
     muted: false,
   },

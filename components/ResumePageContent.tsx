@@ -26,6 +26,7 @@ const GRAY_BLEED_CLASS =
 export function ResumePageContent() {
   const reducedMotion = Boolean(useReducedMotion());
   const [toolsOpenIndex, setToolsOpenIndex] = useState<number | null>(null);
+  const [toolsActiveTab, setToolsActiveTab] = useState(0);
 
   return (
     <>
@@ -216,43 +217,58 @@ export function ResumePageContent() {
                     );
                   })}
                 </div>
-                {/* Desktop: grouped chip layout unchanged */}
-                <ul
-                  className="hidden space-y-6 sm:space-y-7 md:block"
-                  role="list"
-                >
-                  {TOOLS_AND_TECHNOLOGY.map((group) => (
-                    <li key={group.label}>
-                      <p
+                {/* Desktop: 4-tab layout — editorial, minimal */}
+                <div className="hidden md:block">
+                  <div
+                    className="flex flex-wrap gap-x-8 gap-y-0 border-b border-[#e5e5e5]"
+                    role="tablist"
+                    aria-label="Tools & Technology groups"
+                  >
+                    {TOOLS_AND_TECHNOLOGY.map((group, index) => {
+                      const isActive = toolsActiveTab === index;
+                      const isMutedLabel = group.muted;
+                      return (
+                        <button
+                          key={group.label}
+                          type="button"
+                          role="tab"
+                          aria-selected={isActive}
+                          aria-controls={`tools-tabpanel-${index}`}
+                          id={`tools-tab-${index}`}
+                          onClick={() => setToolsActiveTab(index)}
+                          className={`relative border-b-2 pb-3 pt-0 text-[14px] transition-colors duration-150 sm:text-[15px] ${
+                            isActive
+                              ? isMutedLabel
+                                ? "-mb-px border-[#525252] font-semibold text-[#525252]"
+                                : "-mb-px border-[#171717] font-semibold text-[#171717]"
+                              : "-mb-[1px] border-transparent font-normal text-[#737373] hover:text-[#525252]"
+                          }`}
+                        >
+                          {group.label}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  <div
+                    id={`tools-tabpanel-${toolsActiveTab}`}
+                    role="tabpanel"
+                    aria-labelledby={`tools-tab-${toolsActiveTab}`}
+                    className="mt-5 flex flex-wrap gap-3"
+                  >
+                    {TOOLS_AND_TECHNOLOGY[toolsActiveTab].items.map((item) => (
+                      <span
+                        key={item}
                         className={
-                          group.muted
-                            ? "text-[13px] font-medium leading-[1.4] text-[#737373] sm:text-[14px]"
-                            : "text-[14px] font-semibold leading-[1.4] text-[#171717] sm:text-[15px]"
+                          TOOLS_AND_TECHNOLOGY[toolsActiveTab].muted
+                            ? "inline-flex rounded-full border border-[#e5e5e5] bg-white px-4 py-2.5 text-[13px] font-normal leading-[1.3] text-[#525252] sm:text-[14px]"
+                            : "inline-flex rounded-full border border-[#e5e5e5] bg-white px-4 py-2.5 text-[14px] font-normal leading-[1.3] text-[#171717] sm:text-[15px]"
                         }
                       >
-                        {group.label}
-                      </p>
-                      <ul
-                        className="mt-2 flex flex-wrap gap-3"
-                        role="list"
-                      >
-                        {group.items.map((item) => (
-                          <li key={item}>
-                            <span
-                              className={
-                                group.muted
-                                  ? "inline-flex rounded-full border border-[#e5e5e5] bg-white px-4 py-2.5 text-[13px] font-normal leading-[1.3] text-[#525252] sm:text-[14px]"
-                                  : "inline-flex rounded-full border border-[#e5e5e5] bg-white px-4 py-2.5 text-[14px] font-normal leading-[1.3] text-[#171717] sm:text-[15px]"
-                              }
-                            >
-                              {item}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    </li>
-                  ))}
-                </ul>
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
