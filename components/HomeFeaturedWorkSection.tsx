@@ -27,18 +27,18 @@ export function HomeFeaturedWorkSection() {
           <SectionHeading
             headingId="featured-work-heading"
             title="Featured Work"
-            description={'Selected case studies across e-commerce, healthcare, travel, and enterprise product design, focused on clarity, systems thinking, and decision support.'}
+            description={'Selected case studies across retail, healthcare, travel, and enterprise product design — focused on clarity, systems thinking, and measurable usability improvements.'}
           />
         </motion.div>
 
-        <div className="flex flex-col gap-10 sm:gap-16 md:gap-24">
+        <div className="flex flex-col gap-10 sm:gap-16 md:gap-20">
           {FEATURED_PROJECTS.slice(0, 2).map((project) => (
             <ProjectFeatureCard key={project.slug} project={project} />
           ))}
         </div>
 
         <motion.div
-          className="mt-8 text-center sm:mt-12 md:mt-14"
+          className="mt-8 sm:mt-10 md:mt-12"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
@@ -46,7 +46,7 @@ export function HomeFeaturedWorkSection() {
         >
           <Link
             href="/work"
-            className="group inline-flex h-8 items-center justify-center gap-1 rounded-full bg-[#171717] px-4 text-[11px] font-medium text-white shadow-sm transition-opacity duration-200 hover:opacity-90 focus:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#171717] focus:ring-offset-2 sm:h-10 sm:gap-2 sm:px-6 sm:text-xs md:h-14 md:px-8 md:text-base"
+            className="group inline-flex h-11 items-center justify-center gap-1 rounded-full bg-[#171717] px-4 text-[11px] font-medium text-white shadow-sm transition-opacity duration-200 hover:opacity-90 focus:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#171717] focus:ring-offset-2 sm:h-10 sm:gap-2 sm:px-6 sm:text-xs md:h-14 md:px-8 md:text-base"
           >
             View All Work
             <span

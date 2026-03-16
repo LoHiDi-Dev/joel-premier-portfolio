@@ -54,7 +54,7 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
     summary:
       "Designed key moments across Ulta's browse-to-buy journey, balancing merchandising, loyalty, and purchase confidence across responsive commerce surfaces.",
     outcome:
-      "Improved continuity across key shopping flows, helping customers\nmove with less friction and more confidence.",
+      "Improved continuity across key shopping flows, helping\u00A0customers\nmove with less friction and more confidence.",
     image: IMAGES.ultaBeauty,
     imageAlt: "Ulta Beauty e-commerce experience featuring makeup products",
     emphasis: "primary",
@@ -119,7 +119,7 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
     summary:
       "Simplifying a regulated healthcare journey through greater clarity,\ntrust, and accessibility.",
     outcome:
-      "Reduced friction in a complex, regulated journey and helped\nmembers make more confident decisions.",
+      "Reduced friction in a complex, regulated journey and helped\u00A0members\nmake more confident decisions.",
     image: IMAGES.cvsAetna,
     imageAlt: "CVS Health Aetna Medicare Extra Benefits Card",
     emphasis: "primary",
@@ -177,6 +177,7 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
     slug: "tractor-supply-co",
     title: "Tractor Supply",
     category: "E-Commerce UX Audit & Design Systems",
+    hideCategory: true,
     role: "User Experience Designer",
     description:
       "Led audit-informed UX improvements across web and mobile, while helping evolve Adobe XD templates into a unified Figma design system.",
@@ -239,6 +240,7 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
     slug: "american-airlines",
     title: "American\u00A0Airlines",
     category: "Travel Journey Architecture",
+    hideCategory: true,
     role: "Senior Information Architect",
     description:
       "Defined information architecture across end-to-end travel journeys for web, mobile, and kiosk experiences.",

@@ -127,8 +127,8 @@ export function WorkCaseStudyCard({
             href={`/work/${project.slug}`}
             className={`group inline-flex items-center justify-center gap-1 rounded-full border border-[#171717] bg-white font-medium text-[#171717] transition-colors duration-200 hover:bg-[#171717] hover:text-white focus:bg-[#171717] focus:text-white focus:outline-none focus:ring-2 focus:ring-[#171717] focus:ring-offset-2 ${
               isFeature
-                ? "h-8 px-4 text-xs sm:h-10 sm:gap-2 sm:px-6 sm:text-[13px] md:h-12 md:px-7 md:text-sm"
-                : "h-8 px-4 text-xs sm:h-10 sm:gap-2 sm:px-6 sm:text-[13px] md:h-14 md:px-8 md:text-base"
+                ? "h-11 px-4 text-xs sm:h-10 sm:gap-2 sm:px-6 sm:text-[13px] md:h-12 md:px-7 md:text-sm"
+                : "h-11 px-4 text-xs sm:h-10 sm:gap-2 sm:px-6 sm:text-[13px] md:h-14 md:px-8 md:text-base"
             }`}
           >
             View Case Study

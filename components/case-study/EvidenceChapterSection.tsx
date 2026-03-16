@@ -21,7 +21,7 @@ export function EvidenceChapterSection({
 }: EvidenceChapterSectionProps) {
   return (
     <motion.article
-      className="grid gap-8 border-t border-[#ebebeb] pt-10 md:grid-cols-[minmax(0,0.28fr)_minmax(0,0.72fr)] md:gap-16 md:pt-12"
+      className="grid gap-6 border-t border-[#ebebeb] pt-8 md:grid-cols-[minmax(0,0.28fr)_minmax(0,0.72fr)] md:gap-16 md:pt-12"
       variants={staggerContainerVariants(0.06)}
     >
       <motion.div variants={fadeUpVariants(reducedMotion, 10)}>

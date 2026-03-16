@@ -161,6 +161,17 @@ export function getUltaCaseStudyConfig(): CaseStudyPageConfig {
   ];
 
   return {
+    heroMetaRow: [
+      { label: "ROLE", value: "Senior Product Designer" },
+      {
+        label: "SCOPE",
+        value: "Browse, Navigation,\nCategory Entry, Account & Loyalty",
+      },
+      {
+        label: "FOCUS",
+        value: "Clarity, continuity,\nand conversion support",
+      },
+    ],
     heroSupportingLine:
       "Designing a clearer browse-to-buy journey across\ndiscovery, navigation, and loyalty.",
     overview: {
@@ -248,6 +259,17 @@ export function getUltaCaseStudyConfig(): CaseStudyPageConfig {
 export function getCvsCaseStudyConfig(): CaseStudyPageConfig {
   return {
     heroTitle: "CVS Health",
+    heroMetaRow: [
+      { label: "ROLE", value: "Senior Product Designer" },
+      {
+        label: "SCOPE",
+        value: "Plan Search, Comparison,\nEnrollment & Review",
+      },
+      {
+        label: "FOCUS",
+        value: "Clarity, trust,\nand accessibility",
+      },
+    ],
     heroSubtitle: "Medicare Plan Comparison & Enrollment",
     heroSupportingLine:
       "Simplifying a regulated healthcare journey through greater clarity,\ntrust, and accessibility.",
@@ -438,6 +460,17 @@ function mkScreenshot(input: ScreenshotConfig): ScreenshotConfig {
 export function getTractorSupplyCaseStudyConfig(): CaseStudyPageConfig {
   return {
     layoutVariant: "audit-led",
+    heroMetaRow: [
+      { label: "ROLE", value: "User Experience Designer" },
+      {
+        label: "SCOPE",
+        value: "PLP, PDP,\nand Mobile Shopping",
+      },
+      {
+        label: "FOCUS",
+        value: "Browse clarity,\npurchase decisions, design systems",
+      },
+    ],
     heroEyebrow: "CASE STUDY",
     heroSupportingLine:
       "Clarifying browse-to-buy decisions across\nproduct listing, product detail, and mobile shopping.",

@@ -7,11 +7,11 @@ export const LABEL_CLASS_DARK =
 export const SECTION_HEADING_CLASS =
   "mt-5 text-[28px] font-medium leading-[1.04] tracking-[-0.8px] text-[#171717] sm:text-[34px] md:text-[44px] md:tracking-[-1.1px]";
 export const BODY_CLASS =
-  "text-[15px] leading-[1.65] text-[#3d3d3d] sm:text-[16px] sm:leading-[1.62] md:text-[18px] md:leading-[1.66]";
+  "text-[15px] leading-[1.65] text-[#2d2d2d] sm:text-[16px] sm:leading-[1.62] md:text-[18px] md:leading-[1.66]";
 export const CARD_TITLE_CLASS =
   "text-[18px] font-medium leading-[1.12] tracking-[-0.35px] sm:text-[20px] md:text-[22px]";
 export const CAPTION_CLASS =
-  "text-[14px] leading-[1.6] text-[#525252] sm:text-[14px] sm:leading-[1.62] md:text-[15px] md:leading-[1.62]";
+  "text-[14px] leading-[1.6] text-[#3d3d3d] sm:text-[15px] sm:leading-[1.62] md:text-[16px] md:leading-[1.62]";
 
 export const SECTION_MAX = "max-w-[1280px]";
 export const CONTENT_MAX = "max-w-[46rem]";

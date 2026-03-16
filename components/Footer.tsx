@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Logo } from "@/components/Logo";
 
 const NAV_LINKS = [
   { href: "/work", label: "Work" },
@@ -30,16 +31,16 @@ function useFooterVariant(): FooterVariant {
 
 const variantClasses = {
   home: {
-    footer: "border-t border-[#2e2e2e] bg-[#171717] px-3 pt-10 pb-6 sm:px-6 sm:pt-14 sm:pb-8 md:px-16",
+    footer: "border-t border-[#2e2e2e] bg-[#171717] px-3 pt-3 pb-4 sm:px-6 sm:pt-14 sm:pb-8 md:px-16",
     mainGap: "gap-8 sm:flex-row sm:gap-6",
     leftGap: "space-y-2.5",
-    dividerGap: "mt-8 sm:mt-10 pt-5 sm:pt-6",
+    dividerGap: "pt-3 md:mt-8 md:pt-6",
   },
   inner: {
-    footer: "border-t border-[#2e2e2e] bg-[#171717] px-3 pt-6 pb-4 sm:px-6 sm:pt-8 sm:pb-6 md:px-16",
+    footer: "border-t border-[#2e2e2e] bg-[#171717] px-3 pt-3 pb-4 sm:px-6 sm:pt-8 sm:pb-6 md:px-16",
     mainGap: "gap-6 sm:flex-row sm:gap-4",
     leftGap: "space-y-2",
-    dividerGap: "mt-6 sm:mt-8 pt-4 sm:pt-5",
+    dividerGap: "pt-3 md:mt-6 md:pt-5",
   },
 } as const;
 
@@ -52,7 +53,7 @@ export function Footer() {
     <footer className={classes.footer} role="contentinfo">
       <div className="mx-auto max-w-[1280px]">
         <div
-          className={`flex flex-col sm:flex-row sm:items-start sm:justify-between ${classes.mainGap}`}
+          className={`hidden md:flex md:flex-row md:items-start md:justify-between ${classes.mainGap}`}
         >
           <div className={`${classes.leftGap} sm:pt-0`}>
             <Link
@@ -61,10 +62,10 @@ export function Footer() {
                 e.preventDefault();
                 window.location.href = "/";
               }}
-              className={navLinkClass}
               aria-label="Joel Premier - Home"
+              className="inline-flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-[#171717] focus-visible:ring-offset-2"
             >
-              {FOOTER_COPY.name}
+              <Logo variant="white" />
             </Link>
             <p className="max-w-[430px] whitespace-pre-line text-[14px] leading-[1.6] text-[#b8b8b8] sm:text-sm sm:leading-[1.6] md:leading-[1.55]">
               {FOOTER_COPY.description}
@@ -94,7 +95,7 @@ export function Footer() {
           </nav>
         </div>
 
-        <div className={`border-t border-[#2e2e2e] text-center ${classes.dividerGap}`}>
+        <div className={`text-center pt-5 md:border-t md:border-[#2e2e2e] md:pt-6 ${classes.dividerGap}`}>
           <p className="text-[13px] leading-[1.55] text-[#a8a8a8] sm:text-sm sm:leading-[1.6]">
             {FOOTER_COPY.legal1}
           </p>

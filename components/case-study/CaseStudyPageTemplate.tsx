@@ -5,7 +5,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Header } from "@/components/Header";
 import type { CaseStudy } from "@/lib/projects";
 import { fadeUpVariants, staggerContainerVariants } from "@/lib/motion";
-import { LABEL_CLASS, SECTION_HEADING_CLASS, SECTION_MAX, CONTENT_MAX_EDITORIAL, SECTION_LOOSE } from "./constants";
+import { LABEL_CLASS, SECTION_HEADING_CLASS, SECTION_MAX, CONTENT_MAX_EDITORIAL } from "./constants";
 import type { CaseStudyPageConfig } from "./types";
 import { CaseStudyHero } from "./CaseStudyHero";
 import { CaseStudyMetaRow } from "./CaseStudyMetaRow";
@@ -148,7 +148,7 @@ export function CaseStudyPageTemplate({
 
       {hasEvidence && (
         <motion.section
-          className={`bg-white ${SECTION_LOOSE}`}
+          className="bg-white px-4 py-12 sm:px-8 sm:py-20 md:px-12 md:py-28"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
@@ -167,7 +167,7 @@ export function CaseStudyPageTemplate({
               </h2>
             </motion.div>
             <motion.div
-              className="space-y-14 md:space-y-20"
+              className="space-y-10 md:space-y-20"
               variants={staggerContainerVariants(0.08)}
             >
               {config.evidenceChapters!.map((chapter, idx) => (

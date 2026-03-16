@@ -60,7 +60,7 @@ export function CaseStudyHero({
       </motion.div>
 
       <motion.div
-        className={`relative z-10 mx-auto flex min-h-[84svh] ${SECTION_MAX} flex-col px-4 pb-14 pt-20 sm:px-8 sm:pb-16 sm:pt-24 md:min-h-[90svh] md:px-12 md:pb-20 md:pt-[96px]`}
+        className={`relative z-10 mx-auto flex min-h-[60svh] ${SECTION_MAX} flex-col px-4 pb-10 pt-16 sm:px-8 sm:pb-16 sm:pt-24 md:min-h-[90svh] md:px-12 md:pb-20 md:pt-[96px]`}
         initial="hidden"
         animate="visible"
         variants={staggerContainerVariants(0.08)}

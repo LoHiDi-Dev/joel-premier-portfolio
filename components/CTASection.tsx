@@ -32,10 +32,10 @@ export function CTASection() {
         </motion.h2>
 
         <motion.p
-          className="mx-auto mt-4 max-w-[720px] whitespace-pre-line text-[14px] leading-[1.6] text-[#c2c2c2] sm:mt-6 sm:text-base sm:leading-[1.55] md:max-w-[820px] md:text-xl md:leading-[1.5]"
+          className="mx-auto mt-4 max-w-[720px] whitespace-pre-line text-[14px] leading-[1.6] text-[#c2c2c2] sm:mt-6 sm:text-base sm:leading-[1.55] md:max-w-[820px] md:text-xl md:leading-[1.5] [text-wrap:balance]"
           variants={fadeUpVariants(reducedMotion)}
         >
-          {"Open to senior product design roles and select consulting engagements\nwhere thoughtful design brings more clarity, consistency,\nand confidence to complex products and services."}
+          {"Open to senior product design roles and select consulting\u00A0engagements\nwhere thoughtful design brings more clarity, consistency,\u00A0and\u00A0confidence to complex products and services."}
         </motion.p>
 
         <motion.div
@@ -45,7 +45,7 @@ export function CTASection() {
           <motion.div variants={fadeUpVariants(reducedMotion)}>
             <Link
               href="/contact"
-              className="group flex h-8 items-center justify-center gap-1 rounded-full bg-white px-4 text-[11px] font-medium text-[#171717] transition-opacity duration-200 hover:opacity-90 focus:opacity-90 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#171717] sm:h-10 sm:px-6 sm:text-xs md:h-14 md:px-8 md:text-base"
+              className="group flex h-11 items-center justify-center gap-1 rounded-full bg-white px-4 text-[11px] font-medium text-[#171717] transition-opacity duration-200 hover:opacity-90 focus:opacity-90 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#171717] sm:h-10 sm:px-6 sm:text-xs md:h-14 md:px-8 md:text-base"
             >
               Get in Touch
               <span
@@ -59,7 +59,7 @@ export function CTASection() {
           <motion.div variants={fadeUpVariants(reducedMotion)}>
             <Link
               href="/resume"
-              className="group flex h-8 items-center justify-center gap-1 rounded-full border border-white bg-transparent px-4 text-[11px] font-medium text-white transition-colors duration-200 hover:bg-white/10 focus:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#171717] sm:h-10 sm:gap-2 sm:px-6 sm:text-xs md:h-14 md:px-8 md:text-base"
+              className="group flex h-11 items-center justify-center gap-1 rounded-full border border-white bg-transparent px-4 text-[11px] font-medium text-white transition-colors duration-200 hover:bg-white/10 focus:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#171717] sm:h-10 sm:gap-2 sm:px-6 sm:text-xs md:h-14 md:px-8 md:text-base"
             >
               View Resume
               <span

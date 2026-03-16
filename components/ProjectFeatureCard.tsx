@@ -104,7 +104,7 @@ export function ProjectFeatureCard({ project }: ProjectFeatureCardProps) {
         <motion.div variants={fadeUpVariants(reducedMotion, 10)}>
           <Link
             href={`/work/${project.slug}`}
-            className="group inline-flex h-8 items-center justify-center gap-1 rounded-full border border-[#171717] bg-white px-4 text-xs font-medium text-[#171717] transition-colors duration-200 hover:bg-[#171717] hover:text-white focus:bg-[#171717] focus:text-white focus:outline-none focus:ring-2 focus:ring-[#171717] focus:ring-offset-2 sm:h-10 sm:gap-2 sm:px-6 sm:text-[13px] md:h-14 md:px-8 md:text-base"
+            className="group inline-flex h-11 items-center justify-center gap-1 rounded-full border border-[#171717] bg-white px-4 text-xs font-medium text-[#171717] transition-colors duration-200 hover:bg-[#171717] hover:text-white focus:bg-[#171717] focus:text-white focus:outline-none focus:ring-2 focus:ring-[#171717] focus:ring-offset-2 sm:h-10 sm:gap-2 sm:px-6 sm:text-[13px] md:h-14 md:px-8 md:text-base"
           >
             View Case Study
             <span
