@@ -135,9 +135,11 @@ export function ResumePageContent() {
               ))}
             </motion.ul>
           </div>
+        </div>
 
-          {/* Tools & Technology */}
-          <div className="mt-12 border-t border-[#e5e5e5] pt-10 sm:mt-16 md:mt-20 md:pt-12">
+        {/* Tools & Technology — full-bleed white band */}
+        <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen border-t border-b border-[#e5e5e5] bg-white py-16 md:py-20">
+          <div className="mx-auto max-w-[1280px] px-3 sm:px-6 md:px-16">
             <div className="grid gap-6 md:grid-cols-[180px_minmax(0,1fr)] md:items-start md:gap-x-12">
               <p className={LABEL_CLASS}>TOOLS & TECHNOLOGY</p>
               <div className="mt-5 min-w-0 max-w-[52rem] md:mt-0">
@@ -272,7 +274,9 @@ export function ResumePageContent() {
               </div>
             </div>
           </div>
+        </div>
 
+        <div className="mx-auto max-w-[1280px]">
           {/* Education */}
           <motion.div
             className="mt-12 border-t border-[#e5e5e5] pt-10 sm:mt-16 md:mt-20 md:pt-12"
