@@ -17,6 +17,7 @@ interface CaseStudyPageProps {
 
 export async function generateMetadata({ params }: CaseStudyPageProps) {
   const { slug } = await params;
+  if (slug === "american-airlines") return { title: "Not Found" };
   const project = getProjectBySlug(slug);
   if (!project) return { title: "Project Not Found" };
   return {
@@ -27,6 +28,9 @@ export async function generateMetadata({ params }: CaseStudyPageProps) {
 
 export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   const { slug } = await params;
+  if (slug === "american-airlines") {
+    notFound();
+  }
   const project = getProjectBySlug(slug);
   const nextProject = getNextCaseStudy(slug);
 

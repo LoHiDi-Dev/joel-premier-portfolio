@@ -59,7 +59,7 @@ export function CaseStudySection({
                   className="rounded-[20px] border border-[#e8e8e8] bg-[#fafafa] px-5 py-5 sm:px-6 sm:py-6"
                   variants={fadeUpVariants(reducedMotion, 10)}
                 >
-                  <p className="text-[11px] font-semibold uppercase tracking-[1.8px] text-[#525252] sm:text-[12px]">
+                  <p className="accordion-number text-[11px] font-semibold uppercase tracking-[1.8px] text-[#525252] sm:text-[12px]">
                     {String(index + 1).padStart(2, "0")}
                   </p>
                   <p className="mt-4 text-[14px] leading-[1.65] text-[#4c4c4c] sm:text-[14px] sm:leading-[1.66] md:text-[15px] md:leading-[1.62]">

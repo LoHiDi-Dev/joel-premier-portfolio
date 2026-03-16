@@ -28,3 +28,24 @@ button:focus-visible {
   outline: 2px solid var(--foreground);
   outline-offset: 2px;
 }
+
+@media (max-width: 768px) {
+  .accordion-number {
+    display: none !important;
+  }
+}
+
+/* Prevent awkward mobile ragged/orphan lines without changing copy */
+h1,
+h2,
+h3,
+h1 + p,
+h2 + p,
+h3 + p,
+[role="doc-subtitle"] {
+  text-wrap: balance;
+}
+
+p.whitespace-pre-line {
+  text-wrap: balance;
+}

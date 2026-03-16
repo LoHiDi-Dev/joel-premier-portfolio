@@ -147,7 +147,7 @@ export function ResumePageContent() {
                   className="rounded-[20px] border border-[#e8e8e8] bg-[#f6f5f4] px-5 py-6 transition-colors duration-200 hover:bg-[#f0eeec] sm:px-6 sm:py-7"
                   variants={fadeUpVariants(reducedMotion, 10)}
                 >
-                  <p className="text-[10px] font-semibold uppercase tracking-[1.8px] text-[#525252] sm:text-[11px]">
+                  <p className="accordion-number text-[10px] font-semibold uppercase tracking-[1.8px] text-[#525252] sm:text-[11px]">
                     01
                   </p>
                   <h3 className="mt-4 text-[18px] font-semibold leading-[1.12] tracking-[-0.35px] text-[#171717] sm:text-[20px] md:text-[22px]">
@@ -173,7 +173,7 @@ export function ResumePageContent() {
                       className="rounded-[20px] border border-[#e8e8e8] bg-[#fafafa] px-5 py-6 transition-colors duration-200 hover:bg-[#f5f5f5] sm:px-6 sm:py-7"
                       variants={fadeUpVariants(reducedMotion, 10)}
                     >
-                      <p className="text-[10px] font-semibold uppercase tracking-[1.8px] text-[#525252] sm:text-[11px]">
+                      <p className="accordion-number text-[10px] font-semibold uppercase tracking-[1.8px] text-[#525252] sm:text-[11px]">
                         0{index + 2}
                       </p>
                       <h3 className="mt-4 text-[18px] font-semibold leading-[1.12] tracking-[-0.35px] text-[#171717] sm:text-[20px] md:text-[22px]">

@@ -146,7 +146,7 @@ export function Header({ heroOverlay = false }: HeaderProps) {
 
   return (
     <motion.header
-      className={`${isHeroOverlay ? "fixed inset-x-0 top-0" : "sticky top-0"} z-50 isolate border-b`}
+      className={`${isHeroOverlay ? "fixed inset-x-0 top-0" : "sticky top-0"} z-[1000] isolate border-b`}
       role="banner"
       initial={false}
       animate={isScrolled ? "scrolled" : "top"}
@@ -213,7 +213,7 @@ export function Header({ heroOverlay = false }: HeaderProps) {
         <button
           type="button"
           onClick={() => setMenuOpen((prev) => !prev)}
-          className={`relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 md:hidden ${
+          className={`relative z-[1010] flex h-11 w-11 shrink-0 items-center justify-center rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 md:hidden ${
             isOverlayTop
               ? "text-white hover:bg-white/10 focus:ring-white focus:ring-offset-[#171717]"
               : "text-[#171717] hover:bg-[#f5f5f5] focus:ring-[#171717] focus:ring-offset-white"
@@ -249,7 +249,7 @@ export function Header({ heroOverlay = false }: HeaderProps) {
                 ease: "easeOut",
               },
             }}
-            className="overflow-hidden bg-white md:hidden border-b border-[#e5e5e5] relative z-[50]"
+            className="relative z-[1005] overflow-hidden border-b border-[#e5e5e5] bg-white md:hidden"
             role="navigation"
             aria-label="Mobile navigation"
           >
@@ -305,7 +305,7 @@ export function Header({ heroOverlay = false }: HeaderProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-[45] bg-black/20 md:hidden"
+            className="fixed inset-0 z-[995] bg-black/20 md:hidden"
             style={{ top: "56px" }}
             onClick={closeMenu}
             aria-hidden="true"

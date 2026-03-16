@@ -24,22 +24,11 @@ export interface CaseStudy {
   reflection: CaseStudySection;
 }
 
-// Figma design asset URLs (from JP-I-Portfolio-UX-PILOT, node 9:1112)
 const IMAGES = {
-  ultaBeauty:
-    "https://www.figma.com/api/mcp/asset/efefe37d-6f53-4d6d-af7d-7c2ffc136735",
-  cvsAetna:
-    "https://www.figma.com/api/mcp/asset/45b896b9-0d65-4338-9605-a5869094bcc7",
-  tractorSupply:
-    "https://www.figma.com/api/mcp/asset/26ab01dc-ae7e-4267-8fee-39ef828d9426",
-  americanAirlines:
-    "https://www.figma.com/api/mcp/asset/f79a1d5a-a38e-4d92-a193-74c2b8eb708f",
-  medivite:
-    "https://www.figma.com/api/mcp/asset/43e70474-bb35-498f-879e-8ecf2358c593",
-  stJude:
-    "https://www.figma.com/api/mcp/asset/032a5f14-5016-43e8-a400-dde92adc93de",
-  renoTx:
-    "https://www.figma.com/api/mcp/asset/db2a842f-5672-485d-932d-00f7ff07f945",
+  ultaBeauty: "/heroes/ulta-beauty.jpg",
+  cvsAetna: "/heroes/cvs-health.jpg",
+  tractorSupply: "/heroes/tractor-supply.jpg",
+  americanAirlines: "/heroes/american-airlines.jpg",
 };
 
 export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
@@ -301,199 +290,9 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
   },
 ];
 
-export const SECONDARY_CASE_STUDIES: CaseStudy[] = [
-  {
-    slug: "medivite",
-    title: "MediVite",
-    category: "Digital Health Platform Exploration",
-    role: "Independent Product Design Exploration",
-    description:
-      "Designed a digital health platform focused on care access, provider discovery, and clearer patient journeys.",
-    summary:
-      "A self-directed exploration focused on making healthcare access feel more coordinated, understandable, and responsive to patient needs.",
-    outcome:
-      "Created a clearer concept for connected care access, service discovery, and patient guidance.",
-    image: IMAGES.medivite,
-    imageAlt: "MediVite digital health platform",
-    emphasis: "secondary",
-    context: {
-      paragraphs: [
-        "MediVite explored how a modern health platform could better connect care discovery, service access, and ongoing patient support in one coherent experience.",
-        "The concept was grounded in a familiar healthcare problem: people often need clearer pathways, better orientation, and less fragmentation when trying to find or manage care.",
-      ],
-    },
-    challenge: {
-      paragraphs: [
-        "Healthcare platforms can easily become fragmented, with disconnected entry points and unclear next steps for users trying to complete essential tasks.",
-        "The challenge was to create a calmer, more unified experience without losing the flexibility needed for different patient goals and contexts.",
-      ],
-    },
-    myRole: {
-      paragraphs: [
-        "This was a self-directed product design exploration where I defined the experience direction, interaction approach, and responsive design system considerations.",
-      ],
-      bullets: [
-        "Owned concept framing, flows, UI direction, and responsive behavior.",
-        "Explored how service discovery and access pathways could feel more connected.",
-        "Used the project to examine how healthcare experiences could balance clarity, warmth, and utility.",
-      ],
-    },
-    approach: {
-      bullets: [
-        "Framed the core patient tasks the platform needed to support.",
-        "Mapped how users might move between discovery, selection, and follow-through moments.",
-        "Explored a visual system that felt modern and reassuring without becoming overly decorative.",
-      ],
-    },
-    keyDesignDecisions: {
-      bullets: [
-        "Kept navigation and action hierarchy simple so care-related decisions felt easier to progress through.",
-        "Used modular patterns that could scale across different health services and content types.",
-        "Balanced friendliness with clarity so the interface still felt dependable for important tasks.",
-      ],
-    },
-    outcomes: {
-      paragraphs: [
-        "The concept demonstrated how a more connected healthcare experience could improve orientation and reduce friction across patient tasks.",
-        "It also served as a useful exercise in translating systems thinking into a cleaner, more approachable digital health interface.",
-      ],
-    },
-    reflection: {
-      paragraphs: [
-        "What made this exploration valuable was the opportunity to think beyond isolated screens and focus on how a service ecosystem should feel when it is working well for patients.",
-      ],
-    },
-  },
-  {
-    slug: "st-jude-navigation-study",
-    title: "St. Jude - Navigation Exploration",
-    category: "Information Architecture Exploration",
-    role: "Independent Navigation Study",
-    description:
-      "Explored nonprofit navigation patterns and simpler supporter pathways to improve findability.",
-    summary:
-      "A focused navigation and information architecture study aimed at reducing friction across a mission-driven site with multiple audiences and needs.",
-    outcome:
-      "Produced a navigation direction centered on audience clarity, findability, and stronger pathway definition.",
-    image: IMAGES.stJude,
-    imageAlt: "St. Jude Children's Research Hospital building",
-    emphasis: "secondary",
-    context: {
-      paragraphs: [
-        "Nonprofit organizations often serve multiple audiences at once, each arriving with different needs, urgency levels, and emotional context.",
-        "This exploration focused on how a navigation system could better support families, donors, and supporters without making the site feel crowded or difficult to understand.",
-      ],
-    },
-    challenge: {
-      paragraphs: [
-        "The main challenge was balancing breadth with clarity. A site can contain all the right content and still feel hard to use if the pathways do not reflect how people actually orient themselves.",
-        "The navigation needed to reduce cognitive load while still supporting varied, meaningful journeys.",
-      ],
-    },
-    myRole: {
-      paragraphs: [
-        "This was an independent study focused on information architecture, labeling, and navigation patterns for a complex nonprofit experience.",
-      ],
-      bullets: [
-        "Examined audience needs and likely entry points.",
-        "Explored clearer structural groupings and navigation pathways.",
-        "Focused on orientation, findability, and emotional clarity in the browsing experience.",
-      ],
-    },
-    approach: {
-      bullets: [
-        "Looked at how multiple user groups might interpret the same site structure differently.",
-        "Tested ways to simplify top-level navigation without flattening important distinctions.",
-        "Used hierarchy and labeling decisions to reduce ambiguity in high-value paths.",
-      ],
-    },
-    keyDesignDecisions: {
-      bullets: [
-        "Structured navigation around user intent rather than organizational complexity.",
-        "Clarified labels so sections felt more predictable before users clicked.",
-        "Protected the most emotionally important pathways by making them easier to locate quickly.",
-      ],
-    },
-    outcomes: {
-      paragraphs: [
-        "The study produced a more focused navigation direction with stronger audience clarity and improved findability.",
-        "It highlighted how better IA decisions can reduce friction without requiring a visually heavy redesign.",
-      ],
-    },
-    reflection: {
-      paragraphs: [
-        "This work reinforced that navigation design is often a content and decision-making problem before it becomes a UI problem.",
-      ],
-    },
-  },
-  {
-    slug: "reno-tx-civic-website-redesign",
-    title: "Reno, TX - Civic Website Redesign",
-    category: "Civic Service Experience",
-    role: "Independent Civic UX Exploration",
-    description:
-      "Reframed a municipal website around service clarity, key resident tasks, and easier access to local information.",
-    summary:
-      "A civic website exploration focused on helping residents complete everyday tasks with less searching and more confidence.",
-    outcome:
-      "Framed a more service-oriented civic experience centered on resident tasks and easier information access.",
-    image: IMAGES.renoTx,
-    imageAlt: "Welcome to Reno, Texas sign",
-    emphasis: "secondary",
-    context: {
-      paragraphs: [
-        "Municipal websites are everyday service tools. Residents often arrive with practical questions, time-sensitive tasks, or a need for straightforward public information.",
-        "This redesign exploration focused on how a civic experience could feel clearer, more useful, and more respectful of resident time.",
-      ],
-    },
-    challenge: {
-      paragraphs: [
-        "The challenge was making local government information easier to act on. Civic websites often reflect internal structure rather than the way residents think about tasks.",
-        "The redesign needed to improve clarity and service access while maintaining trust and simplicity.",
-      ],
-    },
-    myRole: {
-      paragraphs: [
-        "This was a self-directed civic UX exploration where I shaped the information structure, service pathways, and interface direction.",
-      ],
-      bullets: [
-        "Reframed the experience around resident needs and common civic tasks.",
-        "Explored clearer pathways for service information and city updates.",
-        "Applied a restrained visual approach to keep utility and trust at the center.",
-      ],
-    },
-    approach: {
-      bullets: [
-        "Identified the resident tasks most likely to drive visits and repeat usage.",
-        "Organized information around services, actions, and local updates instead of internal departments alone.",
-        "Explored a cleaner responsive structure that could support both quick answers and deeper browsing.",
-      ],
-    },
-    keyDesignDecisions: {
-      bullets: [
-        "Shifted emphasis from institutional structure to task clarity so residents could find what they needed faster.",
-        "Used plain, scannable hierarchy to support trust and readability.",
-        "Kept the interface restrained so public-service information stayed central.",
-      ],
-    },
-    outcomes: {
-      paragraphs: [
-        "The concept demonstrated how a more service-oriented structure could improve resident access and overall usability.",
-        "It also showed how civic design can feel more modern without becoming visually noisy or harder to maintain.",
-      ],
-    },
-    reflection: {
-      paragraphs: [
-        "This project underscored how much civic UX depends on prioritization and structure. Good public-facing design often means removing friction, not adding flourish.",
-      ],
-    },
-  },
-];
+export const SECONDARY_CASE_STUDIES: CaseStudy[] = [];
 
-export const ALL_CASE_STUDIES: CaseStudy[] = [
-  ...PRIMARY_CASE_STUDIES,
-  ...SECONDARY_CASE_STUDIES,
-];
+export const ALL_CASE_STUDIES: CaseStudy[] = [...PRIMARY_CASE_STUDIES];
 
 export type Project = CaseStudy;
 export type PersonalProject = CaseStudy;
@@ -502,25 +301,31 @@ export const FEATURED_PROJECTS: Project[] = PRIMARY_CASE_STUDIES.slice(0, 2);
 
 export const ADDITIONAL_PROJECTS: Project[] = PRIMARY_CASE_STUDIES.slice(2);
 
-export const PERSONAL_PROJECTS: PersonalProject[] = SECONDARY_CASE_STUDIES;
+export const PERSONAL_PROJECTS: PersonalProject[] = [];
 
 const PROJECT_MAP: Record<string, CaseStudy> = {};
 ALL_CASE_STUDIES.forEach((project) => {
   PROJECT_MAP[project.slug] = project;
 });
 
+const NEXT_CASE_STUDY_EXCLUDED_SLUGS = new Set<string>(["american-airlines"]);
+
 export function getProjectBySlug(slug: string): CaseStudy | undefined {
   return PROJECT_MAP[slug];
 }
 
 export function getNextCaseStudy(slug: string): CaseStudy | undefined {
-  const currentIndex = ALL_CASE_STUDIES.findIndex((project) => project.slug === slug);
+  const navigableCaseStudies = ALL_CASE_STUDIES.filter(
+    (project) => !NEXT_CASE_STUDY_EXCLUDED_SLUGS.has(project.slug),
+  );
+
+  const currentIndex = navigableCaseStudies.findIndex((project) => project.slug === slug);
 
   if (currentIndex === -1) {
     return undefined;
   }
 
-  return ALL_CASE_STUDIES[(currentIndex + 1) % ALL_CASE_STUDIES.length];
+  return navigableCaseStudies[(currentIndex + 1) % navigableCaseStudies.length];
 }
 
 export const APPROACH_ITEMS = [

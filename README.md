@@ -39,14 +39,7 @@ Open [http://localhost:3000](http://localhost:3000).
 - `/work/cvs-health-aetna`
 - `/work/tractor-supply-co`
 - `/work/american-airlines`
-- `/work/medivite`
-- `/work/st-jude-navigation-study`
-- `/work/reno-tx-civic-website-redesign`
 
 ## Deployment
 
 Vercel-ready. Deploy with `vercel` or connect the GitHub repo to Vercel.
-
-## Images
-
-Project images are currently loaded from Figma asset URLs. For production longevity, consider downloading and hosting them locally in `/public`.

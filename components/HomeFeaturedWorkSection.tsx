@@ -38,7 +38,7 @@ export function HomeFeaturedWorkSection() {
         </div>
 
         <motion.div
-          className="mt-8 sm:mt-10 md:mt-12"
+          className="mt-8 sm:mt-10 md:mt-14 md:flex md:justify-center"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}

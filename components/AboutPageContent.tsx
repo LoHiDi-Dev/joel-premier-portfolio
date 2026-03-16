@@ -51,7 +51,7 @@ export function AboutPageContent() {
           >
             Senior Product Designer focused on complex digital{"\u00A0"}
             products,
-            <br />
+            <br className="hidden sm:block" />
             systems thinking, accessibility, and outcomes that matter.
           </motion.p>
         </motion.div>
@@ -185,13 +185,13 @@ export function AboutPageContent() {
               className="mt-6 max-w-[20ch] text-[42px] font-medium leading-[0.94] tracking-[-1.3px] text-white sm:text-[56px] sm:tracking-[-1.8px] md:text-[72px] md:tracking-[-2px]"
             >
               The work behind
-              <br />
+              <br className="hidden sm:block" />
               the thinking
             </h2>
             <p className="mx-auto mt-5 max-w-[36rem] whitespace-pre-line text-[14px] leading-[1.6] text-[#c7c7c7] sm:mt-6 sm:text-[16px] sm:leading-[1.58] md:max-w-[40rem] md:text-[18px] md:leading-[1.56] [text-wrap:balance]">
               A selection of product design case studies focused{"\u00A0"}
               on{"\u00A0"}structure,
-              <br />
+              <br className="hidden sm:block" />
               usability, and delivery across complex systems.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-2 sm:mt-9 sm:gap-4">
@@ -251,7 +251,7 @@ function PrincipleAccordionCard({
         aria-expanded={open}
       >
         <div>
-          <p className="mb-2 hidden text-[10px] font-semibold uppercase tracking-[1.8px] text-[#525252] md:block">
+          <p className="accordion-number mb-2 hidden text-[10px] font-semibold uppercase tracking-[1.8px] text-[#525252] md:block">
             {card.number}
           </p>
           <h3 className="text-[18px] font-semibold leading-[1.12] tracking-[-0.35px] text-[#171717]">
@@ -290,7 +290,7 @@ function PrincipleAccordionCard({
 
       {/* Desktop: fully expanded */}
       <div className="hidden px-6 py-7 md:block">
-        <p className="text-[11px] font-semibold uppercase tracking-[1.8px] text-[#525252]">
+        <p className="accordion-number text-[11px] font-semibold uppercase tracking-[1.8px] text-[#525252]">
           {card.number}
         </p>
         <h3 className="mt-4 text-[20px] font-semibold leading-[1.12] tracking-[-0.35px] text-[#171717] md:text-[22px]">
