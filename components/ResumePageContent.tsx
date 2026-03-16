@@ -1,6 +1,7 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { MOTION, fadeUpVariants, staggerContainerVariants } from "@/lib/motion";
 import {
   BODY_CLASS,
@@ -24,6 +25,7 @@ const GRAY_BLEED_CLASS =
 
 export function ResumePageContent() {
   const reducedMotion = Boolean(useReducedMotion());
+  const [toolsOpenIndex, setToolsOpenIndex] = useState<number | null>(null);
 
   return (
     <>
@@ -138,7 +140,87 @@ export function ResumePageContent() {
             <div className="grid gap-6 md:grid-cols-[180px_minmax(0,1fr)] md:items-start md:gap-x-12">
               <p className={LABEL_CLASS}>TOOLS & TECHNOLOGY</p>
               <div className="mt-5 min-w-0 max-w-[52rem] md:mt-0">
-                <ul className="space-y-6 sm:space-y-7" role="list">
+                {/* Mobile: accordion */}
+                <div className="md:hidden">
+                  {TOOLS_AND_TECHNOLOGY.map((group, index) => {
+                    const isOpen = toolsOpenIndex === index;
+                    return (
+                      <div key={group.label} className={index > 0 ? "mt-3" : ""}>
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setToolsOpenIndex(isOpen ? null : index)
+                          }
+                          className="w-full text-left"
+                          aria-expanded={isOpen}
+                          aria-controls={`tools-tech-${index}`}
+                        >
+                          <div className="flex items-center justify-between gap-4 rounded-[16px] border border-[#e5e5e5] bg-white px-4 py-4 transition-colors duration-200 hover:bg-[#f7f6f4] active:bg-[#f0eeec]">
+                            <span
+                              className={
+                                group.muted
+                                  ? "text-[13px] font-medium leading-[1.4] text-[#737373] sm:text-[14px]"
+                                  : "text-[14px] font-semibold leading-[1.4] text-[#171717] sm:text-[15px]"
+                              }
+                            >
+                              {group.label}
+                            </span>
+                            <motion.span
+                              animate={{ rotate: isOpen ? 180 : 0 }}
+                              transition={{
+                                duration: 0.2,
+                                ease: [0.22, 1, 0.36, 1],
+                              }}
+                              className="flex-shrink-0 text-[18px] leading-none text-[#525252]"
+                              aria-hidden="true"
+                            >
+                              ↓
+                            </motion.span>
+                          </div>
+                        </button>
+                        <AnimatePresence initial={false}>
+                          {isOpen && (
+                            <motion.div
+                              id={`tools-tech-${index}`}
+                              key="content"
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{
+                                height: {
+                                  duration: 0.3,
+                                  ease: [0.22, 1, 0.36, 1],
+                                },
+                                opacity: { duration: 0.2 },
+                              }}
+                              className="overflow-hidden"
+                            >
+                              <div className="flex flex-wrap gap-3 px-4 pb-4 pt-3">
+                                {group.items.map((item) => (
+                                  <span
+                                    key={item}
+                                    className={
+                                      group.muted
+                                        ? "inline-flex rounded-full border border-[#e5e5e5] bg-white px-4 py-2.5 text-[13px] font-normal leading-[1.3] text-[#525252] sm:text-[14px]"
+                                        : "inline-flex rounded-full border border-[#e5e5e5] bg-white px-4 py-2.5 text-[14px] font-normal leading-[1.3] text-[#171717] sm:text-[15px]"
+                                    }
+                                  >
+                                    {item}
+                                  </span>
+                                ))}
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    );
+                  })}
+                </div>
+                {/* Desktop: grouped chip layout unchanged */}
+                <ul
+                  className="hidden space-y-6 sm:space-y-7 md:block"
+                  role="list"
+                >
                   {TOOLS_AND_TECHNOLOGY.map((group) => (
                     <li key={group.label}>
                       <p
@@ -190,10 +272,7 @@ export function ResumePageContent() {
                   className="rounded-[20px] border border-[#e8e8e8] bg-[#f6f5f4] px-5 py-6 transition-colors duration-200 hover:bg-[#f0eeec] sm:px-6 sm:py-7"
                   variants={fadeUpVariants(reducedMotion, 10)}
                 >
-                  <p className="accordion-number text-[10px] font-semibold uppercase tracking-[1.8px] text-[#525252] sm:text-[11px]">
-                    01
-                  </p>
-                  <h3 className="mt-4 text-[18px] font-semibold leading-[1.12] tracking-[-0.35px] text-[#171717] sm:text-[20px] md:text-[22px]">
+                  <h3 className="text-[18px] font-semibold leading-[1.12] tracking-[-0.35px] text-[#171717] sm:text-[20px] md:text-[22px]">
                     {EDUCATION[0].degree}
                   </h3>
                   <p className="mt-4 text-[14px] leading-[1.62] text-[#3d3d3d] sm:leading-[1.62] md:text-[15px]">
@@ -210,16 +289,13 @@ export function ResumePageContent() {
                   className="mt-4 grid gap-4 sm:grid-cols-2 md:gap-6"
                   variants={staggerContainerVariants(0.06)}
                 >
-                  {EDUCATION.slice(1).map((entry, index) => (
+                  {EDUCATION.slice(1).map((entry) => (
                     <motion.article
                       key={`${entry.degree}-${entry.institution}`}
                       className="rounded-[20px] border border-[#e8e8e8] bg-[#fafafa] px-5 py-6 transition-colors duration-200 hover:bg-[#f5f5f5] sm:px-6 sm:py-7"
                       variants={fadeUpVariants(reducedMotion, 10)}
                     >
-                      <p className="accordion-number text-[10px] font-semibold uppercase tracking-[1.8px] text-[#525252] sm:text-[11px]">
-                        0{index + 2}
-                      </p>
-                      <h3 className="mt-4 text-[18px] font-semibold leading-[1.12] tracking-[-0.35px] text-[#171717] sm:text-[20px] md:text-[22px]">
+                      <h3 className="text-[18px] font-semibold leading-[1.12] tracking-[-0.35px] text-[#171717] sm:text-[20px] md:text-[22px]">
                         {entry.degree}
                       </h3>
                       <p className="mt-4 text-[14px] leading-[1.62] text-[#3d3d3d] sm:leading-[1.62] md:text-[15px]">
