@@ -318,7 +318,9 @@ export function getProjectBySlug(slug: string): CaseStudy | undefined {
 
 export function getNextCaseStudy(slug: string): CaseStudy | undefined {
   const navigableCaseStudies = ALL_CASE_STUDIES.filter(
-    (project) => !NEXT_CASE_STUDY_EXCLUDED_SLUGS.has(project.slug),
+    (project) =>
+      project.status !== "coming-soon" &&
+      !NEXT_CASE_STUDY_EXCLUDED_SLUGS.has(project.slug),
   );
 
   const currentIndex = navigableCaseStudies.findIndex((project) => project.slug === slug);

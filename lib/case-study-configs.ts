@@ -480,7 +480,7 @@ export function getTractorSupplyCaseStudyConfig(): CaseStudyPageConfig {
       editorialMeasure: true,
       paragraphs: [
         "At Tractor Supply, I focused on the core commerce moments where purchase confidence mattered most — product lists, product pages, and mobile shopping experiences.",
-        "Baymard's benchmark helped surface where browse-to-buy friction was most visible, from product discovery to purchase decisions. I used those findings as a starting point to translate\nthe highest-friction issues into focused PLP and PDP redesigns across web and mobile.",
+        "Baymard's benchmark helped surface where browse-to-buy friction was most visible, from product discovery to purchase decisions. I used those findings as a starting point to translate the highest-friction issues into focused PLP and PDP redesigns across web and mobile.",
         "The result was a more structured path from discovery to purchase, with stronger hierarchy, clearer product evaluation, and better support for purchase decisions across devices.",
       ],
     },

@@ -287,7 +287,7 @@ export function Header({ heroOverlay = false }: HeaderProps) {
               <Link
                 href="/resume"
                 onClick={closeMenu}
-                className="mt-2 flex h-12 items-center justify-center rounded-full border border-[#171717] bg-white px-6 text-base font-medium text-[#171717] transition-colors hover:bg-[#171717] hover:text-white focus:bg-[#171717] focus:text-white focus:outline-none"
+                className="mt-2 flex h-12 items-center justify-center rounded-full bg-black px-6 text-base font-medium text-white transition-colors hover:bg-neutral-800 focus:bg-neutral-800 focus:outline-none"
               >
                 Resume
               </Link>

@@ -184,7 +184,7 @@ export function AboutPageContent() {
               id="about-work-endcap-title"
               className="mt-6 max-w-[20ch] text-[42px] font-medium leading-[0.94] tracking-[-1.3px] text-white sm:text-[56px] sm:tracking-[-1.8px] md:text-[72px] md:tracking-[-2px]"
             >
-              The work behind
+              The work behind{" "}
               <br className="hidden sm:block" />
               the thinking
             </h2>
