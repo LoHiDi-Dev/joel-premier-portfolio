@@ -138,8 +138,8 @@ export function ResumePageContent() {
         </div>
 
         {/* Tools & Technology — full-bleed white band */}
-        <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen border-t border-b border-[#e5e5e5] bg-white py-16 md:py-20">
-          <div className="mx-auto max-w-[1280px] px-3 sm:px-6 md:px-16">
+        <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] -mt-6 w-screen bg-white px-3 py-12 sm:px-6 md:-mt-8 md:px-16 md:py-14">
+          <div className="mx-auto max-w-[1280px]">
             <div className="grid gap-6 md:grid-cols-[180px_minmax(0,1fr)] md:items-start md:gap-x-12">
               <p className={LABEL_CLASS}>TOOLS & TECHNOLOGY</p>
               <div className="mt-5 min-w-0 max-w-[52rem] md:mt-0">
