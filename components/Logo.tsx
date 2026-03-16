@@ -6,10 +6,13 @@ function Logo({ variant = "dark" }: { variant?: "dark" | "white" }) {
   const isDark = variant === "dark";
 
   return (
-    <div className="flex items-center gap-2.5 sm:gap-3">
+    <motion.div
+      className="flex items-center gap-2.5 sm:gap-3"
+      whileHover="hover"
+    >
       {/* JP circle — rotates on hover */}
       <motion.div
-        whileHover={{ rotate: 360 }}
+        variants={{ hover: { rotate: 360 } }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
         className={`flex h-[36px] w-[36px] flex-shrink-0 items-center justify-center rounded-full sm:h-[40px] sm:w-[40px] md:h-[48px] md:w-[48px] ${isDark ? "bg-[#171717]" : "bg-white"}`}
       >
@@ -33,7 +36,7 @@ function Logo({ variant = "dark" }: { variant?: "dark" | "white" }) {
           Product Designer
         </span>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

@@ -21,9 +21,13 @@ export function WorkCaseStudyCard({
 }: WorkCaseStudyCardProps) {
   const isFeature = variant === "feature";
   const reducedMotion = Boolean(useReducedMotion());
+  const isComingSoon = project.status === "coming-soon";
 
   return (
     <motion.article
+      aria-label={
+        isComingSoon ? `${project.title} case study — coming soon` : undefined
+      }
       className={
         isFeature
           ? "grid grid-cols-1 gap-5 sm:gap-7 md:grid-cols-12 md:items-center md:gap-x-10 md:gap-y-6"
@@ -45,7 +49,7 @@ export function WorkCaseStudyCard({
         <motion.div
           className="relative h-full w-full"
           whileHover={
-            reducedMotion
+            reducedMotion || isComingSoon
               ? undefined
               : { scale: MOTION.scale.image }
           }
@@ -68,6 +72,14 @@ export function WorkCaseStudyCard({
           className="absolute inset-0 bg-gradient-to-b from-black/10 to-transparent"
           aria-hidden="true"
         />
+
+        {isComingSoon && (
+          <div className="pointer-events-none absolute left-4 top-4">
+            <span className="inline-flex items-center rounded-full border border-white/70 bg-white/85 px-3 py-1 text-[10px] font-semibold uppercase tracking-[1.8px] text-[#525252] backdrop-blur">
+              Coming Soon
+            </span>
+          </div>
+        )}
       </motion.div>
 
       <motion.div
@@ -122,24 +134,26 @@ export function WorkCaseStudyCard({
           </motion.p>
         </div>
 
-        <motion.div variants={fadeUpVariants(reducedMotion, 10)}>
-          <Link
-            href={`/work/${project.slug}`}
-            className={`group inline-flex items-center justify-center gap-1 rounded-full border border-[#171717] bg-white font-medium text-[#171717] transition-colors duration-200 hover:bg-[#171717] hover:text-white focus:bg-[#171717] focus:text-white focus:outline-none focus:ring-2 focus:ring-[#171717] focus:ring-offset-2 ${
-              isFeature
-                ? "h-11 px-4 text-xs sm:h-10 sm:gap-2 sm:px-6 sm:text-[13px] md:h-12 md:px-7 md:text-sm"
-                : "h-11 px-4 text-xs sm:h-10 sm:gap-2 sm:px-6 sm:text-[13px] md:h-14 md:px-8 md:text-base"
-            }`}
-          >
-            View Case Study
-            <span
-              aria-hidden="true"
-              className="transition-transform duration-200 group-hover:translate-x-0.5 group-focus:translate-x-0.5"
+        {!isComingSoon && (
+          <motion.div variants={fadeUpVariants(reducedMotion, 10)}>
+            <Link
+              href={`/work/${project.slug}`}
+              className={`group inline-flex items-center justify-center gap-1 rounded-full border border-[#171717] bg-white font-medium text-[#171717] transition-colors duration-200 hover:bg-[#171717] hover:text-white focus:bg-[#171717] focus:text-white focus:outline-none focus:ring-2 focus:ring-[#171717] focus:ring-offset-2 ${
+                isFeature
+                  ? "h-11 px-4 text-xs sm:h-10 sm:gap-2 sm:px-6 sm:text-[13px] md:h-12 md:px-7 md:text-sm"
+                  : "h-11 px-4 text-xs sm:h-10 sm:gap-2 sm:px-6 sm:text-[13px] md:h-14 md:px-8 md:text-base"
+              }`}
             >
-              →
-            </span>
-          </Link>
-        </motion.div>
+              View Case Study
+              <span
+                aria-hidden="true"
+                className="transition-transform duration-200 group-hover:translate-x-0.5 group-focus:translate-x-0.5"
+              >
+                →
+              </span>
+            </Link>
+          </motion.div>
+        )}
       </motion.div>
     </motion.article>
   );

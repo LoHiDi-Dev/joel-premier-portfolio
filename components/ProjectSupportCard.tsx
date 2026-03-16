@@ -7,8 +7,13 @@ interface ProjectSupportCardProps {
 }
 
 export function ProjectSupportCard({ project }: ProjectSupportCardProps) {
+  const isComingSoon = project.status === "coming-soon";
+
   return (
-    <article className="flex flex-col gap-3 sm:gap-5">
+    <article
+      className="flex flex-col gap-3 sm:gap-5"
+      aria-label={isComingSoon ? `${project.title} case study — coming soon` : undefined}
+    >
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-gradient-to-br from-[#f5f5f5] to-[#fafafa] shadow-sm md:rounded-2xl">
         <Image
           src={project.image}
@@ -21,6 +26,13 @@ export function ProjectSupportCard({ project }: ProjectSupportCardProps) {
           className="absolute inset-0 bg-gradient-to-b from-black/10 to-transparent"
           aria-hidden="true"
         />
+        {isComingSoon && (
+          <div className="pointer-events-none absolute left-3 top-3 sm:left-4 sm:top-4">
+            <span className="inline-flex items-center rounded-full border border-white/70 bg-white/85 px-3 py-1 text-[10px] font-semibold uppercase tracking-[1.8px] text-[#525252] backdrop-blur">
+              Coming Soon
+            </span>
+          </div>
+        )}
       </div>
 
       <div className="space-y-1 sm:space-y-2">
@@ -43,18 +55,20 @@ export function ProjectSupportCard({ project }: ProjectSupportCardProps) {
           {project.description}
         </p>
 
-        <Link
-          href={`/work/${project.slug}`}
-          className="group inline-flex items-center gap-1 text-[12px] font-medium text-[#171717] transition-opacity hover:opacity-80 focus:opacity-80 sm:text-xs md:gap-2 md:text-base"
-        >
-          View Case Study
-          <span
-            aria-hidden="true"
-            className="transition-transform duration-200 group-hover:translate-x-0.5 group-focus:translate-x-0.5"
+        {!isComingSoon && (
+          <Link
+            href={`/work/${project.slug}`}
+            className="group inline-flex items-center gap-1 text-[12px] font-medium text-[#171717] transition-opacity hover:opacity-80 focus:opacity-80 sm:text-xs md:gap-2 md:text-base"
           >
-            →
-          </span>
-        </Link>
+            View Case Study
+            <span
+              aria-hidden="true"
+              className="transition-transform duration-200 group-hover:translate-x-0.5 group-focus:translate-x-0.5"
+            >
+              →
+            </span>
+          </Link>
+        )}
       </div>
     </article>
   );

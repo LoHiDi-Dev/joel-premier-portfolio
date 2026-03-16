@@ -12,9 +12,11 @@ interface PersonalProjectCardProps {
 
 export function PersonalProjectCard({ project }: PersonalProjectCardProps) {
   const reducedMotion = Boolean(useReducedMotion());
+  const isComingSoon = project.status === "coming-soon";
 
   return (
     <motion.article
+      aria-label={isComingSoon ? `${project.title} case study — coming soon` : undefined}
       className="flex h-full flex-col gap-3 rounded-[20px] border border-[#e5e5e5] bg-white px-3 py-3 shadow-[0_8px_24px_rgba(23,23,23,0.04)] sm:gap-3.5 sm:px-3.5 sm:py-3.5 md:px-4 md:py-4"
       initial="hidden"
       whileInView="visible"
@@ -28,7 +30,7 @@ export function PersonalProjectCard({ project }: PersonalProjectCardProps) {
         <motion.div
           className="relative h-full w-full"
           whileHover={
-            reducedMotion
+            reducedMotion || isComingSoon
               ? undefined
               : { scale: MOTION.scale.image }
           }
@@ -46,6 +48,14 @@ export function PersonalProjectCard({ project }: PersonalProjectCardProps) {
           className="absolute inset-0 bg-gradient-to-b from-black/10 to-transparent"
           aria-hidden="true"
         />
+
+        {isComingSoon && (
+          <div className="pointer-events-none absolute left-3 top-3">
+            <span className="inline-flex items-center rounded-full border border-white/70 bg-white/85 px-3 py-1 text-[10px] font-semibold uppercase tracking-[1.8px] text-[#525252] backdrop-blur">
+              Coming Soon
+            </span>
+          </div>
+        )}
       </motion.div>
 
       <motion.div
@@ -64,20 +74,22 @@ export function PersonalProjectCard({ project }: PersonalProjectCardProps) {
         >
           {project.description}
         </motion.p>
-        <motion.div variants={fadeUpVariants(reducedMotion, 10)}>
-          <Link
-            href={`/work/${project.slug}`}
-            className="group inline-flex items-center gap-1 text-[13px] font-medium text-[#525252] transition-colors duration-200 hover:text-[#171717] focus:text-[#171717] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#525252] focus-visible:ring-offset-2 sm:text-[13px] md:gap-1.5 md:text-sm"
-          >
-            View Case Study
-            <span
-              aria-hidden="true"
-              className="transition-transform duration-200 group-hover:translate-x-0.5 group-focus:translate-x-0.5"
+        {!isComingSoon && (
+          <motion.div variants={fadeUpVariants(reducedMotion, 10)}>
+            <Link
+              href={`/work/${project.slug}`}
+              className="group inline-flex items-center gap-1 text-[13px] font-medium text-[#525252] transition-colors duration-200 hover:text-[#171717] focus:text-[#171717] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#525252] focus-visible:ring-offset-2 sm:text-[13px] md:gap-1.5 md:text-sm"
             >
-              →
-            </span>
-          </Link>
-        </motion.div>
+              View Case Study
+              <span
+                aria-hidden="true"
+                className="transition-transform duration-200 group-hover:translate-x-0.5 group-focus:translate-x-0.5"
+              >
+                →
+              </span>
+            </Link>
+          </motion.div>
+        )}
       </motion.div>
     </motion.article>
   );

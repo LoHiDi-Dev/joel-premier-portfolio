@@ -8,6 +8,7 @@ export interface CaseStudy {
   title: string;
   category: string;
   hideCategory?: boolean;
+  status?: "published" | "coming-soon";
   role: string;
   description: string;
   summary: string;
@@ -230,6 +231,7 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
     title: "American\u00A0Airlines",
     category: "Travel Journey Architecture",
     hideCategory: true,
+    status: "coming-soon",
     role: "Senior Information Architect",
     description:
       "Defined information architecture across end-to-end travel journeys for web, mobile, and kiosk experiences.",

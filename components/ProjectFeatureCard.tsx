@@ -14,6 +14,7 @@ interface ProjectFeatureCardProps {
 export function ProjectFeatureCard({ project }: ProjectFeatureCardProps) {
   const reducedMotion = Boolean(useReducedMotion());
   const imageRef = useRef<HTMLDivElement | null>(null);
+  const isComingSoon = project.status === "coming-soon";
 
   const { scrollYProgress } = useScroll({
     target: imageRef,
@@ -50,6 +51,14 @@ export function ProjectFeatureCard({ project }: ProjectFeatureCardProps) {
           className="absolute inset-0 bg-gradient-to-b from-black/10 to-transparent"
           aria-hidden="true"
         />
+
+        {isComingSoon && (
+          <div className="pointer-events-none absolute left-4 top-4">
+            <span className="inline-flex items-center rounded-full border border-white/70 bg-white/85 px-3 py-1 text-[10px] font-semibold uppercase tracking-[1.8px] text-[#525252] backdrop-blur">
+              Coming Soon
+            </span>
+          </div>
+        )}
       </motion.div>
 
       <motion.div
@@ -101,20 +110,22 @@ export function ProjectFeatureCard({ project }: ProjectFeatureCardProps) {
           </motion.p>
         )}
 
-        <motion.div variants={fadeUpVariants(reducedMotion, 10)}>
-          <Link
-            href={`/work/${project.slug}`}
-            className="group inline-flex h-11 items-center justify-center gap-1 rounded-full border border-[#171717] bg-white px-4 text-xs font-medium text-[#171717] transition-colors duration-200 hover:bg-[#171717] hover:text-white focus:bg-[#171717] focus:text-white focus:outline-none focus:ring-2 focus:ring-[#171717] focus:ring-offset-2 sm:h-10 sm:gap-2 sm:px-6 sm:text-[13px] md:h-14 md:px-8 md:text-base"
-          >
-            View Case Study
-            <span
-              aria-hidden="true"
-              className="transition-transform duration-200 group-hover:translate-x-0.5 group-focus:translate-x-0.5"
+        {!isComingSoon && (
+          <motion.div variants={fadeUpVariants(reducedMotion, 10)}>
+            <Link
+              href={`/work/${project.slug}`}
+              className="group inline-flex h-11 items-center justify-center gap-1 rounded-full border border-[#171717] bg-white px-4 text-xs font-medium text-[#171717] transition-colors duration-200 hover:bg-[#171717] hover:text-white focus:bg-[#171717] focus:text-white focus:outline-none focus:ring-2 focus:ring-[#171717] focus:ring-offset-2 sm:h-10 sm:gap-2 sm:px-6 sm:text-[13px] md:h-14 md:px-8 md:text-base"
             >
-              →
-            </span>
-          </Link>
-        </motion.div>
+              View Case Study
+              <span
+                aria-hidden="true"
+                className="transition-transform duration-200 group-hover:translate-x-0.5 group-focus:translate-x-0.5"
+              >
+                →
+              </span>
+            </Link>
+          </motion.div>
+        )}
       </motion.div>
     </article>
   );

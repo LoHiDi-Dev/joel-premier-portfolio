@@ -166,7 +166,7 @@ export function Header({ heroOverlay = false }: HeaderProps) {
               window.location.href = "/";
             }
           }}
-          className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#171717] focus-visible:ring-offset-2"
+          className="flex items-center cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#171717] focus-visible:ring-offset-2"
         >
           <Logo variant={isOverlayTop ? "white" : "dark"} />
         </Link>
