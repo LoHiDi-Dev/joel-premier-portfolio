@@ -68,7 +68,7 @@ export function CaseStudyPageTemplate({
   const isAuditLed = config.layoutVariant === "audit-led";
 
   return (
-    <article className="bg-white">
+    <article className="bg-white overflow-x-clip">
       <Header heroOverlay />
       <CaseStudyHero
         project={project}

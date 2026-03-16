@@ -50,10 +50,10 @@ export function ScreenshotFrame({
 
   const imageBlock = (
     <div
-        className={`relative w-full ${aspectClass} ${
-          treatment === "before" ? "bg-[#f4f4f4]" : "bg-white"
-        }`}
-      >
+      className={`relative w-full min-w-0 ${aspectClass} ${
+        treatment === "before" ? "bg-[#f4f4f4]" : "bg-white"
+      }`}
+    >
       <Image
         src={src}
         alt={alt}
@@ -106,7 +106,7 @@ export function ScreenshotFrame({
   );
 
   return (
-    <motion.figure variants={fadeUpVariants(reducedMotion, 16)}>
+    <motion.figure className="min-w-0" variants={fadeUpVariants(reducedMotion, 16)}>
       {resolvedBadgeLabel && (
         <p
           className={`mb-3 text-[11px] font-semibold uppercase tracking-[1.6px] ${
@@ -119,7 +119,7 @@ export function ScreenshotFrame({
       {frameContent}
       <figcaption className="mt-5 space-y-1.5">
         <p
-          className={`${captionFullWidth ? "w-full" : "max-w-[36rem]"} ${CAPTION_CLASS} ${captionNowrap ? "md:whitespace-nowrap" : ""}`}
+          className={`${captionFullWidth ? "w-full" : "max-w-[36rem]"} break-words ${CAPTION_CLASS} ${captionNowrap ? "md:whitespace-nowrap" : ""}`}
         >
           {caption}
         </p>
