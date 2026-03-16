@@ -1,7 +1,7 @@
 /** Shared design tokens for case study pages. Matches Ulta reference. */
 
 export const LABEL_CLASS =
-  "text-[11px] font-semibold uppercase tracking-[1.8px] text-[#525252] sm:text-[12px]";
+  "font-sans text-[11px] font-semibold uppercase tracking-[1.8px] text-[#525252] sm:text-[12px]";
 export const LABEL_CLASS_DARK =
   "text-[11px] font-semibold uppercase tracking-[1.8px] text-white/78 sm:text-[12px]";
 export const SECTION_HEADING_CLASS =
