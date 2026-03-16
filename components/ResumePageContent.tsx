@@ -15,6 +15,7 @@ import {
   EDUCATION,
   PROFESSIONAL_SUMMARY_HEADLINE,
   PROFESSIONAL_SUMMARY_PARAGRAPHS,
+  TOOLS_AND_TECHNOLOGY,
 } from "@/lib/resume-data";
 
 const GRAY_BLEED_CLASS =
@@ -130,6 +131,48 @@ export function ResumePageContent() {
                 </motion.li>
               ))}
             </motion.ul>
+          </div>
+
+          {/* Tools & Technology */}
+          <div className="mt-12 border-t border-[#e5e5e5] pt-10 sm:mt-16 md:mt-20 md:pt-12">
+            <div className="grid gap-6 md:grid-cols-[180px_minmax(0,1fr)] md:items-start md:gap-x-12">
+              <p className={LABEL_CLASS}>TOOLS & TECHNOLOGY</p>
+              <div className="mt-5 min-w-0 max-w-[52rem] md:mt-0">
+                <ul className="space-y-6 sm:space-y-7" role="list">
+                  {TOOLS_AND_TECHNOLOGY.map((group) => (
+                    <li key={group.label}>
+                      <p
+                        className={
+                          group.muted
+                            ? "text-[13px] font-medium leading-[1.4] text-[#737373] sm:text-[14px]"
+                            : "text-[14px] font-semibold leading-[1.4] text-[#171717] sm:text-[15px]"
+                        }
+                      >
+                        {group.label}
+                      </p>
+                      <ul
+                        className="mt-2 flex flex-wrap gap-3"
+                        role="list"
+                      >
+                        {group.items.map((item) => (
+                          <li key={item}>
+                            <span
+                              className={
+                                group.muted
+                                  ? "inline-flex rounded-full border border-[#e5e5e5] bg-white px-4 py-2.5 text-[13px] font-normal leading-[1.3] text-[#525252] sm:text-[14px]"
+                                  : "inline-flex rounded-full border border-[#e5e5e5] bg-white px-4 py-2.5 text-[14px] font-normal leading-[1.3] text-[#171717] sm:text-[15px]"
+                              }
+                            >
+                              {item}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
 
           {/* Education */}

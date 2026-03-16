@@ -134,6 +134,55 @@ export const SKILLS_GROUPS = [
 
 export const AI_WORKFLOW = ["Claude", "Figma AI", "UX Pilot", "Cursor"] as const;
 
+/** Tools & Technology section — exact copy for Resume page. muted: true = "Working familiarity with" (secondary). */
+export const TOOLS_AND_TECHNOLOGY = [
+  {
+    label: "Design",
+    items: [
+      "Figma",
+      "FigJam",
+      "Design Systems",
+      "Interactive Prototyping",
+      "Wireframing",
+      "User Flows",
+      "Accessibility Review",
+      "UX Writing",
+    ],
+    muted: false,
+  },
+  {
+    label: "Front-End",
+    items: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+    ],
+    muted: false,
+  },
+  {
+    label: "Delivery & Collaboration",
+    items: [
+      "GitHub",
+      "Jira",
+      "Confluence",
+      "Design Tokens",
+      "Component Handoff",
+      "Responsive QA",
+      "Front-End Implementation Support",
+    ],
+    muted: false,
+  },
+  {
+    label: "Working familiarity with",
+    items: ["Laravel", "Prisma ORM", "PostgreSQL", "Docker", "GitHub Actions"],
+    muted: true,
+  },
+] as const;
+
 export const EDUCATION = [
   {
     degree: "M.A. Design Management",
