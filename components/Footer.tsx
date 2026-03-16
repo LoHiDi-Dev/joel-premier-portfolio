@@ -31,13 +31,13 @@ function useFooterVariant(): FooterVariant {
 
 const variantClasses = {
   home: {
-    footer: "border-t border-[#2e2e2e] bg-[#171717] px-3 pt-3 pb-4 sm:px-6 sm:pt-14 sm:pb-8 md:px-16",
+    footer: "border-t border-[#2e2e2e] bg-[#171717] px-3 pt-3 pb-4 sm:px-6 sm:pt-10 sm:pb-8 md:px-16",
     mainGap: "gap-8 sm:flex-row sm:gap-6",
     leftGap: "space-y-2.5",
     dividerGap: "pt-3 md:mt-8 md:pt-6",
   },
   inner: {
-    footer: "border-t border-[#2e2e2e] bg-[#171717] px-3 pt-3 pb-4 sm:px-6 sm:pt-8 sm:pb-6 md:px-16",
+    footer: "border-t border-[#2e2e2e] bg-[#171717] px-3 pt-3 pb-4 sm:px-6 sm:pt-10 sm:pb-6 md:px-16",
     mainGap: "gap-6 sm:flex-row sm:gap-4",
     leftGap: "space-y-2",
     dividerGap: "pt-3 md:mt-6 md:pt-5",

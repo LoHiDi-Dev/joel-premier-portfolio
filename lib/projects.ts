@@ -40,11 +40,11 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
     hideCategory: true,
     role: "Senior Product Designer",
     description:
-      "Designed a more coherent browse-to-buy journey across\ndiscovery, navigation, category entry, and loyalty.",
+      "Designed a more coherent browse-to-buy journey across discovery, navigation, category entry, and loyalty.",
     summary:
       "Designed key moments across Ulta's browse-to-buy journey, balancing merchandising, loyalty, and purchase confidence across responsive commerce surfaces.",
     outcome:
-      "Improved continuity across key shopping flows, helping\u00A0customers\nmove with less friction and more confidence.",
+      "Improved continuity across key shopping flows, helping customers move with less friction and more confidence.",
     image: IMAGES.ultaBeauty,
     imageAlt: "Ulta Beauty e-commerce experience featuring makeup products",
     emphasis: "primary",
@@ -105,11 +105,11 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
     hideCategory: true,
     role: "Senior Product Designer",
     description:
-      "Designed clearer Medicare plan shopping and enrollment\nexperiences across search, comparison, and plan review.",
+      "Designed clearer Medicare plan shopping and enrollment experiences across search, comparison, and plan review.",
     summary:
-      "Simplifying a regulated healthcare journey through greater clarity,\ntrust, and accessibility.",
+      "Simplifying a regulated healthcare journey through greater clarity, trust, and accessibility.",
     outcome:
-      "Reduced friction in a complex, regulated journey and helped\u00A0members\nmake more confident decisions.",
+      "Reduced friction in a complex, regulated journey and helped members make more confident decisions.",
     image: IMAGES.cvsAetna,
     imageAlt: "CVS Health Aetna Medicare Extra Benefits Card",
     emphasis: "primary",
@@ -172,7 +172,7 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
     description:
       "Led audit-informed UX improvements across web and mobile, while helping evolve Adobe XD templates into a unified Figma design system.",
     summary:
-      "Clarifying core shopping flows across product discovery,\nevaluation, and purchase.",
+      "Clarifying core shopping flows across product discovery, evaluation, and purchase.",
     outcome:
       "Helped modernize core patterns and improve consistency across commerce touchpoints.",
     image: IMAGES.tractorSupply,

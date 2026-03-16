@@ -159,12 +159,6 @@ export function AboutPageContent() {
                 <PrincipleAccordionCard key={card.number} card={card} />
               ))}
             </motion.div>
-            <motion.p
-              className="mt-14 max-w-[46rem] text-[13px] leading-[1.6] text-[#525252] sm:mt-16 sm:text-[14px] md:mt-20"
-              variants={fadeUpVariants(reducedMotion, 10)}
-            >
-              This approach shapes how I work — especially where complexity, scale, and delivery alignment matter.
-            </motion.p>
           </div>
         </motion.div>
       </div>

@@ -124,9 +124,6 @@ export function ContactPageContent() {
                     className={`flex gap-4 py-6 ${index > 0 ? "border-t border-[#e5e5e5]" : ""}`}
                     variants={fadeUpVariants(reducedMotion, 10)}
                   >
-                    <span className="flex-shrink-0 text-[13px] leading-[1.8] text-[#737373]">
-                      0{index + 1}
-                    </span>
                     <div>
                       <h3 className="text-[16px] font-semibold leading-[1.18] tracking-[-0.2px] text-[#171717] sm:text-[18px] md:text-[20px]">
                         {item.title}

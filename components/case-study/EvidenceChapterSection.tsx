@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { fadeUpVariants, staggerContainerVariants } from "@/lib/motion";
 import { LABEL_CLASS, BODY_CLASS, EVIDENCE_ASPECT } from "./constants";
 import { ScreenshotFrame } from "./ScreenshotFrame";

@@ -60,7 +60,7 @@ export default function ResumePage() {
                 </a>
                 <Link
                   href="/work"
-                  className="group flex h-11 items-center justify-center gap-1 rounded-full border border-white bg-transparent px-4 text-[11px] font-medium text:white transition-colors duration-200 hover:bg:white/10 focus:bg:white/10 focus:outline-none focus:ring-2 focus:ring:white focus:ring-offset-2 focus:ring-offset-[#171717] sm:h-10 sm:gap-2 sm:px-6 sm:text-xs md:h-14 md:px-8 md:text-base"
+                  className="group flex h-11 items-center justify-center gap-1 rounded-full border border-white bg-transparent px-4 text-[11px] font-medium text-white transition-colors duration-200 hover:bg-white/10 focus:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#171717] sm:h-10 sm:gap-2 sm:px-6 sm:text-xs md:h-14 md:px-8 md:text-base"
                 >
                   View Work
                   <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-0.5 group-focus:translate-x-0.5">

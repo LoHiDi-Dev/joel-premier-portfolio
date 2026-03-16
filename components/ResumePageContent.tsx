@@ -115,7 +115,7 @@ export function ResumePageContent() {
         viewport={{ once: true, amount: 0.15 }}
         variants={staggerContainerVariants(0.08)}
       >
-        <div className="mx-auto max-w-[1280px] pb-8">
+        <div className="mx-auto max-w-[1280px] pb-10 md:pb-14">
           {/* Core Competencies */}
           <div className="grid gap-6 md:grid-cols-[180px_minmax(0,1fr)] md:items-start md:gap-x-12">
             <motion.p className={LABEL_CLASS} variants={fadeUpVariants(reducedMotion, 10)}>
@@ -138,12 +138,10 @@ export function ResumePageContent() {
         </div>
 
         {/* Tools & Technology — full-bleed white band */}
-        <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-4 w-screen bg-white px-3 py-12 sm:px-6 md:px-16 md:py-14">
+        <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-2 w-screen bg-white px-3 pt-12 pb-10 sm:px-6 md:px-16 md:pt-14 md:pb-12">
           <div className="mx-auto max-w-[1280px]">
             <div className="grid gap-6 md:grid-cols-[180px_minmax(0,1fr)] md:items-start md:gap-x-12">
-              <motion.p className={LABEL_CLASS} variants={fadeUpVariants(reducedMotion, 10)}>
-                TOOLS & TECHNOLOGY
-              </motion.p>
+              <p className={LABEL_CLASS}>TOOLS & TECHNOLOGY</p>
               <div className="mt-5 min-w-0 max-w-[52rem] md:mt-0">
                 {/* Mobile: accordion */}
                 <div className="md:hidden">
@@ -281,7 +279,7 @@ export function ResumePageContent() {
         <div className="mx-auto max-w-[1280px]">
           {/* Education */}
           <motion.div
-            className="mt-12 border-t border-[#e5e5e5] pt-10 sm:mt-16 md:mt-20 md:pt-12"
+            className="mt-8 pt-10 sm:mt-10 md:mt-12 md:pt-12"
             variants={staggerContainerVariants(0.06)}
           >
             <div className="grid gap-6 md:grid-cols-[180px_minmax(0,1fr)] md:items-start md:gap-x-12">
