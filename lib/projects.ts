@@ -29,7 +29,7 @@ const IMAGES = {
   ultaBeauty: "/heroes/ulta-beauty.jpg",
   cvsAetna: "/heroes/cvs-health.jpg",
   tractorSupply: "/heroes/tractor-supply.jpg",
-  americanAirlines: "/heroes/american-airlines.jpg",
+  americanAirlines: "/aa/aa-admirals-club-current.png",
 };
 
 export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
@@ -229,18 +229,18 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
   {
     slug: "american-airlines",
     title: "American\u00A0Airlines",
-    category: "Travel Journey Architecture",
+    category: "Information Architecture & Travel Systems",
     hideCategory: true,
-    status: "coming-soon",
     role: "Senior Information Architect",
     description:
-      "Defined information architecture across end-to-end travel journeys for web, mobile, and kiosk experiences.",
+      "Selected IA and UX flow work across travel support, airport services, account ownership, and payment journeys on web and mobile.",
     summary:
-      "Structured a complex travel ecosystem so customers could move through booking and trip-management tasks with less confusion.",
+      "Structuring complex travel experiences across information architecture, mobile utility, and decision-heavy flows.",
     outcome:
-      "Clarified multi-channel travel flows and improved consistency across key traveler moments.",
+      "Improved clarity and task flow across support content, mobile utility, account edge cases, and review-and-pay moments.",
     image: IMAGES.americanAirlines,
-    imageAlt: "American Airlines aircraft on tarmac",
+    imageAlt:
+      "American Airlines Admirals Club service page showing structured sub-navigation and scannable amenity sections",
     emphasis: "primary",
     context: {
       paragraphs: [
@@ -310,17 +310,13 @@ ALL_CASE_STUDIES.forEach((project) => {
   PROJECT_MAP[project.slug] = project;
 });
 
-const NEXT_CASE_STUDY_EXCLUDED_SLUGS = new Set<string>(["american-airlines"]);
-
 export function getProjectBySlug(slug: string): CaseStudy | undefined {
   return PROJECT_MAP[slug];
 }
 
 export function getNextCaseStudy(slug: string): CaseStudy | undefined {
   const navigableCaseStudies = ALL_CASE_STUDIES.filter(
-    (project) =>
-      project.status !== "coming-soon" &&
-      !NEXT_CASE_STUDY_EXCLUDED_SLUGS.has(project.slug),
+    (project) => project.status !== "coming-soon",
   );
 
   const currentIndex = navigableCaseStudies.findIndex((project) => project.slug === slug);

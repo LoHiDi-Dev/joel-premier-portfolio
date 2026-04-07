@@ -44,6 +44,240 @@ const TSC_ASSETS = {
   auditMobileApp: "/tsc/audit-mobile_app.png",
 } as const;
 
+const AA_ASSETS = {
+  admiralsClub: "/aa/aa-admirals-club-current.png",
+  airsideWebExistingVsNew: "/aa/aa-airside-web-existing-vs-new.png",
+  airsideWebDetail: "/aa/aa-airside-web-detail.png",
+  airsideMobileConcepts: "/aa/aa-airside-mobile-concepts.png",
+  airsideAppConcept: "/aa/aa-airside-app-concept.png",
+  accountOwnershipLocalization: "/aa/aa-account-ownership-localization.png",
+  reviewPayWireframes: "/aa/aa-review-pay-wireframes.png",
+} as const;
+
+export function getAmericanAirlinesCaseStudyConfig(): CaseStudyPageConfig {
+  return {
+    heroMetaRow: [
+      { label: "ROLE", value: "Senior Information Architect" },
+      {
+        label: "SCOPE",
+        value:
+          "Travel tools, airport-service content, mobile support,\naccount ownership, and payment flows",
+      },
+      {
+        label: "FOCUS",
+        value:
+          "Information architecture, task flow,\nmobile utility, and cross-channel clarity",
+      },
+    ],
+    heroSubtitle:
+      "Structuring complex travel experiences across information architecture, mobile utility, and decision-heavy flows.",
+    heroSupportingLine:
+      "Selected work focused on making travel support, airport services, account ownership, and payment journeys easier to understand across web and mobile.",
+    overview: {
+      eyebrow: "OVERVIEW",
+      title: "Designing structure across\na complex airline ecosystem.",
+      editorialMeasure: true,
+      paragraphs: [
+        "At American Airlines, I worked on selected digital experiences where the core challenge was not simply designing screens, but organizing complex information and making high-stakes travel tasks easier to navigate.",
+        "The work spanned airport-service content, Airside Mobile Passport, account ownership and localization flows, and review-and-pay experiences. Across each of these touchpoints, the goal was the same: improve clarity, reduce friction, and help travelers understand what they needed to do next.",
+        "Rather than treating each page as an isolated artifact, the work required systems thinking — structuring content, grouping actions more clearly, and creating stronger pathways across web and mobile experiences.",
+      ],
+    },
+    challenge: {
+      eyebrow: "CHALLENGE",
+      title: "Making high-stakes travel tasks easier to understand.",
+      editorialMeasure: true,
+      paragraphs: [
+        "Travel experiences carry pressure that many digital products do not. Users may be dealing with time constraints, airport processes, language issues, account details, or final payment decisions — often all within the same journey.",
+        "That meant the experience could not rely on users piecing things together on their own. Key flows needed clearer hierarchy, more useful grouping of information, and stronger guidance at moments where confusion could quickly erode confidence.",
+        "The challenge was not visual simplification alone. It was information architecture: helping travelers orient, decide, and proceed through complex tasks with greater confidence.",
+      ],
+    },
+    approach: {
+      eyebrow: "APPROACH",
+      title: "Using information architecture to bring order to the journey.",
+      paragraphs: [
+        "My role focused on making complex experiences easier to use by improving how information was structured and how tasks unfolded across the journey.",
+      ],
+      bullets: [
+        "That included clarifying content hierarchy on service and support pages, improving entry points into airport-related tools, strengthening the relationship between informational content and mobile utility, organizing account and localization flows more clearly, and making payment steps easier to parse, trust, and complete.",
+        "Across these efforts, the work balanced traveler needs with technical constraints, international considerations, and operational realities inside a large-scale airline platform.",
+      ],
+      image: {
+        src: AA_ASSETS.airsideWebExistingVsNew,
+        alt: "Low-fidelity wireframes comparing existing and proposed web structure for Airside Mobile Passport within the Mobile and app section.",
+        caption:
+          "Web IA explorations focused on clearer hierarchy, tab organization, and pathways into airport-support tools.",
+        label: "Web structure exploration",
+        aspectClass: "aspect-[1024/498]",
+        captionNowrap: false,
+        treatment: "support",
+        badgeLabel: "WEB IA",
+      },
+    },
+    evidenceSection: {
+      eyebrow: "DESIGN EVOLUTION",
+      title: "Key moments where structure and task flow improved the experience.",
+    },
+    evidenceChapters: [
+      {
+        label: "AIRSIDE MOBILE PASSPORT",
+        title: "Connecting travel support across web and mobile.",
+        paragraphs: [
+          "The Airside Mobile Passport work focused on making an airport-support feature easier to find, easier to understand, and better aligned with mobile behavior.",
+          "The experience needed clearer entry points from the broader American Airlines ecosystem, a more legible page structure, and a stronger connection between informational content and in-app utility. The wireframes explored a cleaner architecture for the page, more deliberate tab organization, and clearer pathways into the tool itself.",
+          "This was not about adding more interface. It was about giving the feature a structure users could understand more quickly.",
+        ],
+        visuals: [
+          mkScreenshot({
+            src: AA_ASSETS.airsideWebExistingVsNew,
+            alt: "Wireframe comparison of existing tabbed Mobile and app page structure versus a proposed layout with clearer content hierarchy.",
+            caption:
+              "Explorations compared the existing tabbed structure with approaches that clarified hierarchy and entry into the passport tool.",
+            label: "Web structure comparison",
+            badgeLabel: "WEB IA",
+            treatment: "support",
+          }),
+          mkScreenshot({
+            src: AA_ASSETS.airsideWebDetail,
+            alt: "Detailed wireframe of the Airside Mobile Passport page showing breadcrumbs, hero, sub-navigation tabs, and instructional content blocks.",
+            caption:
+              "A tighter page model emphasized topic clarity, supporting copy, and explicit paths into the mobile utility.",
+            label: "Page architecture detail",
+            badgeLabel: "STRUCTURE",
+            treatment: "support",
+          }),
+        ],
+      },
+      {
+        label: "MOBILE UTILITY & APP EXPERIENCE",
+        title: "Prioritizing fast access in time-sensitive moments.",
+        paragraphs: [
+          "The mobile concepts explored a more utility-first structure for travelers who needed quick access to flight tools, updates, and passport-related support in constrained airport contexts.",
+          "Rather than treating mobile as a smaller version of desktop, the work focused on what information should surface first, how related actions should be grouped, and how users could move more efficiently through the experience on the go.",
+          "The design direction emphasized faster orientation, simpler navigation, and stronger grouping of task-relevant tools.",
+        ],
+        visuals: [
+          mkScreenshot({
+            src: AA_ASSETS.airsideMobileConcepts,
+            alt: "Three low-fidelity mobile wireframes showing flight context, Mobile Passport Control entry points, and grouped travel utilities.",
+            caption:
+              "Concepts tested contextual entry, utility-first navigation, and where passport support should live alongside other travel tools.",
+            label: "Mobile utility concepts",
+            badgeLabel: "MOBILE",
+            treatment: "support",
+          }),
+          mkScreenshot({
+            src: AA_ASSETS.airsideAppConcept,
+            alt: "Additional mobile wireframe exploration for in-app travel tools and passport-related support in Lucidchart.",
+            caption:
+              "Further mobile explorations reinforced grouping of flight tasks and support actions for on-the-go use.",
+            label: "In-app experience exploration",
+            badgeLabel: "MOBILE",
+            treatment: "support",
+          }),
+        ],
+      },
+      {
+        label: "ACCOUNT OWNERSHIP & LOCALIZATION",
+        title: "Designing clarity beyond the happy path.",
+        paragraphs: [
+          "Account-related experiences required careful attention to form structure, guidance, and interruption states — especially when ownership questions, language mismatch, or localization issues could disrupt the user’s path.",
+          "The work focused on making forms easier to understand, clarifying the sequence of required information, and providing more explicit guidance when users encountered conditions the standard flow could not easily resolve.",
+          "This was a good example of information architecture creating value in edge cases, not just ideal scenarios.",
+        ],
+        visuals: [
+          mkScreenshot({
+            src: AA_ASSETS.accountOwnershipLocalization,
+            alt: "Side-by-side comparison of AAdvantage enrollment in English and Japanese with a modal explaining the form must be completed in English.",
+            caption:
+              "Localization constraints required clear interruption patterns so travelers understood how to proceed when language and system rules conflicted.",
+            label: "Account & localization",
+            badgeLabel: "EDGE CASE",
+            treatment: "support",
+          }),
+        ],
+      },
+      {
+        label: "REVIEW & PAY",
+        title: "Making payment flows easier to parse and trust.",
+        paragraphs: [
+          "The Review & Pay work focused on the final stage of decision-making, where information structure directly affected confidence.",
+          "These wireframes improved the visibility and grouping of payment options, clarified loading and redirect behavior, and made the handoff to alternative or international payment experiences easier to understand. The goal was to reduce ambiguity at the moment of commitment.",
+          "In payment flows, clarity is not just usability. It is reassurance.",
+        ],
+        visuals: [
+          mkScreenshot({
+            src: AA_ASSETS.reviewPayWireframes,
+            alt: "Three wireframes of the Review and pay flow showing buffering state, payment method selection, and redirect messaging before paying with Alipay.",
+            caption:
+              "States addressed option grouping, loading feedback, and explicit redirect guidance for international payment paths.",
+            label: "Review & pay flow",
+            badgeLabel: "PAYMENT",
+            treatment: "support",
+          }),
+        ],
+      },
+      {
+        label: "SERVICE INFORMATION",
+        title: "Turning informational pages into usable travel support.",
+        paragraphs: [
+          "Pages such as Admirals Club needed to do more than present content. They needed to help travelers quickly understand benefits, eligibility, and the actions available to them.",
+          "The design direction emphasized clearer hierarchy, stronger sectioning, and more scannable grouping so that informational pages functioned more like service tools than static reference content.",
+          "This reflected the broader IA principle behind the work: support content should help users move forward, not just read.",
+        ],
+        visuals: [
+          mkScreenshot({
+            src: AA_ASSETS.admiralsClub,
+            alt: "American Airlines Admirals Club service page with tabbed sub-navigation for amenities, membership, locations, and access, and scannable amenity sections.",
+            caption:
+              "Live service pages illustrated how structured hierarchy and grouped actions could make support content easier to scan and act on.",
+            label: "Service information structure",
+            badgeLabel: "SERVICE PAGE",
+            treatment: "support",
+          }),
+        ],
+      },
+    ],
+    designAreas: {
+      eyebrow: "KEY DESIGN DECISIONS",
+      title: "Key moments where hierarchy, utility, and guidance had to align.",
+      numbered: true,
+      items: [
+        {
+          title: "Travel support pages needed to behave like tools",
+          description:
+            "Informational content was structured to help users take action, not simply consume content.",
+        },
+        {
+          title: "Mobile utility required a different hierarchy",
+          description:
+            "Airport and on-the-go experiences demanded faster access patterns and clearer prioritization.",
+        },
+        {
+          title: "Edge cases needed explicit guidance",
+          description:
+            "Account ownership and localization issues required more support than standard happy-path flows.",
+        },
+        {
+          title: "Payment flows needed reassurance at the point of commitment",
+          description:
+            "Users needed to understand what was happening, what came next, and whether they were still on the right path.",
+        },
+      ],
+    },
+    reflection: {
+      eyebrow: "REFLECTION",
+      title: "Designing clarity through structure, not just interface.",
+      editorialMeasure: true,
+      paragraphs: [
+        "This work reinforced an important principle: in complex digital ecosystems, strong UX often comes less from visual reinvention and more from how clearly information, actions, and next steps are organized.",
+        "At American Airlines, the value of the work came from helping complex travel experiences feel more navigable, more usable, and more trustworthy across support, account, and payment moments. It was a strong example of information architecture applied to real product problems — reducing ambiguity, improving task flow, and creating clearer paths through a high-stakes journey.",
+      ],
+    },
+  };
+}
+
 export function getUltaCaseStudyConfig(): CaseStudyPageConfig {
   const evidenceChapters: EvidenceChapter[] = [
     {
@@ -682,6 +916,10 @@ export function getCaseStudyPageConfig(project: CaseStudy): CaseStudyPageConfig 
 
   if (project.slug === "tractor-supply-co") {
     return getTractorSupplyCaseStudyConfig();
+  }
+
+  if (project.slug === "american-airlines") {
+    return getAmericanAirlinesCaseStudyConfig();
   }
 
   const context = project.context;
