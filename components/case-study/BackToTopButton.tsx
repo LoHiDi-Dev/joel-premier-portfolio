@@ -35,14 +35,14 @@ export function BackToTopButton({
           type="button"
           onClick={onClick}
           aria-label="Back to top"
-          className="flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white/92 text-[#171717] shadow-[0_10px_24px_rgba(0,0,0,0.10)] backdrop-blur-sm transition-colors duration-200 hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#171717] focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:h-12 sm:w-12"
+          className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-white bg-[#171717] text-white shadow-[0_10px_28px_rgba(0,0,0,0.35)] transition-colors duration-200 hover:bg-black focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#171717] sm:h-12 sm:w-12"
         >
           <ArrowUp
             className="h-4 w-4 sm:h-[18px] sm:w-[18px]"
-            strokeWidth={2.2}
+            strokeWidth={2.4}
           />
         </button>
-        <span className="pointer-events-none absolute right-16 top-1/2 hidden -translate-y-1/2 whitespace-nowrap rounded-full border border-black/8 bg-white/96 px-3.5 py-2 text-[12px] leading-none font-medium text-[#3d3d3d] opacity-0 shadow-[0_8px_20px_rgba(0,0,0,0.08)] transition-opacity duration-200 group-hover:opacity-100 md:block">
+        <span className="pointer-events-none absolute right-16 top-1/2 hidden -translate-y-1/2 whitespace-nowrap rounded-full border-2 border-white bg-[#171717] px-3.5 py-2 text-[12px] leading-none font-medium text-white opacity-0 shadow-[0_8px_24px_rgba(0,0,0,0.35)] transition-opacity duration-200 group-hover:opacity-100 md:block">
           Back to top
         </span>
       </div>
