@@ -60,19 +60,16 @@ export function getAmericanAirlinesCaseStudyConfig(): CaseStudyPageConfig {
       { label: "ROLE", value: "Senior Information Architect" },
       {
         label: "SCOPE",
-        value:
-          "Travel tools, airport-service content, mobile support,\naccount ownership, and payment flows",
+        value: "Travel Support, Mobile Utility, Account Flows & Payment",
       },
       {
         label: "FOCUS",
-        value:
-          "Information architecture, task flow,\nmobile utility, and cross-channel clarity",
+        value: "Information architecture, task flow, and clarity",
       },
     ],
-    heroSubtitle:
-      "Structuring complex travel experiences across information architecture, mobile utility, and decision-heavy flows.",
+    heroEyebrow: "CASE STUDY",
     heroSupportingLine:
-      "Selected work focused on making travel support, airport services, account ownership, and payment journeys easier to understand across web and mobile.",
+      "Designing clearer travel journeys across service information, account flows, and payment.",
     overview: {
       eyebrow: "OVERVIEW",
       title: "Designing structure across\na complex airline ecosystem.",
@@ -98,8 +95,6 @@ export function getAmericanAirlinesCaseStudyConfig(): CaseStudyPageConfig {
       title: "Using information architecture to bring order to the journey.",
       paragraphs: [
         "My role focused on making complex experiences easier to use by improving how information was structured and how tasks unfolded across the journey.",
-      ],
-      bullets: [
         "That included clarifying content hierarchy on service and support pages, improving entry points into airport-related tools, strengthening the relationship between informational content and mobile utility, organizing account and localization flows more clearly, and making payment steps easier to parse, trust, and complete.",
         "Across these efforts, the work balanced traveler needs with technical constraints, international considerations, and operational realities inside a large-scale airline platform.",
       ],
@@ -109,7 +104,7 @@ export function getAmericanAirlinesCaseStudyConfig(): CaseStudyPageConfig {
         caption:
           "Web IA explorations focused on clearer hierarchy, tab organization, and pathways into airport-support tools.",
         label: "Web structure exploration",
-        aspectClass: "aspect-[1024/498]",
+        aspectClass: "aspect-[1024/460]",
         captionNowrap: false,
         treatment: "support",
         badgeLabel: "WEB IA",
@@ -135,6 +130,7 @@ export function getAmericanAirlinesCaseStudyConfig(): CaseStudyPageConfig {
             caption:
               "Explorations compared the existing tabbed structure with approaches that clarified hierarchy and entry into the passport tool.",
             label: "Web structure comparison",
+            aspectClass: "aspect-[1024/460]",
             badgeLabel: "WEB IA",
             treatment: "support",
           }),
@@ -144,6 +140,7 @@ export function getAmericanAirlinesCaseStudyConfig(): CaseStudyPageConfig {
             caption:
               "A tighter page model emphasized topic clarity, supporting copy, and explicit paths into the mobile utility.",
             label: "Page architecture detail",
+            aspectClass: "aspect-[1024/640]",
             badgeLabel: "STRUCTURE",
             treatment: "support",
           }),
@@ -164,6 +161,7 @@ export function getAmericanAirlinesCaseStudyConfig(): CaseStudyPageConfig {
             caption:
               "Concepts tested contextual entry, utility-first navigation, and where passport support should live alongside other travel tools.",
             label: "Mobile utility concepts",
+            aspectClass: "aspect-[1024/498]",
             badgeLabel: "MOBILE",
             treatment: "support",
           }),
@@ -173,6 +171,7 @@ export function getAmericanAirlinesCaseStudyConfig(): CaseStudyPageConfig {
             caption:
               "Web explorations contrasted a generic tabbed destination with a focused passport page that clarified the story and path into the app.",
             label: "Web-to-app passport page",
+            aspectClass: "aspect-[1024/460]",
             badgeLabel: "WEB / APP",
             treatment: "support",
           }),
@@ -193,6 +192,7 @@ export function getAmericanAirlinesCaseStudyConfig(): CaseStudyPageConfig {
             caption:
               "Localization constraints required clear interruption patterns so travelers understood how to proceed when language and system rules conflicted.",
             label: "Account & localization",
+            aspectClass: "aspect-[1024/398]",
             badgeLabel: "EDGE CASE",
             treatment: "support",
           }),
@@ -213,6 +213,7 @@ export function getAmericanAirlinesCaseStudyConfig(): CaseStudyPageConfig {
             caption:
               "States addressed option grouping, loading feedback, and explicit redirect guidance for international payment paths.",
             label: "Review & pay flow",
+            aspectClass: "aspect-[1024/353]",
             badgeLabel: "PAYMENT",
             treatment: "support",
           }),
@@ -233,6 +234,7 @@ export function getAmericanAirlinesCaseStudyConfig(): CaseStudyPageConfig {
             caption:
               "Live service pages illustrated how structured hierarchy and grouped actions could make support content easier to scan and act on.",
             label: "Service information structure",
+            aspectClass: "aspect-[1024/527]",
             badgeLabel: "SERVICE PAGE",
             treatment: "support",
           }),
@@ -272,7 +274,8 @@ export function getAmericanAirlinesCaseStudyConfig(): CaseStudyPageConfig {
       editorialMeasure: true,
       paragraphs: [
         "This work reinforced an important principle: in complex digital ecosystems, strong UX often comes less from visual reinvention and more from how clearly information, actions, and next steps are organized.",
-        "At American Airlines, the value of the work came from helping complex travel experiences feel more navigable, more usable, and more trustworthy across support, account, and payment moments. It was a strong example of information architecture applied to real product problems — reducing ambiguity, improving task flow, and creating clearer paths through a high-stakes journey.",
+        "At American Airlines, the value of the work came from helping complex travel experiences feel more navigable, more usable, and more trustworthy across support, account, and payment moments.",
+        "It was a strong example of information architecture applied to real product problems — reducing ambiguity, improving task flow, and creating clearer paths through a high-stakes journey.",
       ],
     },
   };

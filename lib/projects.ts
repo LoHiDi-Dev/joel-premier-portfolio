@@ -241,8 +241,8 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
     outcome:
       "Improved clarity and task flow across support content, mobile utility, account edge cases, and review-and-pay moments.",
     image: IMAGES.americanAirlines,
-    imageAlt: "American Airlines aircraft on an airport tarmac",
-    heroObjectPosition: "50% 40%",
+    imageAlt: "American Airlines flagship suite cabin with lie-flat seats",
+    heroObjectPosition: "50% 45%",
     emphasis: "primary",
     context: {
       paragraphs: [
