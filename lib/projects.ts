@@ -31,7 +31,7 @@ const IMAGES = {
   ultaBeauty: "/heroes/ulta-beauty.jpg",
   cvsAetna: "/heroes/cvs-health.jpg",
   tractorSupply: "/heroes/tractor-supply.jpg",
-  americanAirlines: "/aa/aa-admirals-club-current.png",
+  americanAirlines: "/heroes/american-airlines-flagship-suite-seats-scaled.jpg",
 };
 
 export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
@@ -235,15 +235,14 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
     hideCategory: true,
     role: "Senior Information Architect",
     description:
-      "Selected IA and UX flow work across travel support, airport services, account ownership, and payment journeys on web and mobile.",
+      "Defined clearer travel journeys across airport services, account flows, and payment experiences for web, mobile, and kiosk touchpoints.",
     summary:
       "Structuring complex travel experiences across information architecture, mobile utility, and decision-heavy flows.",
     outcome:
       "Improved clarity and task flow across support content, mobile utility, account edge cases, and review-and-pay moments.",
     image: IMAGES.americanAirlines,
-    imageAlt:
-      "American Airlines Admirals Club service page showing structured sub-navigation and scannable amenity sections",
-    heroObjectPosition: "50% 6%",
+    imageAlt: "American Airlines aircraft on an airport tarmac",
+    heroObjectPosition: "50% 40%",
     emphasis: "primary",
     context: {
       paragraphs: [
