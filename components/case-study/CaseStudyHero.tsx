@@ -27,6 +27,8 @@ export function CaseStudyHero({
   const subtitle = heroSubtitle;
   const supportingLine = heroSupportingLine ?? project.summary;
   const eyebrow = heroEyebrow ?? "CASE STUDY";
+  const heroSrc = project.caseStudyHeroImage ?? project.image;
+  const heroAlt = project.caseStudyHeroImageAlt ?? project.imageAlt;
 
   return (
     <section
@@ -41,8 +43,8 @@ export function CaseStudyHero({
         variants={fadeUpVariants(reducedMotion, 16)}
       >
         <Image
-          src={project.image}
-          alt={project.imageAlt}
+          src={heroSrc}
+          alt={heroAlt}
           fill
           priority
           sizes="100vw"

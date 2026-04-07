@@ -17,6 +17,8 @@ export function CaseStudyHero({
   headerOverlay = false,
 }: CaseStudyHeroProps) {
   const reducedMotion = Boolean(useReducedMotion());
+  const heroSrc = project.caseStudyHeroImage ?? project.image;
+  const heroAlt = project.caseStudyHeroImageAlt ?? project.imageAlt;
 
   return (
     <section
@@ -32,12 +34,15 @@ export function CaseStudyHero({
         variants={fadeUpVariants(reducedMotion, 16)}
       >
         <Image
-          src={project.image}
-          alt={project.imageAlt}
+          src={heroSrc}
+          alt={heroAlt}
           fill
           priority
           className="object-cover"
           sizes="100vw"
+          style={{
+            objectPosition: project.heroObjectPosition ?? "50% 24%",
+          }}
         />
         <div
           className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,8,8,0.82)_0%,rgba(8,8,8,0.34)_24%,rgba(8,8,8,0.24)_52%,rgba(8,8,8,0.86)_100%)]"

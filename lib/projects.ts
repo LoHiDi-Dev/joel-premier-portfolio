@@ -15,6 +15,10 @@ export interface CaseStudy {
   outcome?: string;
   image: string;
   imageAlt: string;
+  /** Case study page hero only; work cards and listings use `image`. */
+  caseStudyHeroImage?: string;
+  /** Alt text for `caseStudyHeroImage`; defaults to `imageAlt`. */
+  caseStudyHeroImageAlt?: string;
   /** Optional hero `object-position` for Next/Image cover (e.g. service-page screenshots). */
   heroObjectPosition?: string;
   emphasis: "primary" | "secondary";
@@ -31,7 +35,8 @@ const IMAGES = {
   ultaBeauty: "/heroes/ulta-beauty.jpg",
   cvsAetna: "/heroes/cvs-health.jpg",
   tractorSupply: "/heroes/tractor-supply.jpg",
-  americanAirlines: "/heroes/american-airlines-flagship-suite-seats-scaled.jpg",
+  americanAirlines: "/heroes/american-airlines-thumb.png",
+  americanAirlinesCaseStudyHero: "/heroes/american-airlines-flagship-suite-seats-scaled.jpg",
 };
 
 export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
@@ -241,7 +246,11 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
     outcome:
       "Improved clarity and task flow across support content, mobile utility, account edge cases, and review-and-pay moments.",
     image: IMAGES.americanAirlines,
-    imageAlt: "American Airlines flagship suite cabin with lie-flat seats",
+    imageAlt:
+      "American Airlines tail fin with the airline logo against a clear blue sky",
+    caseStudyHeroImage: IMAGES.americanAirlinesCaseStudyHero,
+    caseStudyHeroImageAlt:
+      "American Airlines flagship suite cabin with lie-flat seats",
     heroObjectPosition: "50% 45%",
     emphasis: "primary",
     context: {
