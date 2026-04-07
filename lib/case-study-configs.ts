@@ -169,11 +169,11 @@ export function getAmericanAirlinesCaseStudyConfig(): CaseStudyPageConfig {
           }),
           mkScreenshot({
             src: AA_ASSETS.airsideAppConcept,
-            alt: "Additional mobile wireframe exploration for in-app travel tools and passport-related support in Lucidchart.",
+            alt: "Wireframes comparing a tabbed Mobile and app page with a body placeholder to a dedicated Airside Mobile Passport page with hero, supporting copy, and app store download links.",
             caption:
-              "Further mobile explorations reinforced grouping of flight tasks and support actions for on-the-go use.",
-            label: "In-app experience exploration",
-            badgeLabel: "MOBILE",
+              "Web explorations contrasted a generic tabbed destination with a focused passport page that clarified the story and path into the app.",
+            label: "Web-to-app passport page",
+            badgeLabel: "WEB / APP",
             treatment: "support",
           }),
         ],
