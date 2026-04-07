@@ -15,6 +15,8 @@ export interface CaseStudy {
   outcome?: string;
   image: string;
   imageAlt: string;
+  /** Optional hero `object-position` for Next/Image cover (e.g. service-page screenshots). */
+  heroObjectPosition?: string;
   emphasis: "primary" | "secondary";
   context: CaseStudySection;
   challenge: CaseStudySection;
