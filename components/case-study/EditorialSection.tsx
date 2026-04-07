@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { fadeUpVariants, staggerContainerVariants } from "@/lib/motion";
+import { caseStudySectionViewport, fadeUpVariants, staggerContainerVariants } from "@/lib/motion";
 import {
   LABEL_CLASS,
   SECTION_HEADING_CLASS,
@@ -77,7 +77,7 @@ export function EditorialSection({
       className={`${muted ? "bg-[#f7f6f4]" : "bg-white"} ${sectionPadding}`}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={caseStudySectionViewport}
       variants={staggerContainerVariants(0.06)}
     >
       <div className={`mx-auto ${SECTION_MAX} md:grid md:grid-cols-[180px_minmax(0,1fr)] ${gridGap}`}>

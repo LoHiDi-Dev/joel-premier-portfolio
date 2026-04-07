@@ -2,7 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import type { CaseStudy } from "@/lib/projects";
-import { fadeUpVariants, staggerContainerVariants } from "@/lib/motion";
+import { caseStudySectionViewport, fadeUpVariants, staggerContainerVariants } from "@/lib/motion";
 
 interface CaseStudyMetaRowProps {
   project: CaseStudy;
@@ -22,7 +22,7 @@ export function CaseStudyMetaRow({ project }: CaseStudyMetaRowProps) {
       className="border-b border-[#e5e5e5] bg-white"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={caseStudySectionViewport}
       variants={staggerContainerVariants(0.06)}
       aria-label="Project metadata"
     >

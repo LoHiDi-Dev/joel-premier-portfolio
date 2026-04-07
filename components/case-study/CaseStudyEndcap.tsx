@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import type { CaseStudy } from "@/lib/projects";
-import { fadeUpVariants, staggerContainerVariants } from "@/lib/motion";
+import { caseStudySectionViewport, fadeUpVariants, staggerContainerVariants } from "@/lib/motion";
 import { SECTION_MAX } from "./constants";
 
 interface CaseStudyEndcapProps {
@@ -20,7 +20,7 @@ export function CaseStudyEndcap({
       className="border-t border-[#242424] bg-[#171717] px-4 py-16 text-white sm:px-8 sm:py-20 md:px-12 md:py-24"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={caseStudySectionViewport}
       variants={staggerContainerVariants(0.08)}
       aria-labelledby="case-study-endcap-title"
     >

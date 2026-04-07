@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Maximize2 } from "lucide-react";
 import { motion } from "framer-motion";
-import { fadeUpVariants, staggerContainerVariants } from "@/lib/motion";
+import { caseStudySectionViewport, fadeUpVariants, staggerContainerVariants } from "@/lib/motion";
 import {
   LABEL_CLASS,
   BODY_CLASS,
@@ -34,7 +34,7 @@ export function AuditGridSection({
       className={`bg-[#f7f6f4] ${SECTION_DEFAULT}`}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={caseStudySectionViewport}
       variants={staggerContainerVariants(0.06)}
     >
       <div className={`mx-auto ${SECTION_MAX}`}>

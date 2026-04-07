@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { Header } from "@/components/Header";
 import type { CaseStudy } from "@/lib/projects";
-import { fadeUpVariants, staggerContainerVariants } from "@/lib/motion";
+import { caseStudySectionViewport, fadeUpVariants, staggerContainerVariants } from "@/lib/motion";
 import { LABEL_CLASS, SECTION_HEADING_CLASS, SECTION_MAX, CONTENT_MAX_EDITORIAL } from "./constants";
 import type { CaseStudyPageConfig } from "./types";
 import { CaseStudyHero } from "./CaseStudyHero";
@@ -151,7 +151,7 @@ export function CaseStudyPageTemplate({
           className="bg-white px-4 py-12 sm:px-8 sm:py-20 md:px-12 md:py-28"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={caseStudySectionViewport}
           variants={staggerContainerVariants(0.06)}
         >
           <div className={`mx-auto ${SECTION_MAX}`}>

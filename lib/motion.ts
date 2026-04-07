@@ -1,5 +1,16 @@
 import type { Variants } from "framer-motion";
 
+/**
+ * Case study sections can be very tall (e.g. many evidence chapters). Using a high
+ * `amount` (like 0.2) requires that fraction of the *entire* section to intersect the
+ * viewport at once, which is impossible for long blocks—so content stays at opacity 0.
+ */
+export const caseStudySectionViewport = {
+  once: true,
+  amount: "some" as const,
+  margin: "0px 0px 120px 0px",
+};
+
 export const MOTION = {
   duration: {
     fast: 0.24,
@@ -40,7 +51,8 @@ export function fadeUpVariants(
 ): Variants {
   return {
     hidden: {
-      opacity: 0,
+      // Prefer reduced motion: stay readable without relying on scroll-driven opacity.
+      opacity: reducedMotion ? 1 : 0,
       ...(reducedMotion ? {} : { y: distance }),
     },
     visible: {

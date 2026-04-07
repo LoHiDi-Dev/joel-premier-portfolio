@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { fadeUpVariants, staggerContainerVariants } from "@/lib/motion";
+import { caseStudySectionViewport, fadeUpVariants, staggerContainerVariants } from "@/lib/motion";
 import {
   LABEL_CLASS,
   LABEL_CLASS_DARK,
@@ -43,7 +43,7 @@ export function CardGridSection({
       className={`${dark ? "bg-[#171717] text-white" : "bg-white"} ${SECTION_TIGHT}`}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={caseStudySectionViewport}
       variants={staggerContainerVariants(0.06)}
     >
       <div className={`mx-auto ${SECTION_MAX}`}>
