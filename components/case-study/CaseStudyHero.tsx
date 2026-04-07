@@ -47,7 +47,9 @@ export function CaseStudyHero({
           priority
           sizes="100vw"
           className="object-cover"
-          style={{ objectPosition: "50% 24%" }}
+          style={{
+            objectPosition: project.heroObjectPosition ?? "50% 24%",
+          }}
         />
         <div
           className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,8,8,0.82)_0%,rgba(8,8,8,0.36)_24%,rgba(8,8,8,0.24)_52%,rgba(8,8,8,0.86)_100%)]"

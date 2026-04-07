@@ -243,6 +243,7 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
     image: IMAGES.americanAirlines,
     imageAlt:
       "American Airlines Admirals Club service page showing structured sub-navigation and scannable amenity sections",
+    heroObjectPosition: "50% 6%",
     emphasis: "primary",
     context: {
       paragraphs: [
