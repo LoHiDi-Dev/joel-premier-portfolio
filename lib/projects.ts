@@ -238,6 +238,7 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
     title: "American\u00A0Airlines",
     category: "Information Architecture & Travel Systems",
     hideCategory: true,
+    status: "coming-soon",
     role: "Senior Information Architect",
     description:
       "Defined clearer travel journeys across airport services, account flows, and payment experiences for web, mobile, and kiosk touchpoints.",

@@ -16,8 +16,8 @@ export const PROFESSIONAL_SUMMARY_HEADLINE =
   "Designing for clarity across\ncomplex product ecosystems.";
 
 export const PROFESSIONAL_SUMMARY_PARAGRAPHS = [
-  "Senior product designer with experience across e-commerce, healthcare, and enterprise products. I focus on structure, usability, and delivery — turning complex problems into clear experiences through close collaboration with product and engineering.",
-  "My work spans discovery, design systems, interaction design, and end-to-end journeys that improve how people move through products and how teams bring those experiences to market.",
+  "Senior Product Designer with 10+ years shaping high-stakes digital journeys across B2B SaaS, e-commerce, healthcare, and travel.\nI translate complex operations into clear, measurable, and accessible experiences that reduce friction, support conversion, and scale consistently.",
+  "My practice spans discovery, information architecture, interaction design, and design systems. I partner with product, engineering, analytics, and compliance to turn ambiguity into structured, shippable work that improves customer journeys and team execution.",
 ] as const;
 
 export const CORE_COMPETENCIES = [
@@ -37,21 +37,15 @@ export const CORE_COMPETENCIES = [
 
 export const CORE_COMPETENCIES_FLAT = [
   "UX Strategy",
+  "End-to-End Product Design",
+  "Information Architecture",
+  "Interaction Design",
+  "Design Systems",
+  "Accessibility (WCAG)",
   "User Research",
   "Behavioral Analytics",
   "Journey Mapping",
-  "Information Architecture",
-  "Usability Testing",
-  "End-to-End Product Design",
-  "Interaction Design",
-  "Wireframing",
-  "Prototyping",
-  "Design Systems",
-  "Accessibility (WCAG)",
   "Cross-Functional Delivery",
-  "Engineering Partnership",
-  "Responsive Design",
-  "Web & Mobile",
 ] as const;
 
 export const EXPERIENCE = [
@@ -61,9 +55,10 @@ export const EXPERIENCE = [
     dates: "Nov 2025 – Present",
     location: "Mesquite, TX",
     bullets: [
-      "Acting as sole Product Designer leading end-to-end design and delivery of JIM (Jillamy Inventory & Ops Portal) — a warehouse operations platform spanning inventory, receiving, picking, packing, and shipping workflows across multiple sites.",
-      "Translated operational needs into UX requirements, user flows, edge cases, acceptance criteria, and error-reduction patterns driving measurable improvements in execution speed and process reliability.",
-      "Extended design into front-end implementation (React, TypeScript, Tailwind, Vite) to close the gap between design intent and shipped product — delivering role-based UI, normalized SKU search, and audit-grade event logging.",
+      "Sole Product Designer for JIM (Jillamy Inventory & Ops Portal), a B2B operator platform managing inventory, receiving, picking, packing, and shipping across multiple warehouse sites.",
+      "Own end-to-end product design: user research with warehouse associates, supervisors, and operations leads; journey mapping across high-volume workflows; interaction design for role-based task completion; and usability validation against real operational scenarios.",
+      "Designed error-reduction patterns, confirmation states, normalized SKU search, and audit-grade event logging that measurably reduced miscounts, mis-picks, and mis-ships in high-volume operational flows.",
+      "Established the product's first design system and interaction standards, improving consistency, usability, and scalability across every operational module.",
     ],
   },
   {
@@ -72,10 +67,11 @@ export const EXPERIENCE = [
     dates: "Nov 2022 – Sep 2025",
     location: "Remote",
     bullets: [
-      "Led end-to-end product design for Ulta's web and responsive e-commerce journey, owning core shopping experiences across search, PLP, PDP, cart, checkout, and product recommendation flows.",
-      "Reworked information architecture and product discovery flows using research, analytics, and FullStory behavioral insights — reducing friction by 22% and contributing to a 17% increase in conversions.",
-      "Redesigned key shopping interactions including navigation, filtering, sorting, add-to-cart, cart management, and checkout, grounded in behavioral data and A/B testing.",
-      "Built and maintained scalable Figma design system patterns improving cross-team consistency and accelerating engineering handoff.",
+      "Led end-to-end product design for Ulta Beauty core shopping journey across web and responsive, owning search, PLP, PDP, cart, checkout, and product recommendation experiences serving millions of monthly shoppers.",
+      "Reworked information architecture and product discovery flows using FullStory behavioral data, A/B testing, and customer research, contributing to a 17% lift in conversion on redesigned flows and materially reducing drop-off between discovery and cart.",
+      "Redesigned high-traffic interactions (navigation, filtering, sorting, add-to-cart, cart management, checkout, error and empty states), standardizing patterns that helped shoppers’ complete tasks faster with fewer dead-ends.",
+      "Built and maintained scalable Figma design system patterns for web and mobile, improving cross-team consistency, reducing one-off components, and accelerating engineering handoff.",
+      "Partnered daily with product, engineering, analytics, content, and merchandising to translate business goals into measurable, shippable design work.",
     ],
   },
   {
@@ -95,20 +91,20 @@ export const EXPERIENCE = [
     dates: "Apr 2019 – Jul 2021",
     location: "Remote",
     bullets: [
-      "Designed and improved the Shop, Buy, and Enroll experience for Medicare-eligible users (65+), simplifying plan comparison, selection, and enrollment for users with varying levels of digital confidence.",
-      "Strengthened accessibility and usability through improvements to readability, content hierarchy, and interaction clarity — supporting WCAG compliance and alignment with HIPAA and Medicare requirements.",
-      "Iteratively refined information architecture and enrollment flows, driving measurable improvements in plan selection completion rates across a highly regulated experience.",
+      "Designed the Shop, Buy, and Enroll experience for Medicare-eligible users (65+), using usability testing to simplify plan comparison, selection, and enrollment across widely varying levels of digital confidence.",
+      "Drove accessibility and comprehension improvements (readability, content hierarchy, interaction clarity) supporting WCAG compliance alongside HIPAA and Medicare regulatory requirements.",
+      "Facilitated research synthesis, persona, and journey mapping workshops in Miro with product, content, and compliance stakeholders, building shared understanding across a highly regulated domain.",
+      "Iteratively refined IA and enrollment flows, improving plan selection completion rates and user comprehension across one of the most regulated consumer experiences in U.S. healthcare.",
     ],
   },
   {
     company: "American Airlines",
     title: "Senior Information Architect",
-    dates: "Apr 2014 – Sep 2018",
+    dates: "Apr 2014 – Dec 2018",
     location: "Fort Worth, TX",
     bullets: [
-      "Led information architecture across aa.com, mobile, and airport kiosks — defining user flows, wireframes, IA specifications, and interaction requirements for complex travel and booking journeys.",
-      "Redesigned and documented Review & Pay and Finish booking steps, standardizing information hierarchy, state handling, and page structure to reduce traveler confusion across platforms.",
-      "Led IA for Airside Mobile re-entry workflows and a GDPR request portal for European customers, translating compliance and localization requirements into clear, consistent user flows.",
+      "Led information architecture for aa.com, mobile, and airport kiosks, defining user flows, wireframes, and interaction requirements for high-stakes booking and travel journeys.",
+      "Redesigned Review & Pay and Finish booking steps, and led IA for Airside Mobile re-entry workflows, GDPR request portal (EU customers), and WePay integration on aa.com China, translating compliance and localization requirements into consistent, user-friendly flows.",
     ],
   },
 ] as const;

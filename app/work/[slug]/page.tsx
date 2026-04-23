@@ -30,7 +30,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   const project = getProjectBySlug(slug);
   const nextProject = getNextCaseStudy(slug);
 
-  if (!project || !nextProject) {
+  if (!project || project.status === "coming-soon" || !nextProject) {
     notFound();
   }
 

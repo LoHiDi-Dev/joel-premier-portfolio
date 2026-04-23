@@ -67,11 +67,11 @@ export function ResumePageContent() {
             PROFESSIONAL SUMMARY
           </motion.p>
           <motion.div
-            className={`mt-5 min-w-0 space-y-6 md:mt-0 ${CONTENT_MAX_EDITORIAL}`}
+            className="mt-5 min-w-0 space-y-6 md:mt-0 max-w-[52rem]"
             variants={staggerContainerVariants(0.06)}
           >
             <motion.h2
-              className={`whitespace-pre-line ${SECTION_HEADING_CLASS} ${HEADING_MAX_EDITORIAL}`}
+              className={`whitespace-pre-line ${SECTION_HEADING_CLASS}`}
               variants={fadeUpVariants(reducedMotion, 16)}
             >
               {PROFESSIONAL_SUMMARY_HEADLINE}
@@ -79,7 +79,7 @@ export function ResumePageContent() {
             {PROFESSIONAL_SUMMARY_PARAGRAPHS.map((paragraph, index) => (
               <motion.p
                 key={`summary-p-${index}`}
-                className={index > 0 ? "mt-5 " + BODY_CLASS : BODY_CLASS}
+                className={`${index > 0 ? "mt-5 " : ""}${BODY_CLASS} whitespace-pre-line`}
                 variants={fadeUpVariants(reducedMotion, 10)}
               >
                 {paragraph}
