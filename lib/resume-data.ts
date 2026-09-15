@@ -113,7 +113,11 @@ export const CORE_COMPETENCIES = [
       "Jira",
       "Confluence",
       "Notion",
-      "working fluency with HTML/CSS, React, TypeScript, Tailwind CSS, and front-end implementation concepts",
+      "HTML/CSS",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "front-end implementation concepts",
     ],
   },
 ] as const;
