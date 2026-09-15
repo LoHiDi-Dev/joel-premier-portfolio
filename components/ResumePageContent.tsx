@@ -123,7 +123,9 @@ export function ResumePageContent() {
               className="mt-5 min-w-0 max-w-[52rem] space-y-7 md:mt-0"
               variants={staggerContainerVariants(0.06)}
             >
-              {CORE_COMPETENCIES.map((group) => (
+              {CORE_COMPETENCIES.filter(
+                (group) => group.label !== "Tools & Technical Fluency",
+              ).map((group) => (
                 <motion.div
                   key={group.label}
                   variants={fadeUpVariants(reducedMotion, 10)}
