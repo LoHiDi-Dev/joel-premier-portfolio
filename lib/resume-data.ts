@@ -1,4 +1,4 @@
-/** Resume page content. Update with your real experience, skills, and education. */
+/** Resume page content. Source of truth: public/Joel_Premier_Senior_Product_Designer_Resume.pdf */
 
 export const RESUME_PDF_URL = "/Joel_Premier_Senior_Product_Designer_Resume.pdf";
 export const RESUME_DOWNLOAD_NAME = "Joel_Premier_Resume.pdf";
@@ -6,59 +6,129 @@ export const RESUME_DOWNLOAD_NAME = "Joel_Premier_Resume.pdf";
 export const IDENTITY = {
   name: "Joel Stefano Premier",
   role: "Senior Product Designer",
-  positioning: "UX Strategy, Product Design, Design Systems, Accessibility",
-  location: "Irving, TX",
-  phone: "+1 214 243 4649",
+  positioning:
+    "Senior Product Designer | SaaS, B2B/B2C, Mobile Products, AI & Design Systems",
+  location: "Dallas, TX",
+  phone: "+1 (214) 243-4649",
   email: "jojo.s.1er@gmail.com",
+  portfolio: "https://joel-premier-portfolio.vercel.app",
 } as const;
 
 export const PROFESSIONAL_SUMMARY_HEADLINE =
-  "Designing for clarity across\ncomplex product ecosystems.";
+  IDENTITY.positioning;
 
 export const PROFESSIONAL_SUMMARY_PARAGRAPHS = [
-  "Senior Product Designer with 10+ years shaping high-stakes digital journeys across B2B SaaS, e-commerce, healthcare, and travel.\nI translate complex operations into clear, measurable, and accessible experiences that reduce friction, support conversion, and scale consistently.",
-  "My practice spans discovery, information architecture, interaction design, and design systems. I partner with product, engineering, analytics, and compliance to turn ambiguity into structured, shippable work that improves customer journeys and team execution.",
+  "Senior Product Designer with 10+ years of experience designing mobile, responsive web, SaaS, B2B, and B2C products across commerce, healthcare, travel, and operational platforms. Strong in discovery, information architecture, interaction design, design systems, accessibility, and analytics, with a practical record of turning ambiguous journeys into clear, shippable product experiences in close partnership with product and engineering. Integrates AI-assisted design, rapid prototyping, and design-to-code workflows to accelerate exploration, validation, and engineering collaboration.",
 ] as const;
 
 export const CORE_COMPETENCIES = [
-  "UX Strategy",
-  "Product Design",
-  "Interaction Design",
-  "Information Architecture",
-  "Journey Mapping",
-  "Wireframing",
-  "Prototyping",
-  "Usability Testing",
-  "Design Systems",
-  "Accessibility (WCAG)",
-  "User Research",
-  "Behavioral Analytics",
-] as const;
-
-export const CORE_COMPETENCIES_FLAT = [
-  "UX Strategy",
-  "End-to-End Product Design",
-  "Information Architecture",
-  "Interaction Design",
-  "Design Systems",
-  "Accessibility (WCAG)",
-  "User Research",
-  "Behavioral Analytics",
-  "Journey Mapping",
-  "Cross-Functional Delivery",
+  {
+    label: "Product Design",
+    items: [
+      "End-to-end product design",
+      "product discovery",
+      "UX strategy",
+      "interaction design",
+      "information architecture",
+      "journey mapping",
+      "wireframing",
+      "prototyping",
+      "usability testing",
+      "cross-functional collaboration",
+    ],
+  },
+  {
+    label: "Mobile, SaaS & B2B",
+    items: [
+      "Mobile-first and responsive product design",
+      "SaaS platforms",
+      "enterprise workflows",
+      "role-based experiences",
+      "dashboards",
+      "operational tools",
+      "data-dense interfaces",
+      "regulated workflows",
+      "complex multi-step workflows",
+    ],
+  },
+  {
+    label: "Product Growth & Transactional UX",
+    items: [
+      "Onboarding",
+      "activation",
+      "search and discovery",
+      "account management",
+      "personalization",
+      "recommendations",
+      "transactional flows",
+      "payments",
+      "checkout",
+      "loyalty",
+      "funnel optimization",
+      "experimentation",
+      "A/B testing",
+      "behavioral analytics",
+    ],
+  },
+  {
+    label: "Design Systems & Accessibility",
+    items: [
+      "Component libraries",
+      "design tokens",
+      "interaction standards",
+      "pattern documentation",
+      "WCAG 2.1/2.2",
+    ],
+  },
+  {
+    label: "Research & Analytics",
+    items: [
+      "User interviews",
+      "usability testing",
+      "research synthesis",
+      "qualitative and quantitative insights",
+      "FullStory",
+      "Hotjar",
+      "Mixpanel",
+      "Qualtrics",
+    ],
+  },
+  {
+    label: "AI-Assisted Product Design",
+    items: [
+      "AI-assisted ideation and prototyping",
+      "AI-enabled product workflows",
+      "human-AI interaction patterns",
+      "trust and transparency",
+      "rapid experimentation",
+      "design-to-code collaboration",
+    ],
+  },
+  {
+    label: "Tools & Technical Fluency",
+    items: [
+      "Figma",
+      "FigJam",
+      "Miro",
+      "Jira",
+      "Confluence",
+      "Notion",
+      "working fluency with HTML/CSS, React, TypeScript, Tailwind CSS, and front-end implementation concepts",
+    ],
+  },
 ] as const;
 
 export const EXPERIENCE = [
   {
     company: "Jillamy, Inc.",
-    title: "In-House Product Designer · Front-End Implementation Support",
+    title: "Senior Product Designer (Contract)",
     dates: "Nov 2025 – Present",
     location: "Mesquite, TX",
     bullets: [
-      "Sole Product Designer for JIM (Jillamy Inventory & Ops Portal), a B2B operator platform managing inventory, receiving, picking, packing, and shipping across multiple warehouse sites.",
-      "Own end-to-end product design: user research with warehouse associates, supervisors, and operations leads; journey mapping across high-volume workflows; interaction design for role-based task completion; and usability validation against real operational scenarios.",
-      "Designed error-reduction patterns, confirmation states, normalized SKU search, and audit-grade event logging that measurably reduced miscounts, mis-picks, and mis-ships in high-volume operational flows.",
-      "Established the product's first design system and interaction standards, improving consistency, usability, and scalability across every operational module.",
+      "Lead product design for JIM (Jillamy Inventory Management), a B2B warehouse operations platform supporting receiving, inventory control, picking, packing, shipping, workforce coordination, and exception handling across multiple sites.",
+      "Led discovery and workflow mapping with warehouse associates, supervisors, and operations leads to translate real operational tasks into clear, role-based product flows.",
+      "Designed SKU search, task confirmation, exception handling, audit logs, and status visibility patterns to reduce ambiguity in high-volume workflows and support operational accountability, traceability, and consistent decision-making across the platform.",
+      "Designed responsive and mobile-first operational workflows for associates working across warehouse environments, prioritizing speed, scannability, task completion, and usability in high-volume conditions.",
     ],
   },
   {
@@ -67,11 +137,11 @@ export const EXPERIENCE = [
     dates: "Nov 2022 – Sep 2025",
     location: "Remote",
     bullets: [
-      "Led end-to-end product design for Ulta Beauty core shopping journey across web and responsive, owning search, PLP, PDP, cart, checkout, and product recommendation experiences serving millions of monthly shoppers.",
-      "Reworked information architecture and product discovery flows using FullStory behavioral data, A/B testing, and customer research, contributing to a 17% lift in conversion on redesigned flows and materially reducing drop-off between discovery and cart.",
-      "Redesigned high-traffic interactions (navigation, filtering, sorting, add-to-cart, cart management, checkout, error and empty states), standardizing patterns that helped shoppers’ complete tasks faster with fewer dead-ends.",
-      "Built and maintained scalable Figma design system patterns for web and mobile, improving cross-team consistency, reducing one-off components, and accelerating engineering handoff.",
-      "Partnered daily with product, engineering, analytics, content, and merchandising to translate business goals into measurable, shippable design work.",
+      "Led product design across Ulta Beauty’s desktop, responsive web, and mobile shopping experiences, with emphasis on search, recommendations, loyalty/account, cart, checkout, and conversion-focused customer journeys.",
+      "Used FullStory behavioral data, A/B testing, customer research, and merchandising insights to identify friction, optimize shopping flows, and contribute to a 17% conversion lift across redesigned experiences.",
+      "Improved search, filtering, sorting, recommendations, add-to-cart, cart management, checkout, error states, and empty states to help customers move more efficiently from intent to purchase.",
+      "Designed scalable Figma patterns for responsive and mobile commerce experiences, reducing one-off solutions and strengthening consistency across product, design, and engineering.",
+      "Partnered with product, engineering, analytics, content, and merchandising teams to balance customer needs, commercial priorities, and measurable product outcomes.",
     ],
   },
   {
@@ -80,21 +150,23 @@ export const EXPERIENCE = [
     dates: "Aug 2021 – Oct 2022",
     location: "Remote",
     bullets: [
-      "Translated a Nielsen Norman Group (NN/g) UX audit into a prioritized roadmap for web and mobile improvements, turning research-backed recommendations into actionable design work.",
-      "Redesigned PDP, PLP, and cart experiences based on NN/g audit findings, applying usability and personalization improvements that strengthened the end-to-end shopping experience.",
-      "Led migration of core design system components from Adobe XD to Figma, rebuilding buttons, toggles, tooltips, pagination, and reusable UI patterns.",
+      "Converted a Nielsen Norman Group UX audit into a prioritized roadmap for responsive web and mobile commerce improvements, with a focus on product discovery, PLP, PDP, navigation, and cart experiences.",
+      "Redesigned PLP and PDP experiences to improve product findability, information hierarchy, comparison, filtering, merchandising clarity, and customer decision-making.",
+      "Improved product discovery patterns across navigation, category browsing, search entry points, and product-detail content to reduce friction between exploration and purchase consideration.",
+      "Led the migration of the design system from Adobe XD to Figma, rebuilding core components, interaction states, and reusable patterns to improve consistency and scalability.",
+      "Partnered with product and engineering to translate UX audit findings into prioritized backlog items, design requirements, and shippable commerce improvements.",
     ],
   },
   {
     company: "CVS Health / Aetna",
-    title: "Senior UX Strategist — Medicare",
-    dates: "Apr 2019 – Jul 2021",
+    title: "Senior UX Strategist, Medicare",
+    dates: "Mar 2019 – Jul 2021",
     location: "Remote",
     bullets: [
-      "Designed the Shop, Buy, and Enroll experience for Medicare-eligible users (65+), using usability testing to simplify plan comparison, selection, and enrollment across widely varying levels of digital confidence.",
-      "Drove accessibility and comprehension improvements (readability, content hierarchy, interaction clarity) supporting WCAG compliance alongside HIPAA and Medicare regulatory requirements.",
-      "Facilitated research synthesis, persona, and journey mapping workshops in Miro with product, content, and compliance stakeholders, building shared understanding across a highly regulated domain.",
-      "Iteratively refined IA and enrollment flows, improving plan selection completion rates and user comprehension across one of the most regulated consumer experiences in U.S. healthcare.",
+      "Designed complex, multi-step Shop, Buy, and Enroll experiences for Medicare-eligible users across responsive digital channels, simplifying plan comparison, selection, and enrollment for people with varying levels of digital confidence.",
+      "Improved accessibility, readability, content hierarchy, and interaction clarity while supporting WCAG, HIPAA, and Medicare compliance requirements.",
+      "Facilitated research synthesis, persona development, and journey mapping workshops with product, content, compliance, and engineering stakeholders to align user needs with regulatory and business requirements.",
+      "Refined information architecture and enrollment flows through iterative design and validation, improving comprehension and reducing confusion in regulated healthcare decision-making.",
     ],
   },
   {
@@ -103,80 +175,20 @@ export const EXPERIENCE = [
     dates: "Apr 2014 – Dec 2018",
     location: "Fort Worth, TX",
     bullets: [
-      "Led information architecture for aa.com, mobile, and airport kiosks, defining user flows, wireframes, and interaction requirements for high-stakes booking and travel journeys.",
-      "Redesigned Review & Pay and Finish booking steps, and led IA for Airside Mobile re-entry workflows, GDPR request portal (EU customers), and WePay integration on aa.com China, translating compliance and localization requirements into consistent, user-friendly flows.",
+      "Led information architecture and interaction design across aa.com, mobile experiences, and airport kiosks, defining end-to-end flows, wireframes, and interaction requirements for booking, payment, check-in, and travel management journeys.",
+      "Served as the Information Architect for the 2017 Basic Economy booking experience, structuring fare-selection flows, restriction messaging, and key travel information across the purchase journey, including the placement and hierarchy of boarding-group information on the boarding pass.",
+      "Designed information architecture for customer baggage tracking and notification experiences, organizing baggage status, alerts, and next-step guidance across mobile and digital travel journeys.",
+      "Redesigned Review & Pay and Finish Booking experiences to clarify purchase decisions and reduce friction, while translating complex operational, compliance, and localization requirements into consistent experiences across web, mobile, and kiosk channels.",
     ],
   },
 ] as const;
 
-export const SKILLS_GROUPS = [
-  {
-    label: "Design",
-    items: ["Figma", "Sketch", "Miro"],
-  },
-  {
-    label: "Research",
-    items: ["Qualtrics", "FullStory", "Hotjar", "Mixpanel"],
-  },
-  {
-    label: "Collaboration",
-    items: ["Jira", "Confluence", "Notion"],
-  },
-  {
-    label: "Development",
-    items: ["React", "TypeScript", "Tailwind CSS", "Vite"],
-  },
-] as const;
-
-export const AI_WORKFLOW = ["Claude", "Figma AI", "UX Pilot", "Cursor"] as const;
-
-/** Tools & Technology section — exact copy for Resume page. muted: true = "Working familiarity with" (secondary). */
+/** Tools tabs reuse finalized competency content rather than maintaining separate claims. */
 export const TOOLS_AND_TECHNOLOGY = [
-  {
-    label: "Design",
-    items: [
-      "Figma",
-      "FigJam",
-      "Design Systems",
-      "Interactive Prototyping",
-      "Wireframing",
-      "User Flows",
-      "Accessibility Review",
-      "UX Writing",
-    ],
-    muted: false,
-  },
-  {
-    label: "Front-End",
-    items: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "TypeScript",
-      "React",
-      "Next.js",
-      "Tailwind CSS",
-    ],
-    muted: false,
-  },
-  {
-    label: "Delivery & Collaboration",
-    items: [
-      "GitHub",
-      "Jira",
-      "Confluence",
-      "Design Tokens",
-      "Component Handoff",
-      "Responsive QA",
-      "Front-End Implementation Support",
-    ],
-    muted: false,
-  },
-  {
-    label: "Working familiarity with",
-    items: ["Laravel", "Prisma ORM", "PostgreSQL", "Docker", "GitHub Actions"],
-    muted: true,
-  },
+  { label: "Design", items: CORE_COMPETENCIES[0].items, muted: false },
+  { label: "Research & Analytics", items: CORE_COMPETENCIES[4].items, muted: false },
+  { label: "AI-Assisted Product Design", items: CORE_COMPETENCIES[5].items, muted: false },
+  { label: "Tools & Technical Fluency", items: CORE_COMPETENCIES[6].items, muted: false },
 ] as const;
 
 export const EDUCATION = [
@@ -184,18 +196,18 @@ export const EDUCATION = [
     degree: "M.A. Design Management",
     institution: "Savannah College of Art and Design",
     dates: "",
-    notes: ["Thesis Research", "Graduate Teaching Assistant"],
+    notes: [] as const,
   },
   {
-    degree: "B.A. Digital Recording Arts",
+    degree: "B.A. Digital Arts",
     institution: "New England Institute of Technology",
     dates: "",
-    notes: [],
+    notes: [] as const,
   },
   {
     degree: "A.S. Web and Multimedia Technology",
     institution: "New England Institute of Technology",
     dates: "",
-    notes: [],
+    notes: [] as const,
   },
 ] as const;

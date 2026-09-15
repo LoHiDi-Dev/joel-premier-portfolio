@@ -4,9 +4,10 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import { X } from "lucide-react";
-
-const RESUME_URL = "/Joel_Premier_Senior_Product_Designer_Resume.pdf";
-const RESUME_DOWNLOAD_NAME = "Joel_Premier_Resume.pdf";
+import {
+  RESUME_DOWNLOAD_NAME,
+  RESUME_PDF_URL,
+} from "@/lib/resume-data";
 
 interface ResumePreviewSectionProps {
   open: boolean;
@@ -92,7 +93,7 @@ function ResumeModal({ open, onClose }: ResumePreviewSectionProps) {
 
         <div className="flex min-h-0 flex-1 overflow-hidden bg-[#f5f5f5]">
           <iframe
-            src={RESUME_URL}
+            src={RESUME_PDF_URL}
             title="Joel Premier Resume"
             className="h-full w-full flex-1"
           />
@@ -100,7 +101,7 @@ function ResumeModal({ open, onClose }: ResumePreviewSectionProps) {
 
         <div className="flex shrink-0 items-center justify-center gap-4 border-t border-[#e0e0e0] px-5 py-4 sm:gap-6 sm:px-6">
           <a
-            href={RESUME_URL}
+            href={RESUME_PDF_URL}
             download={RESUME_DOWNLOAD_NAME}
             className="inline-flex h-9 items-center justify-center rounded-full bg-[#171717] px-5 text-[13px] font-medium text-white transition-opacity hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3b82f6] focus-visible:ring-offset-2 sm:h-10 sm:px-6 sm:text-sm"
           >
@@ -140,7 +141,7 @@ export function ResumePreviewSection() {
       >
         <div className="relative aspect-[3/4] w-full bg-[#f5f5f5] sm:aspect-[4/3]">
           <iframe
-            src={`${RESUME_URL}#page=1`}
+            src={`${RESUME_PDF_URL}#page=1`}
             title="Resume preview"
             className="pointer-events-none absolute inset-0 h-full w-full"
             tabIndex={-1}
@@ -155,7 +156,7 @@ export function ResumePreviewSection() {
 
       <div className="mt-8 flex flex-wrap gap-2 sm:mt-10 sm:gap-4">
         <a
-          href={RESUME_URL}
+          href={RESUME_PDF_URL}
           download={RESUME_DOWNLOAD_NAME}
           className="inline-flex h-11 items-center justify-center gap-1.5 rounded-full bg-[#171717] px-4 text-[11px] font-medium text-white shadow-sm transition-opacity hover:opacity-90 focus:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#171717] focus:ring-offset-2 sm:h-10 sm:px-6 sm:text-xs md:h-14 md:px-8 md:text-base"
         >

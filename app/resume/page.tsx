@@ -10,7 +10,7 @@ import {
 export const metadata = {
   title: "Resume",
   description:
-    "A concise overview of experience across product design, systems thinking, UX strategy, and delivery.",
+    "Senior Product Designer specializing in SaaS, B2B/B2C products, mobile experiences, design systems, transactional UX, and AI-assisted product design.",
 };
 
 export default function ResumePage() {
@@ -44,8 +44,8 @@ export default function ResumePage() {
                 in one place
               </h2>
               <p className="mx-auto mt-5 max-w-[36rem] text-[14px] leading-[1.6] text-[#c7c7c7] sm:mt-6 sm:text-[16px] sm:leading-[1.58] md:max-w-[40rem] md:text-[18px] md:leading-[1.56]">
-                A concise overview of product design, systems thinking, and
-                delivery — with the work behind it available to explore.
+                A concise overview of SaaS, B2B/B2C, mobile, and design-system
+                work — with the case studies behind it available to explore.
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-2 sm:mt-9 sm:gap-4">
                 <a

@@ -5,15 +5,14 @@ import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { MOTION, fadeUpVariants, staggerContainerVariants } from "@/lib/motion";
 import {
   BODY_CLASS,
-  CONTENT_MAX_EDITORIAL,
-  HEADING_MAX_EDITORIAL,
   LABEL_CLASS,
   SECTION_HEADING_CLASS,
 } from "@/components/case-study/constants";
 import { ExperienceAccordion } from "@/components/ExperienceAccordion";
 import {
-  CORE_COMPETENCIES_FLAT,
+  CORE_COMPETENCIES,
   EDUCATION,
+  IDENTITY,
   PROFESSIONAL_SUMMARY_HEADLINE,
   PROFESSIONAL_SUMMARY_PARAGRAPHS,
   TOOLS_AND_TECHNOLOGY,
@@ -45,9 +44,19 @@ export function ResumePageContent() {
             Resume
           </h1>
           <p className="mt-4 max-w-[46rem] text-[14px] leading-[1.6] text-[#525252] sm:mt-5 sm:text-[16px] sm:leading-[1.58] md:text-[20px] md:leading-[1.5]">
-            A concise overview of my experience across product design, systems
-            thinking, UX strategy, and delivery.
+            A concise overview of my experience across SaaS, B2B/B2C products,
+            mobile experiences, design systems, transactional UX, and delivery.
           </p>
+          <div className="mt-6 space-y-2 text-[14px] leading-[1.6] text-[#525252] sm:text-[16px]">
+            <p className="font-semibold text-[#171717]">{IDENTITY.name}</p>
+            <p>{IDENTITY.positioning}</p>
+            <p className="flex flex-wrap gap-x-3 gap-y-1">
+              <span>{IDENTITY.location}</span>
+              <a className="underline underline-offset-4" href="tel:+12142434649">{IDENTITY.phone}</a>
+              <a className="underline underline-offset-4" href={`mailto:${IDENTITY.email}`}>{IDENTITY.email}</a>
+            </p>
+            <p className="break-words">Portfolio: <a className="underline underline-offset-4" href={IDENTITY.portfolio}>{IDENTITY.portfolio}</a></p>
+          </div>
         </motion.div>
       </div>
 
@@ -121,19 +130,34 @@ export function ResumePageContent() {
             <motion.p className={LABEL_CLASS} variants={fadeUpVariants(reducedMotion, 10)}>
               CORE COMPETENCIES
             </motion.p>
-            <motion.ul
-              className="mt-5 min-w-0 max-w-[52rem] flex flex-wrap gap-3 md:mt-0"
-              role="list"
+            <motion.div
+              className="mt-5 min-w-0 max-w-[52rem] space-y-7 md:mt-0"
               variants={staggerContainerVariants(0.06)}
             >
-              {CORE_COMPETENCIES_FLAT.map((item) => (
-                <motion.li key={item} variants={fadeUpVariants(reducedMotion, 10)}>
-                  <span className="inline-flex rounded-full border border-[#e5e5e5] bg-white px-4 py-2.5 text-[14px] font-normal leading-[1.3] text-[#171717] sm:text-[15px]">
-                    {item}
-                  </span>
-                </motion.li>
+              {CORE_COMPETENCIES.map((group) => (
+                <motion.div
+                  key={group.label}
+                  variants={fadeUpVariants(reducedMotion, 10)}
+                >
+                  <p className="text-[14px] font-semibold leading-[1.3] text-[#171717] sm:text-[15px]">
+                    {group.label}
+                  </p>
+                  <ul
+                    className="mt-3 flex flex-wrap gap-3"
+                    role="list"
+                    aria-label={group.label}
+                  >
+                    {group.items.map((item) => (
+                      <li key={item}>
+                        <span className="inline-flex rounded-full border border-[#e5e5e5] bg-white px-4 py-2.5 text-[14px] font-normal leading-[1.3] text-[#171717] sm:text-[15px]">
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
               ))}
-            </motion.ul>
+            </motion.div>
           </div>
         </div>
 
