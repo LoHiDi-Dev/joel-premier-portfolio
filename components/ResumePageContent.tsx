@@ -12,7 +12,6 @@ import { ExperienceAccordion } from "@/components/ExperienceAccordion";
 import {
   CORE_COMPETENCIES,
   EDUCATION,
-  IDENTITY,
   PROFESSIONAL_SUMMARY_HEADLINE,
   PROFESSIONAL_SUMMARY_PARAGRAPHS,
   TOOLS_AND_TECHNOLOGY,
@@ -47,16 +46,6 @@ export function ResumePageContent() {
             A concise overview of my experience across SaaS, B2B/B2C products,
             mobile experiences, design systems, transactional UX, and delivery.
           </p>
-          <div className="mt-6 space-y-2 text-[14px] leading-[1.6] text-[#525252] sm:text-[16px]">
-            <p className="font-semibold text-[#171717]">{IDENTITY.name}</p>
-            <p>{IDENTITY.positioning}</p>
-            <p className="flex flex-wrap gap-x-3 gap-y-1">
-              <span>{IDENTITY.location}</span>
-              <a className="underline underline-offset-4" href="tel:+12142434649">{IDENTITY.phone}</a>
-              <a className="underline underline-offset-4" href={`mailto:${IDENTITY.email}`}>{IDENTITY.email}</a>
-            </p>
-            <p className="break-words">Portfolio: <a className="underline underline-offset-4" href={IDENTITY.portfolio}>{IDENTITY.portfolio}</a></p>
-          </div>
         </motion.div>
       </div>
 
