@@ -40,7 +40,8 @@ export const CORE_COMPETENCIES = [
   {
     label: "Mobile, SaaS & B2B",
     items: [
-      "Mobile-first and responsive product design",
+      "Mobile-first",
+      "responsive product design",
       "SaaS platforms",
       "enterprise workflows",
       "role-based experiences",
@@ -86,7 +87,7 @@ export const CORE_COMPETENCIES = [
       "User interviews",
       "usability testing",
       "research synthesis",
-      "qualitative and quantitative insights",
+      "qualitative & quantitative insights",
       "FullStory",
       "Hotjar",
       "Mixpanel",
@@ -99,7 +100,7 @@ export const CORE_COMPETENCIES = [
       "AI-assisted ideation and prototyping",
       "AI-enabled product workflows",
       "human-AI interaction patterns",
-      "trust and transparency",
+      "trust & transparency",
       "rapid experimentation",
       "design-to-code collaboration",
     ],
