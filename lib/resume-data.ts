@@ -15,7 +15,7 @@ export const IDENTITY = {
 } as const;
 
 export const PROFESSIONAL_SUMMARY_HEADLINE =
-  IDENTITY.positioning;
+  "Senior Product Designer\nSaaS, B2B/B2C, Mobile Products,\nAI & Design Systems";
 
 export const PROFESSIONAL_SUMMARY_PARAGRAPHS = [
   "Senior Product Designer with 10+ years of experience designing mobile, responsive web, SaaS, B2B, and B2C products across commerce, healthcare, travel, and operational platforms. Strong in discovery, information architecture, interaction design, design systems, accessibility, and analytics, with a practical record of turning ambiguous journeys into clear, shippable product experiences in close partnership with product and engineering. Integrates AI-assisted design, rapid prototyping, and design-to-code workflows to accelerate exploration, validation, and engineering collaboration.",
