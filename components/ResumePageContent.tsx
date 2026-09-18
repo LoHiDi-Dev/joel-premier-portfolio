@@ -124,7 +124,12 @@ export function ResumePageContent() {
               variants={staggerContainerVariants(0.06)}
             >
               {CORE_COMPETENCIES.filter(
-                (group) => group.label !== "Tools & Technical Fluency",
+                (group) =>
+                  ![
+                    "Research & Analytics",
+                    "AI-Assisted Product Design",
+                    "Tools & Technical Fluency",
+                  ].includes(group.label),
               ).map((group) => (
                 <motion.div
                   key={group.label}
