@@ -38,7 +38,7 @@ export const CORE_COMPETENCIES = [
     ],
   },
   {
-    label: "Mobile, SaaS & B2B",
+    label: "Mobile, SaaS & Enterprise",
     items: [
       "Mobile-first",
       "responsive product design",
