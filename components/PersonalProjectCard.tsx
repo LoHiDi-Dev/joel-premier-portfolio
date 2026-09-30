@@ -16,7 +16,7 @@ export function PersonalProjectCard({ project }: PersonalProjectCardProps) {
 
   return (
     <motion.article
-      aria-label={isComingSoon ? `${project.title} case study — coming soon` : undefined}
+      aria-label={isComingSoon ? `${project.title} case study – coming soon` : undefined}
       className="flex h-full flex-col gap-3 rounded-[20px] border border-[#e5e5e5] bg-white px-3 py-3 shadow-[0_8px_24px_rgba(23,23,23,0.04)] sm:gap-3.5 sm:px-3.5 sm:py-3.5 md:px-4 md:py-4"
       initial="hidden"
       whileInView="visible"

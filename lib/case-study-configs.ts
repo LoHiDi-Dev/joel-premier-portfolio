@@ -54,6 +54,304 @@ const AA_ASSETS = {
   reviewPayWireframes: "/aa/aa-review-pay-wireframes.png",
 } as const;
 
+const JILLAMY_ASSETS = {
+  overview: "/jillamy/overview.jpg",
+  signIn:
+    "/jillamy/JIM-%E2%80%94-sitesperations%C2%AE-Activity-Tracking-09-30-2026_12_59_AM.png",
+  usersHub: "/jillamy/user%20managment%20.png",
+  addUser: "/jillamy/users%20managment.png",
+  inventory: "/jillamy/inventory%20count.png",
+  incoming: "/jillamy/recors%20incoming%20filled.png",
+  picking: "/jillamy/picking%20created.png",
+  shipment: "/jillamy/shipment%20report.png",
+  reviewActivity: "/jillamy/review%20activity.png",
+  tracking: "/jillamy/tracking.png",
+} as const;
+
+export function getJillamyCaseStudyConfig(): CaseStudyPageConfig {
+  const evidenceChapters: EvidenceChapter[] = [
+    {
+      label: "ACCESS & IDENTITY",
+      title: "Starting with who is working–and where.",
+      paragraphs: [
+        "Access to an operational system begins with context.",
+        "The JIM sign-in experience combines work location, identity, credentials, and shared-device behavior to establish the user's operating context before work begins.",
+        "Rather than treating authentication as a generic login step, the experience accounts for warehouse environments where users may work across locations or access JIM from shared devices.",
+      ],
+      visuals: [
+        mkScreenshot({
+          src: JILLAMY_ASSETS.signIn,
+          alt: "JIM Operations sign-in screen with work location selection, User ID, PIN, and shared-device option.",
+          caption:
+            "Location, identity, credentials, and shared-device behavior establish operational context at sign-in.",
+          label: "Sign-in & location context",
+          treatment: "support",
+          aspectClass: "aspect-[4/3]",
+        }),
+      ],
+    },
+    {
+      label: "ROLES & PERMISSIONS",
+      title: "Managing people without opening up everything.",
+      paragraphs: [
+        "Different responsibilities require different levels of access.",
+        "I structured user management around roles and permissions so managers could control who could enter specific parts of JIM without creating entirely separate products for each type of user.",
+        "This allowed one operational system to support different responsibilities while keeping access intentional and manageable.",
+      ],
+      visuals: [
+        mkScreenshot({
+          src: JILLAMY_ASSETS.usersHub,
+          alt: "JIM Operations Users tab showing the User Management entry point within the Manager Hub.",
+          caption:
+            "Managers can create and maintain users within the same operational environment.",
+          label: "User Management",
+          treatment: "support",
+          aspectClass: "aspect-[4/3]",
+        }),
+        mkScreenshot({
+          src: JILLAMY_ASSETS.addUser,
+          alt: "JIM Operations Add User screen with role, employment type, and generated User ID and PIN fields.",
+          caption:
+            "Role-based permissions control which areas and actions are available to each user.",
+          label: "Add User",
+          treatment: "support",
+          aspectClass: "aspect-[4/3]",
+        }),
+      ],
+    },
+    {
+      label: "INVENTORY",
+      title: "Making inventory state visible and actionable.",
+      paragraphs: [
+        "Inventory needed to communicate more than a quantity.",
+        "I designed the experience to bring SKU identity, location, count, status, notes, and activity into one operational view so users could understand the current state and act without moving between disconnected screens.",
+      ],
+      visuals: [
+        mkScreenshot({
+          src: JILLAMY_ASSETS.inventory,
+          alt: "JIM Operations Inventory Count screen showing SKU details, bin location, quantity, notes, and activity history.",
+          caption:
+            "SKU details bring quantity, location, status, and activity together in one operational view.",
+          label: "Inventory Count",
+          treatment: "support",
+          aspectClass: "aspect-[4/3]",
+        }),
+      ],
+    },
+    {
+      label: "RECEIVING",
+      title: "Turning incoming inventory into a structured verification workflow.",
+      paragraphs: [
+        "Receiving introduces new inventory into the system, so accuracy and progression needed to be clear from the beginning.",
+        "I structured the workflow around expected quantities, box counts, scanning, and verification so associates could move from arrival to confirmed inventory through a predictable sequence.",
+      ],
+      visuals: [
+        mkScreenshot({
+          src: JILLAMY_ASSETS.incoming,
+          alt: "JIM Operations Start Incoming screen with generated batch ID, expected quantities, and scan verification panel.",
+          caption:
+            "Expected quantities, scanning, and verification create a clear path from arrival to confirmed inventory.",
+          label: "Start Incoming",
+          treatment: "support",
+          aspectClass: "aspect-[4/3]",
+        }),
+      ],
+    },
+    {
+      label: "PICKING",
+      title: "Connecting inventory to people and work.",
+      paragraphs: [
+        "Picking turns available inventory into assigned operational work.",
+        "I designed the workflow to make the relationship between the item, required quantity, assigned user, and task status clear so associates could understand what needed to be picked and managers could maintain visibility into progress.",
+      ],
+      visuals: [
+        mkScreenshot({
+          src: JILLAMY_ASSETS.picking,
+          alt: "JIM Operations Create Pick Batch screen with batch details, SKU context, quantity, and assigned picker.",
+          caption:
+            "Picking connects inventory requirements with assignment, quantity, and task progression.",
+          label: "Create Pick Batch",
+          treatment: "support",
+          aspectClass: "aspect-[4/3]",
+        }),
+      ],
+    },
+    {
+      label: "SHIPPING",
+      title: "Making sequence and dependency visible.",
+      paragraphs: [
+        "Shipping depends on several actions happening in the correct order.",
+        "I structured the experience as a progressive workflow so users could see what was complete, what was currently actionable, and what remained locked until the required step was finished.",
+      ],
+      visuals: [
+        mkScreenshot({
+          src: JILLAMY_ASSETS.shipment,
+          alt: "JIM Operations Create Shipment Report screen with sequential pallet steps, locked future states, and generated pallet ID.",
+          caption:
+            "Sequential states make dependencies visible as a shipment moves toward completion.",
+          label: "Create Shipment Report",
+          treatment: "support",
+          aspectClass: "aspect-[4/3]",
+        }),
+      ],
+    },
+    {
+      label: "OPERATIONAL ACCOUNTABILITY",
+      title: "Closing the loop on operational work.",
+      paragraphs: [
+        "Completing a task is only part of the operational story.",
+        "JIM preserves activity across inventory, receiving, picking, shipping, returns, and user actions so managers can understand what happened, who performed the action, and when it occurred.",
+      ],
+      visuals: [
+        mkScreenshot({
+          src: JILLAMY_ASSETS.reviewActivity,
+          alt: "JIM Operations Review Activity screen with filters for user, date range, and SKU across operational modules.",
+          caption:
+            "Operational activity provides a shared record across warehouse workflows.",
+          label: "Review Activity",
+          treatment: "support",
+          aspectClass: "aspect-[4/3]",
+        }),
+        mkScreenshot({
+          src: JILLAMY_ASSETS.tracking,
+          alt: "JIM Operations Tracking and Tracing screen showing daily summary states and auditability notes for warehouse progress.",
+          caption:
+            "Detailed history preserves user, action, status, and timing context for review.",
+          label: "Tracking & Tracing",
+          treatment: "support",
+          aspectClass: "aspect-[4/3]",
+        }),
+      ],
+    },
+  ];
+
+  return {
+    heroEyebrow: "CASE STUDY",
+    heroTitle: "Jillamy",
+    heroSupportingLine:
+      "Designing and building a unified platform for complex warehouse operations.",
+    heroMetaRow: [
+      { label: "ROLE", value: "Senior Product Designer" },
+      {
+        label: "SCOPE",
+        value: "Product Architecture, UX/UI,\nB2B Operations & Full-Stack Implementation",
+      },
+      {
+        label: "FOCUS",
+        value: "Role-based workflows, operational clarity, and system scalability",
+      },
+    ],
+    overview: {
+      eyebrow: "OVERVIEW",
+      title: "Designing the product and the system behind it.",
+      editorialMeasure: true,
+      paragraphs: [
+        "JIM Operations is a B2B warehouse platform I designed from the ground up, connecting people, inventory, and workflows across day-to-day fulfillment.",
+        "I owned the experience from product structure and workflow architecture through interface design and full-stack implementation–designing how roles, permissions, inventory states, and operational workflows work together as one connected system.",
+        "My focus was to make complex warehouse operations easier to understand and execute, while giving different users the right level of access, context, and accountability across inventory counting, receiving, picking, shipping, returns, and activity tracking.",
+        "The result was a unified operational experience where multiple roles and workflows could work within the same product without sacrificing clarity, consistency, or traceability.",
+      ],
+    },
+    challenge: {
+      eyebrow: "CHALLENGE",
+      title: "Complexity came from the system–not a single screen.",
+      editorialMeasure: true,
+      paragraphs: [
+        "Warehouse operations involve different people performing different responsibilities across shared inventory, locations, devices, and workflows.",
+        "A manager may need visibility across operations and user access. An associate may need to complete a focused warehouse task. Other workflows require scanning, quantity verification, assignment, sequential completion, or historical accountability.",
+        "The design challenge was to make these experiences feel like parts of one product without forcing every user or workflow into the same interface.",
+        "The system needed to balance role and access differences, warehouse-location context, fast task execution, shared-device usage, inventory visibility, sequential workflow dependencies, exception and status awareness, and operational traceability.",
+      ],
+    },
+    approach: {
+      eyebrow: "APPROACH",
+      title: "Designing the operating model before the individual screens.",
+      paragraphs: [
+        "Before designing individual workflows, I structured JIM as one connected system–considering how users, access, warehouse tasks, and operational activity needed to work together.",
+      ],
+      bullets: [
+        "Defined a shared model for access, operations, and accountability across inventory, receiving, picking, shipping, returns, and user management.",
+      ],
+      image: {
+        src: JILLAMY_ASSETS.overview,
+        alt: "JIM Operations Manager Hub showing inventory KPIs, workflow cards for inventory, receiving, picking, shipping, returns, and activity review.",
+        caption:
+          "The Manager Hub connects role context, operational workflows, inventory status, and activity visibility in one workspace.",
+        label: "Manager Hub",
+        aspectClass: "aspect-[1024/735]",
+        captionNowrap: false,
+      },
+      lightboxVisuals: [
+        mkScreenshot({
+          src: JILLAMY_ASSETS.overview,
+          alt: "JIM Operations Manager Hub showing inventory KPIs, workflow cards for inventory, receiving, picking, shipping, returns, and activity review.",
+          caption:
+            "The Manager Hub connects role context, operational workflows, inventory status, and activity visibility in one workspace.",
+          label: "Manager Hub",
+          aspectClass: "aspect-[1024/735]",
+          treatment: "support",
+        }),
+      ],
+    },
+    evidenceSection: {
+      eyebrow: "PRODUCT EXPERIENCE",
+      title: "One system. Multiple roles.\nMultiple operational workflows.",
+      paragraphs: [
+        "JIM connects different people and responsibilities within the same operational environment.",
+        "Rather than forcing every user into the same experience, I designed the product around role, access, task context, and the information required to move work forward.",
+      ],
+    },
+    evidenceChapters,
+    designToProduction: {
+      eyebrow: "DESIGN TO PRODUCTION",
+      title: "Taking the system beyond the prototype.",
+      paragraphs: [
+        "I carried JIM from experience architecture and interface design through full-stack implementation, turning the product vision into a functioning application.",
+        "Building the product meant designing with the underlying system in mind–how users and roles are represented, how permissions shape the experience, how operational records persist, and how workflow states move from one action to the next.",
+        "Working across design and implementation became another layer of product validation, exposing edge cases, state dependencies, and interaction details that static screens alone could not reveal.",
+      ],
+    },
+    designAreas: {
+      eyebrow: "KEY DESIGN DECISIONS",
+      title: "The decisions that made a complex operational system feel coherent.",
+      numbered: true,
+      items: [
+        {
+          title: "Role-Based Without Becoming Fragmented",
+          description:
+            "Different users require different levels of access and responsibility without feeling like they are using separate products. Shared navigation, interaction patterns, status language, and visual structure keep JIM consistent while roles and permissions determine what each user can access.",
+        },
+        {
+          title: "Operational Context Before Action",
+          description:
+            "Key actions are paired with the information needed to make them confidently–SKU details before quantity decisions, inventory location before picking, expected counts before verification, and user identity before operational activity.",
+        },
+        {
+          title: "Explicit States and Dependencies",
+          description:
+            "Warehouse work often depends on sequence. Locked steps, disabled actions, completion states, generated identifiers, and visible status make it clear what is available now, what has already happened, and what needs to happen next.",
+        },
+        {
+          title: "Accountability as a Product Pattern",
+          description:
+            "Identity, timestamps, batch IDs, assignments, status, and activity history are integrated throughout the experience. Traceability becomes part of the everyday workflow rather than a separate reporting layer.",
+        },
+      ],
+    },
+    reflection: {
+      eyebrow: "REFLECTION",
+      title: "Designing the system behind the screens.",
+      editorialMeasure: true,
+      paragraphs: [
+        "JIM reinforced that the interface is only the visible layer of a product.",
+        "Designing for warehouse operations meant thinking beyond individual screens to the relationships between people, permissions, inventory, workflow states, and accountability.",
+        "The goal was not to make every workflow identical, but to create enough shared structure that different tasks could still feel like parts of one coherent product.",
+        "That systems-level thinking shaped JIM from the beginning: simplify what users see without removing the context they need to understand what is happening and what to do next.",
+      ],
+    },
+  };
+}
+
 export function getAmericanAirlinesCaseStudyConfig(): CaseStudyPageConfig {
   return {
     heroMetaRow: [
@@ -77,7 +375,7 @@ export function getAmericanAirlinesCaseStudyConfig(): CaseStudyPageConfig {
       paragraphs: [
         "At American Airlines, I worked on selected digital experiences where the core challenge was not simply designing screens, but organizing complex information and making high-stakes travel tasks easier to navigate.",
         "The work spanned airport-service content, Airside Mobile Passport, account ownership and localization flows, and review-and-pay experiences. Across each of these touchpoints, the goal was the same: improve clarity, reduce friction, and help travelers understand what they needed to do next.",
-        "Rather than treating each page as an isolated artifact, the work required systems thinking — structuring content, grouping actions more clearly, and creating stronger pathways across web and mobile experiences.",
+        "Rather than treating each page as an isolated artifact, the work required systems thinking – structuring content, grouping actions more clearly, and creating stronger pathways across web and mobile experiences.",
       ],
     },
     challenge: {
@@ -85,7 +383,7 @@ export function getAmericanAirlinesCaseStudyConfig(): CaseStudyPageConfig {
       title: "Making high-stakes travel tasks easier to understand.",
       editorialMeasure: true,
       paragraphs: [
-        "Travel experiences carry pressure that many digital products do not. Users may be dealing with time constraints, airport processes, language issues, account details, or final payment decisions — often all within the same journey.",
+        "Travel experiences carry pressure that many digital products do not. Users may be dealing with time constraints, airport processes, language issues, account details, or final payment decisions – often all within the same journey.",
         "That meant the experience could not rely on users piecing things together on their own. Key flows needed clearer hierarchy, more useful grouping of information, and stronger guidance at moments where confusion could quickly erode confidence.",
         "The challenge was not visual simplification alone. It was information architecture: helping travelers orient, decide, and proceed through complex tasks with greater confidence.",
       ],
@@ -181,7 +479,7 @@ export function getAmericanAirlinesCaseStudyConfig(): CaseStudyPageConfig {
         label: "ACCOUNT OWNERSHIP & LOCALIZATION",
         title: "Designing clarity beyond the happy path.",
         paragraphs: [
-          "Account-related experiences required careful attention to form structure, guidance, and interruption states — especially when ownership questions, language mismatch, or localization issues could disrupt the user’s path.",
+          "Account-related experiences required careful attention to form structure, guidance, and interruption states – especially when ownership questions, language mismatch, or localization issues could disrupt the user’s path.",
           "The work focused on making forms easier to understand, clarifying the sequence of required information, and providing more explicit guidance when users encountered conditions the standard flow could not easily resolve.",
           "This was a good example of information architecture creating value in edge cases, not just ideal scenarios.",
         ],
@@ -275,7 +573,7 @@ export function getAmericanAirlinesCaseStudyConfig(): CaseStudyPageConfig {
       paragraphs: [
         "This work reinforced an important principle: in complex digital ecosystems, strong UX often comes less from visual reinvention and more from how clearly information, actions, and next steps are organized.",
         "At American Airlines, the value of the work came from helping complex travel experiences feel more navigable, more usable, and more trustworthy across support, account, and payment moments.",
-        "It was a strong example of information architecture applied to real product problems — reducing ambiguity, improving task flow, and creating clearer paths through a high-stakes journey.",
+        "It was a strong example of information architecture applied to real product problems – reducing ambiguity, improving task flow, and creating clearer paths through a high-stakes journey.",
       ],
     },
   };
@@ -296,7 +594,7 @@ export function getUltaCaseStudyConfig(): CaseStudyPageConfig {
           alt: "Ulta Beauty homepage before redesign showing a dense promotional layout with multiple competing merchandising areas.",
           caption:
             "Promotions, navigation, and hero messaging competed more heavily for attention.",
-          label: "Before — Competing promotional signals",
+          label: "Before – Competing promotional signals",
           badgeLabel: "BEFORE",
           treatment: "before",
         }),
@@ -305,7 +603,7 @@ export function getUltaCaseStudyConfig(): CaseStudyPageConfig {
           alt: "Ulta Beauty homepage after redesign showing clearer merchandising hierarchy and more structured promotional organization.",
           caption:
             "A cleaner structure created clearer pathways into shopping and a more modern promotional rhythm.",
-          label: "After — Clearer merchandising hierarchy",
+          label: "After – Clearer merchandising hierarchy",
           badgeLabel: "AFTER",
           treatment: "after",
         }),
@@ -324,7 +622,7 @@ export function getUltaCaseStudyConfig(): CaseStudyPageConfig {
           alt: "Ulta Beauty shop navigation before redesign showing a dense browse structure with many competing navigation options.",
           caption:
             "The earlier navigation placed more decision weight on users at the start of the journey.",
-          label: "Before — Dense browse structure",
+          label: "Before – Dense browse structure",
           badgeLabel: "BEFORE",
           treatment: "before",
         }),
@@ -333,7 +631,7 @@ export function getUltaCaseStudyConfig(): CaseStudyPageConfig {
           alt: "Ulta Beauty shop navigation after redesign showing cleaner category pathways and clearer browse entry points.",
           caption:
             "Clearer entry points and a more structured browse model made navigation easier to scan and act on.",
-          label: "After — Cleaner category access",
+          label: "After – Cleaner category access",
           badgeLabel: "AFTER",
           treatment: "after",
         }),
@@ -352,7 +650,7 @@ export function getUltaCaseStudyConfig(): CaseStudyPageConfig {
           alt: "Ulta Beauty category page before redesign showing a hero-led presentation with discovery competing with broader framing.",
           caption:
             "Discovery depended more on broader framing and less on direct entry points.",
-          label: "Before — Discovery competed with presentation",
+          label: "Before – Discovery competed with presentation",
           badgeLabel: "BEFORE",
           treatment: "before",
         }),
@@ -361,7 +659,7 @@ export function getUltaCaseStudyConfig(): CaseStudyPageConfig {
           alt: "Ulta Beauty category page after redesign showing more direct subcategory entry and clearer discovery pathways.",
           caption:
             "A more scannable structure helped customers reach the right subcategory faster.",
-          label: "After — More direct category entry",
+          label: "After – More direct category entry",
           badgeLabel: "AFTER",
           treatment: "after",
         }),
@@ -380,7 +678,7 @@ export function getUltaCaseStudyConfig(): CaseStudyPageConfig {
           alt: "Ulta Beauty sign-in modal before redesign showing multiple competing account actions and benefit messages.",
           caption:
             "Sign-in, account creation, and benefit messaging competed within a more crowded modal flow.",
-          label: "Before — Split attention across account actions",
+          label: "Before – Split attention across account actions",
           badgeLabel: "BEFORE",
           treatment: "before",
         }),
@@ -389,7 +687,7 @@ export function getUltaCaseStudyConfig(): CaseStudyPageConfig {
           alt: "Ulta Beauty sign-in experience after redesign showing a more focused and trustworthy account access flow.",
           caption:
             "A more focused sign-in experience created stronger clarity, better trust, and a clearer path into loyalty.",
-          label: "After — More focused account access",
+          label: "After – More focused account access",
           badgeLabel: "AFTER",
           treatment: "after",
         }),
@@ -416,7 +714,7 @@ export function getUltaCaseStudyConfig(): CaseStudyPageConfig {
       title: "Designing a more coherent browse-to-buy journey for Ulta Beauty.",
       editorialMeasure: true,
       paragraphs: [
-        "At Ulta, I designed across connected moments in the commerce experience — treating homepage, browse, category entry, and account access as parts of one journey rather than separate screens.",
+        "At Ulta, I designed across connected moments in the commerce experience – treating homepage, browse, category entry, and account access as parts of one journey rather than separate screens.",
         "My focus was to bring stronger hierarchy to merchandising, clearer paths into shopping, and smoother transitions between discovery and loyalty so customers could move through the experience with more confidence.",
         "The result was a clearer path into shopping, with less friction across discovery, browse, category entry, and account access.",
       ],
@@ -434,7 +732,7 @@ export function getUltaCaseStudyConfig(): CaseStudyPageConfig {
       eyebrow: "APPROACH",
       title: "Designing for continuity across the shopping journey.",
       paragraphs: [
-        "Before refining individual screens, I looked at the shopping experience as a connected journey—reviewing how homepage, browse, category entry, and account access worked together to shape discovery, consideration, and purchase.",
+        "Before refining individual screens, I looked at the shopping experience as a connected journey–reviewing how homepage, browse, category entry, and account access worked together to shape discovery, consideration, and purchase.",
       ],
       bullets: [
         "Audited key entry points and shopping moments to identify friction in hierarchy, navigation, and merchandising",
@@ -716,7 +1014,7 @@ export function getTractorSupplyCaseStudyConfig(): CaseStudyPageConfig {
       title: "Designing clearer product discovery\nand purchase decisions for TSC.",
       editorialMeasure: true,
       paragraphs: [
-        "At Tractor Supply, I focused on the core commerce moments where purchase confidence mattered most — product lists, product pages, and mobile shopping experiences.",
+        "At Tractor Supply, I focused on the core commerce moments where purchase confidence mattered most – product lists, product pages, and mobile shopping experiences.",
         "Baymard's benchmark helped surface where browse-to-buy friction was most visible, from product discovery to purchase decisions. I used those findings as a starting point to translate the highest-friction issues into focused PLP and PDP redesigns across web and mobile.",
         "The result was a more structured path from discovery to purchase, with stronger hierarchy, clearer product evaluation, and better support for purchase decisions across devices.",
       ],
@@ -902,13 +1200,17 @@ export function getTractorSupplyCaseStudyConfig(): CaseStudyPageConfig {
       wideBodyMeasure: true,
       paragraphs: [
         "This project reinforced that effective commerce design is not just about showcasing products.\nIt is about helping shoppers understand options, compare with confidence, and move toward purchase through clearer structure, stronger hierarchy, and more usable decision flows.",
-        "The strongest outcomes came from treating PLP, PDP, and mobile shopping as one connected journey — using audit insight to focus the redesign, then validating whether the new patterns made purchase decisions clearer and easier to act on.",
+        "The strongest outcomes came from treating PLP, PDP, and mobile shopping as one connected journey – using audit insight to focus the redesign, then validating whether the new patterns made purchase decisions clearer and easier to act on.",
       ],
     },
   };
 }
 
 export function getCaseStudyPageConfig(project: CaseStudy): CaseStudyPageConfig {
+  if (project.slug === "jillamy") {
+    return getJillamyCaseStudyConfig();
+  }
+
   if (project.slug === "ulta-beauty") {
     return getUltaCaseStudyConfig();
   }

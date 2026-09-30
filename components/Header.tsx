@@ -209,7 +209,7 @@ export function Header({ heroOverlay = false }: HeaderProps) {
           </Link>
         </div>
 
-        {/* Mobile hamburger — relative z-10 so it stays on top within header */}
+        {/* Mobile hamburger – relative z-10 so it stays on top within header */}
         <button
           type="button"
           onClick={() => setMenuOpen((prev) => !prev)}

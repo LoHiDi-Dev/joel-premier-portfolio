@@ -26,7 +26,7 @@ export function WorkCaseStudyCard({
   return (
     <motion.article
       aria-label={
-        isComingSoon ? `${project.title} case study — coming soon` : undefined
+        isComingSoon ? `${project.title} case study – coming soon` : undefined
       }
       className={
         isFeature
@@ -60,7 +60,7 @@ export function WorkCaseStudyCard({
             alt={project.imageAlt}
             fill
             priority={priority}
-            className="object-cover opacity-90"
+            className="object-cover opacity-[0.88] brightness-[1.02] contrast-[0.9] saturate-[0.78]"
             sizes={
               isFeature
                 ? "(max-width: 768px) 100vw, 58vw"
@@ -69,7 +69,7 @@ export function WorkCaseStudyCard({
           />
         </motion.div>
         <div
-          className="absolute inset-0 bg-gradient-to-b from-black/10 to-transparent"
+          className="absolute inset-0 bg-[linear-gradient(180deg,rgba(23,23,23,0.14)_0%,rgba(247,246,244,0.22)_100%)]"
           aria-hidden="true"
         />
 

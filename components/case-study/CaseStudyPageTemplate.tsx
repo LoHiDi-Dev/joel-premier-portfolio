@@ -5,7 +5,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Header } from "@/components/Header";
 import type { CaseStudy } from "@/lib/projects";
 import { caseStudySectionViewport, fadeUpVariants, staggerContainerVariants } from "@/lib/motion";
-import { LABEL_CLASS, SECTION_HEADING_CLASS, SECTION_MAX, CONTENT_MAX_EDITORIAL } from "./constants";
+import { LABEL_CLASS, SECTION_HEADING_CLASS, SECTION_MAX, CONTENT_MAX_EDITORIAL, BODY_CLASS } from "./constants";
 import type { CaseStudyPageConfig } from "./types";
 import { CaseStudyHero } from "./CaseStudyHero";
 import { CaseStudyMetaRow } from "./CaseStudyMetaRow";
@@ -39,6 +39,7 @@ export function CaseStudyPageTemplate({
   const [lightbox, setLightbox] = useState<
     | { type: "evidence"; chapterIndex: number; imageIndex: number }
     | { type: "approachGallery"; initialIndex: number }
+    | { type: "overview" }
     | null
   >(null);
 
@@ -47,6 +48,9 @@ export function CaseStudyPageTemplate({
   }, []);
   const openApproachGallery = useCallback((initialIndex: number) => {
     setLightbox({ type: "approachGallery", initialIndex });
+  }, []);
+  const openOverviewLightbox = useCallback(() => {
+    setLightbox({ type: "overview" });
   }, []);
   const closeLightbox = useCallback(() => setLightbox(null), []);
 
@@ -66,6 +70,8 @@ export function CaseStudyPageTemplate({
   const approach = config.approach;
   const hasEvidence = config.evidenceChapters && config.evidenceChapters.length > 0;
   const isAuditLed = config.layoutVariant === "audit-led";
+  const overviewImage = config.overview.image;
+  const designToProduction = config.designToProduction;
 
   return (
     <article className="bg-white overflow-x-clip">
@@ -86,16 +92,37 @@ export function CaseStudyPageTemplate({
         />
       )}
 
-      <EditorialSection
-        eyebrow={config.overview.eyebrow}
-        title={config.overview.title}
-        paragraphs={config.overview.paragraphs}
-        reducedMotion={reducedMotion}
-        wideContent={config.overview.wideContent}
-        relaxedHeadingGap={config.overview.relaxedHeadingGap}
-        compactGrid={config.overview.compactGrid}
-        editorialMeasure={config.overview.editorialMeasure}
-      />
+      {overviewImage ? (
+        <SplitNarrativeSection
+          eyebrow={config.overview.eyebrow}
+          title={config.overview.title}
+          paragraphs={config.overview.paragraphs}
+          image={overviewImage}
+          reducedMotion={reducedMotion}
+          onLightboxOpen={openOverviewLightbox}
+        />
+      ) : (
+        <EditorialSection
+          eyebrow={config.overview.eyebrow}
+          title={config.overview.title}
+          paragraphs={config.overview.paragraphs}
+          reducedMotion={reducedMotion}
+          wideContent={config.overview.wideContent}
+          relaxedHeadingGap={config.overview.relaxedHeadingGap}
+          compactGrid={config.overview.compactGrid}
+          editorialMeasure={config.overview.editorialMeasure}
+        />
+      )}
+
+      {lightbox != null && lightbox.type === "overview" && overviewImage && (
+        <BeforeAfterLightbox
+          key="overview"
+          open
+          visuals={[overviewImage]}
+          initialIndex={0}
+          onClose={closeLightbox}
+        />
+      )}
 
       <EditorialSection
         eyebrow={config.challenge.eyebrow}
@@ -162,9 +189,25 @@ export function CaseStudyPageTemplate({
               <p className={LABEL_CLASS}>
                 {config.evidenceSection?.eyebrow ?? "DESIGN EVOLUTION"}
               </p>
-              <h2 className={SECTION_HEADING_CLASS}>
+              <h2
+                className={`${SECTION_HEADING_CLASS} ${
+                  config.evidenceSection?.title?.includes("\n")
+                    ? "whitespace-pre-line"
+                    : ""
+                }`}
+              >
                 {config.evidenceSection?.title ?? "Key moments where the experience became clearer."}
               </h2>
+              {config.evidenceSection?.paragraphs &&
+                config.evidenceSection.paragraphs.length > 0 && (
+                  <div className="mt-5 space-y-4">
+                    {config.evidenceSection.paragraphs.map((paragraph) => (
+                      <p key={paragraph} className={BODY_CLASS}>
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                )}
             </motion.div>
             <motion.div
               className="space-y-10 md:space-y-20"
@@ -208,6 +251,97 @@ export function CaseStudyPageTemplate({
             onClose={closeLightbox}
           />
         )}
+
+      {designToProduction && (
+        <motion.section
+          className="bg-[#f7f6f4] px-4 py-12 sm:px-8 sm:py-20 md:px-12 md:py-28"
+          initial="hidden"
+          whileInView="visible"
+          viewport={caseStudySectionViewport}
+          variants={staggerContainerVariants(0.06)}
+        >
+          <div className={`mx-auto ${SECTION_MAX} md:grid md:grid-cols-[180px_minmax(0,1fr)] md:gap-x-12`}>
+            <motion.div variants={fadeUpVariants(reducedMotion, 16)}>
+              <p className={`${LABEL_CLASS} whitespace-nowrap`}>
+                {designToProduction.eyebrow}
+              </p>
+            </motion.div>
+            <motion.div
+              className="mt-5 min-w-0 space-y-6 md:mt-0"
+              variants={staggerContainerVariants(0.06)}
+            >
+              <motion.h2
+                className={`${SECTION_HEADING_CLASS} ${CONTENT_MAX_EDITORIAL}`}
+                variants={fadeUpVariants(reducedMotion, 10)}
+              >
+                {designToProduction.title}
+              </motion.h2>
+              <div className={`space-y-5 ${CONTENT_MAX_EDITORIAL}`}>
+                {designToProduction.paragraphs.map((paragraph) => (
+                  <motion.p
+                    key={paragraph}
+                    className="text-[15px] leading-[1.65] text-[#2d2d2d] sm:text-[16px] sm:leading-[1.62] md:text-[18px] md:leading-[1.66]"
+                    variants={fadeUpVariants(reducedMotion, 10)}
+                  >
+                    {paragraph}
+                  </motion.p>
+                ))}
+              </div>
+
+              {designToProduction.capabilityGroups &&
+                designToProduction.capabilityGroups.length > 0 && (
+                  <motion.div
+                    className="mt-8 space-y-6"
+                    variants={staggerContainerVariants(0.06)}
+                  >
+                    {designToProduction.capabilityGroups.map((group) => (
+                      <motion.div
+                        key={group.label}
+                        variants={fadeUpVariants(reducedMotion, 10)}
+                      >
+                        <p className="text-[13px] font-semibold uppercase tracking-[1.6px] text-[#525252]">
+                          {group.label}
+                        </p>
+                        <ul
+                          className="mt-3 flex flex-wrap gap-2.5"
+                          role="list"
+                          aria-label={group.label}
+                        >
+                          {group.items.map((item) => (
+                            <li key={item}>
+                              <span className="inline-flex rounded-full border border-[#e5e5e5] bg-white px-3.5 py-2 text-[13px] font-normal leading-[1.3] text-[#171717] sm:text-[14px]">
+                                {item}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                )}
+
+              {designToProduction.liveProductCta && (
+                <motion.div variants={fadeUpVariants(reducedMotion, 10)}>
+                  <a
+                    href={designToProduction.liveProductCta.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex h-11 items-center justify-center gap-1.5 rounded-full border border-[#171717] bg-white px-5 text-[12px] font-medium text-[#171717] transition-colors duration-200 hover:bg-[#171717] hover:text-white focus:bg-[#171717] focus:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#171717] focus-visible:ring-offset-2 sm:h-12 sm:px-6 sm:text-[13px]"
+                  >
+                    {designToProduction.liveProductCta.label}
+                    <span
+                      aria-hidden="true"
+                      className="transition-transform duration-200 group-hover:translate-x-0.5 group-focus:translate-x-0.5"
+                    >
+                      ↗
+                    </span>
+                  </a>
+                </motion.div>
+              )}
+            </motion.div>
+          </div>
+        </motion.section>
+      )}
 
       {config.designAreas && (
         <CardGridSection

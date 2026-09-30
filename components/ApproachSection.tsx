@@ -92,7 +92,7 @@ export function ApproachSection() {
           })}
         </div>
 
-        {/* Desktop: unchanged grid — hidden below md */}
+        {/* Desktop: unchanged grid – hidden below md */}
         <div
           className="hidden md:grid md:grid-cols-3 md:gap-x-6 md:gap-y-8"
           role="list"

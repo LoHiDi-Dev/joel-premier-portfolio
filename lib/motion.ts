@@ -3,7 +3,7 @@ import type { Variants } from "framer-motion";
 /**
  * Case study sections can be very tall (e.g. many evidence chapters). Using a high
  * `amount` (like 0.2) requires that fraction of the *entire* section to intersect the
- * viewport at once, which is impossible for long blocks—so content stays at opacity 0.
+ * viewport at once, which is impossible for long blocks–so content stays at opacity 0.
  */
 export const caseStudySectionViewport = {
   once: true,

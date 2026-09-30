@@ -28,7 +28,7 @@ export function ResumePageContent() {
 
   return (
     <>
-      {/* [1] Hero — animate on mount (above fold) */}
+      {/* [1] Hero – animate on mount (above fold) */}
       <div className="mx-auto max-w-[1280px]">
         <motion.div
           className="max-w-[860px]"
@@ -49,7 +49,7 @@ export function ResumePageContent() {
         </motion.div>
       </div>
 
-      {/* [2] GRAY BLEED — Professional Summary */}
+      {/* [2] GRAY BLEED – Professional Summary */}
       <motion.div
         className={GRAY_BLEED_CLASS}
         initial="hidden"
@@ -87,7 +87,7 @@ export function ResumePageContent() {
         </motion.div>
       </motion.div>
 
-      {/* [3] WHITE — Professional Experience */}
+      {/* [3] WHITE – Professional Experience */}
       <motion.div
         className="mx-auto max-w-[1280px] mt-12 pt-10 sm:mt-16 md:mt-20 md:pt-12"
         initial="hidden"
@@ -105,7 +105,7 @@ export function ResumePageContent() {
         </div>
       </motion.div>
 
-      {/* [4+5] GRAY BLEED — Core Competencies + Education */}
+      {/* [4+5] GRAY BLEED – Core Competencies + Education */}
       <motion.div
         className={GRAY_BLEED_CLASS}
         initial="hidden"
@@ -157,7 +157,7 @@ export function ResumePageContent() {
           </div>
         </div>
 
-        {/* Tools & Technology — full-bleed white band */}
+        {/* Tools & Technology – full-bleed white band */}
         <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-2 w-screen bg-white px-3 pt-12 pb-10 sm:px-6 md:px-16 md:pt-14 md:pb-12">
           <div className="mx-auto max-w-[1280px]">
             <div className="grid gap-6 md:grid-cols-[180px_minmax(0,1fr)] md:items-start md:gap-x-12">
@@ -239,7 +239,7 @@ export function ResumePageContent() {
                     );
                   })}
                 </div>
-                {/* Desktop: 4-tab layout — editorial, minimal */}
+                {/* Desktop: 4-tab layout – editorial, minimal */}
                 <div className="hidden md:block">
                   <div
                     className="flex flex-wrap gap-x-8 gap-y-0 border-b border-[#e5e5e5]"
@@ -307,7 +307,7 @@ export function ResumePageContent() {
                 EDUCATION
               </motion.p>
               <div className="mt-5 min-w-0 max-w-[52rem] md:mt-0">
-                {/* M.A. — full width */}
+                {/* M.A. – full width */}
                 <motion.article
                   className="rounded-[20px] border border-[#e8e8e8] bg-[#f6f5f4] px-5 py-6 transition-colors duration-200 hover:bg-[#f0eeec] sm:px-6 sm:py-7"
                   variants={fadeUpVariants(reducedMotion, 10)}
@@ -324,7 +324,7 @@ export function ResumePageContent() {
                     </p>
                   ) : null}
                 </motion.article>
-                {/* B.A. and A.S. — two cards */}
+                {/* B.A. and A.S. – two cards */}
                 <motion.div
                   className="mt-4 grid gap-4 sm:grid-cols-2 md:gap-6"
                   variants={staggerContainerVariants(0.06)}

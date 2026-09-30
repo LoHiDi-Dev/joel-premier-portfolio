@@ -32,6 +32,8 @@ export interface CaseStudy {
 }
 
 const IMAGES = {
+  jillamy: "/jillamy/jillamy-warehouse-truck.jpg",
+  jillamyCaseStudyHero: "/jillamy/jillamy-facility-exterior.png",
   ultaBeauty: "/heroes/ulta-beauty.jpg",
   cvsAetna: "/heroes/cvs-health.jpg",
   tractorSupply: "/heroes/tractor-supply.jpg",
@@ -40,6 +42,74 @@ const IMAGES = {
 };
 
 export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
+  {
+    slug: "jillamy",
+    title: "Jillamy",
+    category: "JIM Operations",
+    hideCategory: true,
+    role: "Senior Product Designer",
+    description:
+      "Designing a unified B2B operations platform for warehouse teams, inventory, fulfillment, and accountability.",
+    summary:
+      "Designing a unified B2B operations platform for warehouse teams, inventory, fulfillment, and accountability.",
+    outcome:
+      "A connected operational system spanning users, inventory, receiving, picking, shipping, returns, and activity history.",
+    image: IMAGES.jillamy,
+    imageAlt:
+      "Jillamy Freightliner truck and trailers parked at a warehouse, branded for transportation, warehousing, fulfillment, and packaging.",
+    caseStudyHeroImage: IMAGES.jillamyCaseStudyHero,
+    caseStudyHeroImageAlt:
+      "Jillamy Packaging & Warehouse facility exterior with company signage and parking lot.",
+    heroObjectPosition: "50% 35%",
+    emphasis: "primary",
+    context: {
+      paragraphs: [
+        "JIM Operations is a B2B warehouse operations platform connecting the people, inventory, and workflows behind day-to-day fulfillment.",
+        "I owned the experience from product structure and workflow architecture through interface design and full-stack implementation.",
+      ],
+    },
+    challenge: {
+      paragraphs: [
+        "Warehouse operations involve different people performing different responsibilities across shared inventory, locations, devices, and workflows.",
+        "The design challenge was to make these experiences feel like parts of one product without forcing every user or workflow into the same interface.",
+      ],
+    },
+    myRole: {
+      paragraphs: [
+        "As Senior Product Designer, I designed the complete product experience and implemented the working full-stack application.",
+      ],
+      bullets: [
+        "Product design and UX architecture across access, operations, and accountability.",
+        "Role-based workflows for inventory, receiving, picking, shipping, and returns.",
+        "Full-stack implementation of the functioning operational product.",
+      ],
+    },
+    approach: {
+      bullets: [
+        "Structured the product around access, operations, and accountability before designing individual screens.",
+        "Designed shared patterns that could scale across distinct warehouse workflows.",
+        "Carried design decisions into a functioning full-stack application for live validation.",
+      ],
+    },
+    keyDesignDecisions: {
+      bullets: [
+        "Role-based access without fragmenting the product into unrelated tools.",
+        "Operational context before action across inventory and fulfillment workflows.",
+        "Explicit states and sequential dependencies for controlled execution.",
+        "Accountability as a product pattern through identity, status, and activity history.",
+      ],
+    },
+    outcomes: {
+      paragraphs: [
+        "The result was a coherent B2B operations platform that connects users, inventory, fulfillment workflows, and operational traceability in one system.",
+      ],
+    },
+    reflection: {
+      paragraphs: [
+        "JIM reinforced that the interface is only the visible layer of the system. Designing warehouse operations meant thinking simultaneously about people, permissions, inventory, locations, workflow states, dependencies, and accountability.",
+      ],
+    },
+  },
   {
     slug: "ulta-beauty",
     title: "Ulta Beauty",

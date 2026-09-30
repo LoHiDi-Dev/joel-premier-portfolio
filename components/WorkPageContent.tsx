@@ -9,7 +9,7 @@ import { fadeUpVariants, staggerContainerVariants } from "@/lib/motion";
 export function WorkPageContent() {
   const reducedMotion = Boolean(useReducedMotion());
   const introRef = useRef<HTMLElement | null>(null);
-  const allCaseStudies = PRIMARY_CASE_STUDIES.slice(0, 4);
+  const allCaseStudies = PRIMARY_CASE_STUDIES;
 
   const { scrollYProgress } = useScroll({
     target: introRef,
@@ -55,8 +55,8 @@ export function WorkPageContent() {
               className="mt-4 max-w-[46rem] text-[14px] leading-[1.6] text-[#525252] sm:mt-5 sm:text-[16px] sm:leading-[1.58] md:text-[20px] md:leading-[1.5]"
               variants={fadeUpVariants(reducedMotion, 16)}
             >
-              Enterprise product design across e-commerce,
-              healthcare, and travel — building accessible, scalable experiences
+              Enterprise product design across B2B operations, e-commerce,
+              healthcare, and travel – building accessible, scalable experiences
               that deliver measurable impact.
             </motion.p>
           </motion.div>

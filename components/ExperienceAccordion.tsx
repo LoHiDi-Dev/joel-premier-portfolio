@@ -94,7 +94,7 @@ export function ExperienceAccordion() {
               )}
             </AnimatePresence>
 
-            {/* Desktop: full layout — no bullet dot, flush left */}
+            {/* Desktop: full layout – no bullet dot, flush left */}
             <div
               className={`hidden md:block ${
                 index > 0 ? "mt-10 border-t border-[#e5e5e5] pt-10" : ""

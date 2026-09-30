@@ -12,7 +12,7 @@ export function ProjectSupportCard({ project }: ProjectSupportCardProps) {
   return (
     <article
       className="flex flex-col gap-3 sm:gap-5"
-      aria-label={isComingSoon ? `${project.title} case study — coming soon` : undefined}
+      aria-label={isComingSoon ? `${project.title} case study – coming soon` : undefined}
     >
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-gradient-to-br from-[#f5f5f5] to-[#fafafa] shadow-sm md:rounded-2xl">
         <Image

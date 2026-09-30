@@ -21,7 +21,7 @@ interface AuditGridSectionProps {
   onTileClick: (index: number) => void;
 }
 
-/** Supporting audit evidence. Matches Ulta/CVS composition—polished, secondary to redesign work. */
+/** Supporting audit evidence. Matches Ulta/CVS composition–polished, secondary to redesign work. */
 export function AuditGridSection({
   content,
   reducedMotion,

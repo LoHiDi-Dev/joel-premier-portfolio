@@ -25,7 +25,7 @@ export default function ResumePage() {
           <ResumePageContent />
         </section>
 
-        {/* Dark endcap — no scroll animation */}
+        {/* Dark endcap – no scroll animation */}
         <section
           className="border-t border-[#242424] bg-[#171717] px-4 py-16 text-white sm:px-8 sm:py-20 md:px-12 md:py-24"
           aria-labelledby="resume-endcap-title"
@@ -45,7 +45,7 @@ export default function ResumePage() {
               </h2>
               <p className="mx-auto mt-5 max-w-[36rem] text-[14px] leading-[1.6] text-[#c7c7c7] sm:mt-6 sm:text-[16px] sm:leading-[1.58] md:max-w-[40rem] md:text-[18px] md:leading-[1.56]">
                 A concise overview of SaaS, B2B/B2C, mobile, and design-system
-                work — with the case studies behind it available to explore.
+                work – with the case studies behind it available to explore.
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-2 sm:mt-9 sm:gap-4">
                 <a

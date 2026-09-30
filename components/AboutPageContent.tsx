@@ -57,7 +57,7 @@ export function AboutPageContent() {
         </motion.div>
       </div>
 
-      {/* APPROACH section — full bleed outside max-width container */}
+      {/* APPROACH section – full bleed outside max-width container */}
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-12 w-screen border-t border-[#e5e5e5] bg-[#f7f6f4] px-3 pt-8 pb-10 sm:mt-16 sm:px-6 sm:pt-10 sm:pb-12 md:mt-20 md:px-16 md:pt-12 md:pb-14">
         <motion.div
           className="mx-auto max-w-[1280px]"
@@ -91,7 +91,7 @@ export function AboutPageContent() {
                   variants={fadeUpVariants(reducedMotion, 10)}
                 >
                   I design digital products with a focus on structure,
-                  usability, and meaningful impact — helping make demanding
+                  usability, and meaningful impact – helping make demanding
                   experiences easier to understand, easier to use, and more
                   effective for the people navigating them.
                 </motion.p>
@@ -111,7 +111,7 @@ export function AboutPageContent() {
                   variants={fadeUpVariants(reducedMotion, 10)}
                 >
                   I do my best work in close partnership with product,
-                  engineering, content, and leadership — connecting user
+                  engineering, content, and leadership – connecting user
                   needs to business goals through a steady, thoughtful
                   approach to delivery.
                 </motion.p>
@@ -164,7 +164,7 @@ export function AboutPageContent() {
       </div>
       </section>
 
-      {/* Dark endcap — no scroll animation per requirements */}
+      {/* Dark endcap – no scroll animation per requirements */}
       <section
         className="border-t border-[#242424] bg-[#171717] px-4 py-16 text-white sm:px-8 sm:py-20 md:px-12 md:py-24"
         aria-labelledby="about-work-endcap-title"

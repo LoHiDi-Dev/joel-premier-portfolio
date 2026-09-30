@@ -10,7 +10,7 @@ function Logo({ variant = "dark" }: { variant?: "dark" | "white" }) {
       className="flex items-center gap-2.5 sm:gap-3"
       whileHover="hover"
     >
-      {/* JP circle — rotates on hover */}
+      {/* JP circle – rotates on hover */}
       <motion.div
         variants={{ hover: { rotate: 360 } }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
@@ -23,7 +23,7 @@ function Logo({ variant = "dark" }: { variant?: "dark" | "white" }) {
         </span>
       </motion.div>
 
-      {/* Text block — never rotates */}
+      {/* Text block – never rotates */}
       <div className="flex flex-col justify-center">
         <span
           className={`text-[13px] font-semibold leading-[1.2] tracking-[-0.2px] sm:text-[14px] md:text-[15px] ${isDark ? "text-[#171717]" : "text-white"}`}

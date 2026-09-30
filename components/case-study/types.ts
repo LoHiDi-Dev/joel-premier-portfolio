@@ -67,7 +67,13 @@ export interface CaseStudyPageConfig {
     label: string;
     value: string;
   }>;
-  overview: EditorialSectionContent & { wideContent?: boolean; relaxedHeadingGap?: boolean; compactGrid?: boolean; editorialMeasure?: boolean };
+  overview: EditorialSectionContent & {
+    wideContent?: boolean;
+    relaxedHeadingGap?: boolean;
+    compactGrid?: boolean;
+    editorialMeasure?: boolean;
+    image?: ScreenshotConfig;
+  };
   challenge: EditorialSectionContent & { wideContent?: boolean; compactGrid?: boolean; editorialMeasure?: boolean; relaxedBodyMeasure?: boolean; compactBodyMeasure?: boolean; wideBodyMeasure?: boolean };
   approach?: SplitNarrativeContent | (EditorialSectionContent & {
     bullets?: string[];
@@ -84,7 +90,12 @@ export interface CaseStudyPageConfig {
   /** Flexible evidence chapters; omit if no visual proof */
   evidenceChapters?: EvidenceChapter[];
   /** Section header for evidence chapters */
-  evidenceSection?: { eyebrow: string; title: string };
+  evidenceSection?: { eyebrow: string; title: string; paragraphs?: string[] };
+  /** Design-to-production bridge (e.g. greenfield build stories) */
+  designToProduction?: EditorialSectionContent & {
+    capabilityGroups?: Array<{ label: string; items: string[] }>;
+    liveProductCta?: { label: string; href: string };
+  };
   /** Key design areas or decisions as cards */
   designAreas?: {
     eyebrow: string;
