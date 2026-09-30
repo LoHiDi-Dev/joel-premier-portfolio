@@ -49,9 +49,9 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
     hideCategory: true,
     role: "Senior Product Designer",
     description:
-      "Designing a unified B2B operations platform for warehouse teams, inventory, fulfillment, and accountability.",
+      "Designing a unified B2B operations platform connecting warehouse teams, inventory, fulfillment, and accountability.",
     summary:
-      "Designing a unified B2B operations platform for warehouse teams, inventory, fulfillment, and accountability.",
+      "Designing a unified B2B operations platform connecting warehouse teams, inventory, fulfillment, and accountability.",
     outcome:
       "A connected operational system spanning users, inventory, receiving, picking, shipping, returns, and activity history.",
     image: IMAGES.jillamy,
