@@ -36,7 +36,7 @@ Open [http://localhost:3000](http://localhost:3000).
 ## Case Study Routes
 
 - `/work/ulta-beauty`
-- `/work/cvs-health-aetna`
+- `/work/aetna`
 - `/work/tractor-supply-co`
 - `/work/american-airlines`
 

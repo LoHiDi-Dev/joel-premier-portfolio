@@ -22,13 +22,13 @@ const ULTA_ASSETS = {
   loginAfter: "/ulta/3-ulta-login-after.png",
 } as const;
 
-const CVS_ASSETS = {
-  entryBefore: "/cvs/entry-before.png",
-  entryAfter: "/cvs/entry-after.png",
-  planDetailMobile: "/cvs/plan-detail-mobile.png",
-  planComparisonDesktop: "/cvs/plan-comparison-desktop-cropped.png",
-  stickyCompare: "/cvs/sticky-compare-cropped.png",
-  enrollmentReview: "/cvs/enrollment-review.png",
+const AETNA_ASSETS = {
+  entryBefore: "/aetna/entry-before.png",
+  entryAfter: "/aetna/entry-after.png",
+  planDetailMobile: "/aetna/plan-detail-mobile.png",
+  planComparisonDesktop: "/aetna/plan-comparison-desktop-cropped.png",
+  stickyCompare: "/aetna/sticky-compare-cropped.png",
+  enrollmentReview: "/aetna/enrollment-review.png",
 } as const;
 
 const TSC_ASSETS = {
@@ -791,9 +791,9 @@ export function getUltaCaseStudyConfig(): CaseStudyPageConfig {
   };
 }
 
-export function getCvsCaseStudyConfig(): CaseStudyPageConfig {
+export function getAetnaCaseStudyConfig(): CaseStudyPageConfig {
   return {
-    heroTitle: "CVS Health",
+    heroTitle: "Aetna",
     heroMetaRow: [
       { label: "ROLE", value: "Senior Product Designer" },
       {
@@ -839,7 +839,7 @@ export function getCvsCaseStudyConfig(): CaseStudyPageConfig {
         "Treated plan search, comparison, and review as one connected journey, identifying where structure, hierarchy, and decision support mattered most.",
       ],
       image: {
-        src: CVS_ASSETS.entryAfter,
+        src: AETNA_ASSETS.entryAfter,
         alt: "Aetna Medicare shopping entry showing clearer pathways into plan shopping.",
         caption:
           "Homepage Medicare pathways were restructured to create a clearer, more direct entry into plan search.",
@@ -862,7 +862,7 @@ export function getCvsCaseStudyConfig(): CaseStudyPageConfig {
         ],
         visuals: [
           mkScreenshot({
-            src: CVS_ASSETS.entryBefore,
+            src: AETNA_ASSETS.entryBefore,
             alt: "Earlier Aetna Medicare navigation showing multiple fragmented entry points into plan shopping.",
             caption:
               "Earlier homepage pathways split Medicare actions across multiple entry points.",
@@ -871,7 +871,7 @@ export function getCvsCaseStudyConfig(): CaseStudyPageConfig {
             treatment: "before",
           }),
           mkScreenshot({
-            src: CVS_ASSETS.entryAfter,
+            src: AETNA_ASSETS.entryAfter,
             alt: "Updated Aetna Medicare navigation showing clearer entry into plan shopping.",
             caption:
               "Homepage pathways were restructured to create a clearer, more direct entry into plan search.",
@@ -890,7 +890,7 @@ export function getCvsCaseStudyConfig(): CaseStudyPageConfig {
         ],
         visuals: [
           mkScreenshot({
-            src: CVS_ASSETS.planDetailMobile,
+            src: AETNA_ASSETS.planDetailMobile,
             alt: "Mobile Medicare plan detail card with structured cost, coverage, provider, pharmacy, and drug information.",
             caption:
               "Mobile plan detail patterns surfaced cost, coverage, and provider information in a clearer scan order.",
@@ -899,7 +899,7 @@ export function getCvsCaseStudyConfig(): CaseStudyPageConfig {
             treatment: "support",
           }),
           mkScreenshot({
-            src: CVS_ASSETS.planComparisonDesktop,
+            src: AETNA_ASSETS.planComparisonDesktop,
             alt: "Cropped design-system view of reusable Medicare plan-card variants for desktop comparison.",
             caption:
               "Reusable desktop plan-card variants standardized comparison across plan states and decision moments.",
@@ -918,7 +918,7 @@ export function getCvsCaseStudyConfig(): CaseStudyPageConfig {
         ],
         visuals: [
           mkScreenshot({
-            src: CVS_ASSETS.stickyCompare,
+            src: AETNA_ASSETS.stickyCompare,
             alt: "Aetna sticky compare component showing reusable plan comparison support across Medicare shopping flows.",
             caption:
               "A reusable compare component helped preserve decision context across plan selection steps.",
@@ -937,7 +937,7 @@ export function getCvsCaseStudyConfig(): CaseStudyPageConfig {
         ],
         visuals: [
           mkScreenshot({
-            src: CVS_ASSETS.enrollmentReview,
+            src: AETNA_ASSETS.enrollmentReview,
             alt: "Aetna review-before-enrollment screen showing plan details, cost and coverage, and requirements checklist before starting the application.",
             caption:
               "Review screens helped members confirm requirements and plan details before enrollment.",
@@ -1215,8 +1215,8 @@ export function getCaseStudyPageConfig(project: CaseStudy): CaseStudyPageConfig 
     return getUltaCaseStudyConfig();
   }
 
-  if (project.slug === "cvs-health-aetna") {
-    return getCvsCaseStudyConfig();
+  if (project.slug === "aetna") {
+    return getAetnaCaseStudyConfig();
   }
 
   if (project.slug === "tractor-supply-co") {

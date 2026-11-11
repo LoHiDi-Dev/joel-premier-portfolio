@@ -24,7 +24,7 @@ interface EditorialSectionProps {
   bullets?: string[];
   reducedMotion: boolean;
   muted?: boolean;
-  /** Use SECTION_LOOSE for concluding sections (process, reflection) to match Ulta/CVS weight */
+  /** Use SECTION_LOOSE for concluding sections (process, reflection) to match Ulta/Aetna weight */
   spacious?: boolean;
   /** Use wider measure so long paragraphs wrap to 2 lines instead of 3 */
   wideContent?: boolean;

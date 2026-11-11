@@ -21,14 +21,14 @@ export const CONTENT_MAX_WIDE = "max-w-[54rem]";
 export const CONTENT_MAX_EDITORIAL = "max-w-[52rem]";
 /** Slightly wider for headings so they break naturally, not forced by body measure */
 export const HEADING_MAX_EDITORIAL = "max-w-[56rem]";
-/** Relaxed body measure for sections where 52rem causes awkward wrapping (e.g. CVS Reflection) */
+/** Relaxed body measure for sections where 52rem causes awkward wrapping (e.g. Aetna Reflection) */
 export const CONTENT_MAX_RELAXED = "max-w-[62rem]";
-/** Compact body measure aligned to heading first-line width (e.g. CVS Challenge ~"stakes") */
+/** Compact body measure aligned to heading first-line width (e.g. Aetna Challenge ~"stakes") */
 export const CONTENT_MAX_COMPACT = "max-w-[40rem]";
 export const RADIUS = "rounded-[20px]";
 /** Evidence thumbnail aspect ratio. Ulta source of truth. */
 export const EVIDENCE_ASPECT = "aspect-[4/3]";
-/** Subtle background tint for lead/anchor card in Key Design Decisions. Same on Ulta and CVS. */
+/** Subtle background tint for lead/anchor card in Key Design Decisions. Same on Ulta and Aetna. */
 export const LEAD_CARD_BG = "bg-[#f6f5f4]";
 
 export const SECTION_TIGHT = "px-4 py-16 sm:px-8 sm:py-18 md:px-12 md:py-22";

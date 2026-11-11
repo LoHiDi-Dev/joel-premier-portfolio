@@ -163,7 +163,7 @@ export const EXPERIENCE = [
     ],
   },
   {
-    company: "CVS Health / Aetna",
+    company: "Aetna",
     title: "Senior UX Strategist, Medicare",
     dates: "Mar 2019 – Jul 2021",
     location: "Remote",

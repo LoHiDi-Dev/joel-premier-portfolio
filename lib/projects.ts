@@ -35,7 +35,7 @@ const IMAGES = {
   jillamy: "/jillamy/jillamy-warehouse-truck.jpg",
   jillamyCaseStudyHero: "/jillamy/jillamy-facility-exterior.png",
   ultaBeauty: "/heroes/ulta-beauty.jpg",
-  cvsAetna: "/heroes/cvs-health.jpg",
+  aetna: "/heroes/aetna.jpg",
   tractorSupply: "/heroes/tractor-supply.jpg",
   americanAirlines: "/heroes/american-airlines-thumb.png",
   americanAirlinesCaseStudyHero: "/heroes/american-airlines-flagship-suite-seats-scaled.jpg",
@@ -176,8 +176,8 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
     },
   },
   {
-    slug: "cvs-health-aetna",
-    title: "CVS Health",
+    slug: "aetna",
+    title: "Aetna",
     category: "Medicare Plan Comparison & Enrollment",
     hideCategory: true,
     role: "Senior Product Designer",
@@ -187,8 +187,8 @@ export const PRIMARY_CASE_STUDIES: CaseStudy[] = [
       "Simplifying a regulated healthcare journey through greater clarity, trust, and accessibility.",
     outcome:
       "Reduced friction in a complex, regulated journey and helped members make more confident decisions.",
-    image: IMAGES.cvsAetna,
-    imageAlt: "CVS Health Aetna Medicare Extra Benefits Card",
+    image: IMAGES.aetna,
+    imageAlt: "Aetna Medicare Extra Benefits Card",
     emphasis: "primary",
     context: {
       paragraphs: [

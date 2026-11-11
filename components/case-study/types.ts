@@ -56,7 +56,7 @@ export interface AuditSectionContent {
 }
 
 export interface CaseStudyPageConfig {
-  /** Layout variant: default (Ulta/CVS) or audit-led (Tractor Supply) */
+  /** Layout variant: default (Ulta/Aetna) or audit-led (Tractor Supply) */
   layoutVariant?: "default" | "audit-led";
   heroTitle?: string;
   heroSubtitle?: string;
